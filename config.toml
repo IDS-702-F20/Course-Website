@@ -27,7 +27,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   gravatarEmail = "olanrewaju.akande@duke.edu"
   # Your profile picture
   picture = "img/avatar-icon.jpg"
-  twitter = "Akande_OM"
+  #twitter = "Akande_OM"
  
 # Menu Configuration
 [[menu.main]]
