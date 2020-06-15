@@ -4,8 +4,8 @@ lessons:
   - date: "Tue, Aug 27"
     title: "Introduction to course"
     slides: "lec-slides/01-intro.html"
-    #hw: "hw-00.html"
-    hw: "hw-00-key.html"
+    hw: "hw-00.html"
+    #hw: "hw-00-key.html"
     
   - title: "PART I: MULTIPLE LINEAR REGRESSION"
     reading: "reading-01.html"
