@@ -71,7 +71,7 @@ lessons:
     #slides: ".html"
     
   - date: " "
-    title: "Data analysis assignment I (due Sept 1)"
+    title: "Data analysis assignment I"
     #hw: "hw-01.html"
     
     
@@ -117,8 +117,11 @@ lessons:
     title: "In-class analysis: beer consumption in Sao Paulo IV"
     #slides: ".html"
     
+  - date: "REMINDER:"
+    title: "Data analysis assignment I due!"
+    
   - date: " "
-    title: "Data analysis assignment II (due Sept 8)"
+    title: "Data analysis assignment II"
     #hw: "hw-02.html"
     
     
@@ -160,6 +163,13 @@ lessons:
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
+    
+  - date: "REMINDER:"
+    title: "Data analysis assignment II due!"
+    
+  - date: " "
+    title: "Data analysis assignment III"
+    #hw: "hw-03.html"
     
     
   - date: "Thur, Sept 10"
