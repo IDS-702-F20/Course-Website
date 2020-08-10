@@ -1,7 +1,7 @@
 # Website
-Website for the Masters in Interdisciplinary Data Science (MIDS) Course "IDS 702 - Modeling and Representation of Data" at Duke University, for Fall 2019.
+Website for the Masters in Interdisciplinary Data Science (MIDS) Course "IDS 702 - Modeling and Representation of Data" at Duke University, for Fall 2020.
 
-Course website is at https://ids-702-f19.github.io/Course-Website/
+Course website is at https://ids-702-f20.github.io/Course-Website/
 
 # Attribution
 
@@ -9,6 +9,6 @@ Course website is at https://ids-702-f19.github.io/Course-Website/
 
 # Notes for building the website:
 
-- Colors: #000033 and #0085A1
+- Colors: #AF5500 and #522700
   - To change, search & replace in `themes/material/static/css/material-kit.css`
  

@@ -9,7 +9,6 @@ These textbooks are great resources for some of the topics we will cover. You do
 
 1. [Ramsey, F.L. and Schafer, D.W. (2013), "The Statistical Sleuth: A Course in Methods of Data Analysis (3rd ed)."](https://www.amazon.com/Statistical-Sleuth-Course-Methods-Analysis/dp/1133490670)
 2. [Imbens, G. W. and Rubin, D. B. (2015), "Causal Inference for Statistics, Social, and Biomedical Sciences: An Introduction"](https://www.amazon.com/gp/product/0521885884/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
-3. [Agresti, A. (2013), "Categorical Data Analysis (3rd ed)."](https://www.amazon.com/Statistical-Sleuth-Course-Methods-Analysis/dp/1133490670)
 
 ### R and R Markdown Resources
 
@@ -21,7 +20,7 @@ R Markdown can be used to create high quality reports and presentations with emb
 4. [R Markdown Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 5. [Data Visualization with ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf)
 6. [Other Useful Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/#import)
-7. [A very (very!) basic R Markdown template](https://ids-702-f19.github.io/Course-Website/labs/resources/LabReport.Rmd)
+7. [A very (very!) basic R Markdown template](https://ids-702-f20.github.io/Course-Website/hw/resources/Report.Rmd)
 
 ### LaTeX
 

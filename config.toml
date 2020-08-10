@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "IDS 702: FALL 2019"
+title = "IDS 702: FALL 2020"
 theme = "material"
 #disqusShortname = ""
 # googleAnalytics = ""
@@ -22,13 +22,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [author]
   name = "Olanrewaju Michael Akande"
   bio = ""
-  job = "Instructor"
-  location = "Social Science Research Institute, Duke University"
+  job = "Assistant Professor of the Practice"
+  location = "Social Science Research Institute, and the Department of Statistical Science, Duke University"
   gravatarEmail = "olanrewaju.akande@duke.edu"
   # Your profile picture
   picture = "img/avatar-icon.jpg"
   #twitter = "Akande_OM"
- 
+
 # Menu Configuration
 [[menu.main]]
   weight = 1
@@ -65,7 +65,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "gradescope"
   name = "Gradescope"
   pre = "<i class=\"material-icons\">assignment</i>"
-  url = "https://www.gradescope.com/courses/57701/assignments"
+  url = "https://www.gradescope.com/courses/157499/assignments"
 #[[menu.main]]
 #  weight = 4
 #  identifier = "rstudio"
@@ -102,5 +102,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
   dateFormat = "January 2, 2006"
-  background = "https://akandelanre.github.io./img/IDS702_background_image.png" 
+  background = "https://akandelanre.github.io./img/IDS702_F20_background_image.png" 
   favicon = "https://akandelanre.github.io./mids_duke_logo.png"

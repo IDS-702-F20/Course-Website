@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>IDS 702: FALL 2019</title>
+    <title>IDS 702: FALL 2020</title>
     <link>/</link>
-    <description>Recent content on IDS 702: FALL 2019</description>
+    <description>Recent content on IDS 702: FALL 2020</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,12 +14,12 @@
     <item>
       <title></title>
       <link>/syllabus/</link>
-      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/syllabus/</guid>
       <description>Note: Please check this page frequently for updates and always remember to refresh the page.
 
- Date Lesson Slides Reading Lab HW Project    WEEK 1        Tue, Aug 27 Introduction to course         PART I: MULTIPLE LINEAR REGRESSION        Thur, Aug 29 Introduction to multiple linear regression         WEEK 2        Tue, Sept 3 Model assessment, diagnostics and validation I        Thur, Sept 5 Model assessment, diagnostics and validation II        Fri, Sept 6 Lab 1: multiple linear regression (beer consumption in sao paulo)         WEEK 3        Tue, Sept 10 Special predictors and multicollinearity        Thur, Sept 12 Model building and selection         PART II: GENERALIZED LINEAR MODELS (GLMs)         WEEK 4         Final project outline        Tue, Sept 17 Introduction to logistic regression (HW2 DUE!</description>
+ Date Lesson Reading Video Slides Slides (pdf) Assignment Project    Module 0.1: Course overview                   WEEK 1                     MODULE 1: MULTIPLE LINEAR REGRESSION         Tue, Aug 18 Module 1.</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@
       
       <guid>/policies/</guid>
       <description>When in doubt about anything at all, ask questions!!!
-Prerequisites Students are expected to know all topics covered in the MIDS summer course review and boot camp. These include basic probability (including conditional probability, expectations and common probability distributions), and statistical inference (including hypothesis testing, confidence intervals, linear regression with one predictor, and exploratory data analysis). Students are also expected to be familiar with R/Rstudio. Due to space constraints, the course is open only to students in the MIDS program.</description>
+Prerequisites Students are expected to know all topics covered in the MIDS summer course review and boot camp. These include basic probability and statistical inference, including random variables, probability distributions, central limit theorem, hypothesis testing, confidence intervals, linear regression with one predictor, and exploratory data analysis methods. Students are also expected to be familiar with R/RStudio and are encouraged to have learned LaTeX or a Markdown language by the end of the course.</description>
     </item>
     
     <item>

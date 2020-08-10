@@ -1,227 +1,117 @@
 lessons:
-  - title: "WEEK 1"
-  
-  - date: "Tue, Aug 27"
-    title: "Introduction to course"
-    slides: "lec-slides/01-intro.html"
-    hw: "hw-00.html"
-    #hw: "hw-00-key.html"
-    
-  - title: "PART I: MULTIPLE LINEAR REGRESSION"
-    reading: "reading-01.html"
-    
-  - date: "Thur, Aug 29" 
-    title: "Introduction to multiple linear regression"
-    slides: "lec-slides/02-intro-reg.html"
-    hw: "hw-01.html"
-    
-  - title: "WEEK 2"
-  
-  - date: "Tue, Sept 3"
-    title: "Model assessment, diagnostics and validation I"
-    slides: "lec-slides/03-reg-model-assess-I.html"
-    
-  - date: "Thur, Sept 5"
-    title: "Model assessment, diagnostics and validation II"
-    slides: "lec-slides/04-reg-model-assess-II.html"
-    
-  - date: "Fri, Sept 6"
-    title: "Lab 1: multiple linear regression (beer consumption in sao paulo)"
-    lab: "lab-01-mlr-beer-consumption-sao-paulo.html"
-    
-  - title: "WEEK 3"
-  
-  - date: "Tue, Sept 10"
-    title: "Special predictors and multicollinearity"
-    slides: "lec-slides/05-reg-model-transformation.html"
-    hw: "hw-02.html"
-    
-  - date: "Thur, Sept 12"
-    title: "Model building and selection"
-    slides: "lec-slides/06-reg-model-building.html"
-    
-  - title: "PART  II: GENERALIZED LINEAR MODELS (GLMs)"
-    
-  - title: "WEEK 4"
-  
-  - title: "Final project outline"
-    project: "final-project.html"
-  
-  - date: "Tue, Sept 17"
-    title: "Introduction to logistic regression (HW2 DUE!)"
-    slides: "lec-slides/07-logistic-reg-intro.html"
-    reading: "reading-02.html"
-    
-  - date: "Thur, Sept 19"
-    title: "Logistic regression: model assessment and validation"
-    slides: "lec-slides/08-logistic-reg-model-assess.html"
-    hw: "hw-03.html"
-    
-  - date: "Fri, Sept 20"
-    title: "Lab 2: logistic regression (predicting nba wins)"
-    lab: "lab-02-logistic-nba-games.html"
-    
-  - title: "WEEK 5"
-  
-  - date: "Mon, Sept 25"
-    title: "Lab 2 DUE!"
-  
-  - date: "Tue, Sept 24"
-    title: "Logistic regression: in-class analysis"
-    slides: "lec-slides/09-logistic-reg-in-class-analysis.html"
-    
-  - date: "Thur, Sept 26"
-    title: "Logistic regression: in-class analysis (cont'd)"
-    
-  - title: "Team project 1"
-    project: "team-project-01.html"
-  
-  - date: "Fri, Sept 27"
-    title: "HW3 DUE!"
-    
-  - title: "WEEK 6"
-  
-  - date: "Tue, Oct 1"
-    title: "Multinomial logistic regression"
-    slides: "lec-slides/10-multinomial-logistic-reg.html"
-    reading: "reading-03.html"
-    
-  - date: "Thur, Oct 3"
-    title: "Proportional odds model; in-class analysis"
-    slides: "lec-slides/11-proportional-odds-model.html"
-    
-  - date: "Fri, Oct 4"
-    title: "Lab 3: team project 1 presentations (reports due at midnight)"
-  
-  - title: "WEEK 7"
-  
-  - date: "Tue, Oct 8"
-    title: "No class: fall break"
-    
-  - date: "Thur, Oct 10"
-    title: "Other GLMs: Poisson and Probit regressions"
-    slides: "lec-slides/12-poisson-regression.html"
-    reading: "reading-04.html"
-    
-  - title: "PART  III: MULTILEVEL/HIERARCHICAL MODELS"
-  
-  - title: "WEEK 8"
-  
-  - date: "Tue, Oct 15"
-    title: "Multilevel/hierarchical models I"
-    slides: "lec-slides/13-hierarchical-models-I.html"
-    reading: "reading-05.html"
-    
-  - date: "Thur, Oct 17"
-    title: "Multilevel/hierarchical models II"
-    slides: "lec-slides/14-hierarchical-models-II.html"
-    
-  - date: "Fri, Oct 18"
-    title: "Lab 4: multilevel linear regression (do more beautiful professors get higher evaluations?)"
-    lab: "lab-04-multilevel-linear-beauty.html"
-    
-  - title: "Team project 2"
-    project: "team-project-02.html"
-    
-  - title: "WEEK 9"
-  
-  - date: "Tue, Oct 22"
-    title: "Multilevel/hierarchical models III"
-    slides: "lec-slides/15-hierarchical-models-III.html"
-    reading: "reading-06.html"
-    
-  - title: "PART  IV: DEALING WITH MESSY DATA"
-    
-  - date: "Thur, Oct 24"
-    title: "Missing data methods I"
-    slides: "lec-slides/16-missing-data-I.html"
-    reading: "reading-07.html"
-    
-  - date: "Fri, Oct 25"
-    title: "Instructions for final project proposals"
-    project: "final-project-proposal.html"
-  
-  - title: "WEEK 10"
-  
-  - date: "Tue, Oct 29"
-    title: "Missing data methods II"
-    slides: "lec-slides/17-missing-data-II.html"
-    
-  - title: "PART  V: METHODS FOR CAUSAL INFERENCE"
-    
-  - date: "Thur, Oct 31"
-    title: "Introduction to causal inference"
-    slides: "lec-slides/18-causal-inference-I.html"
-    reading: "reading-08.html"
-    
-  - date: "Fri, Nov 1"
-    title: "Lab 5: team project 2 presentations (reports due midnight on Monday Nov 4)"
-    
-  - title: "WEEK 11"
 
-  - date: "Tue, Nov 5"
-    title: "Observational studies: regression, stratification and matching"
-    slides: "lec-slides/19-causal-inference-II.html"
-    
-  - title: "HW 4"
-    hw: "hw-04.html"
+  - date: " "
+    title: "Module 0.1: Course overview"
+    #slides: "0-1-course-overview.html"
+    #slidespdf: "0-1-course-overview.pdf"
+    #hw: "hw-00.html"
   
-  - title: "Final project proposal due"
-    
-  - date: "Thur, Nov 7"
-    title: "Observational studies: propensity scores methods"
-    slides: "lec-slides/20-causal-inference-III.html"
-    
-  - title: "WEEK 12"
   
-  - date: "Mon, Nov 11"
-    title: "HW4 DUE!"
+  - date: " "
+  - date: "WEEK 1"
+  - date: " "
   
-  - date: "Tue, Nov 12"
-    title: "Boostrap and tree-based methods"
-    slides: "lec-slides/21-decision-trees.html"
-    reading: "reading-09.html"
-    
-  - title: "HW 5"
-    hw: "hw-05.html"
-    
-  - title: "PART  VI: TIME SERIES MODELS"
-    
-  - date: "Thur, Nov 14"
-    title: "Time series models"
-    reading: "reading-10.html"
-    slides: "lec-slides/22-time-series-I.html"
-    
-  - date: "Fri, Nov 15"
-    title: "Lab 6: causal inference (right heart catheterization)"
-    lab: "lab-06-causal-rhc.html"
   
-  - title: "WEEK 13"
+  - title: "MODULE 1: MULTIPLE LINEAR REGRESSION"
   
-  - date: "Tue, Nov 19"
-    title: "Time series models (cont'd)"
-    slides: "lec-slides/23-time-series-II.html"
-    
-  - date: "Thur, Nov 21"
-    title: "Wrap up (work on final project)"
-    
-  - title: "WEEK 14"
   
-  - date: "Tue, Nov 26"
-    title: "Final project presentations I"
+  - date: "Tue, Aug 18"
+    title: "Module 1.1: Motivating example"
+    #reading: "1-1-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
     
-  - date: "Thur, Nov 28"
-    title: "No class: reading period"
+  - date: " "
+    title: "Module 1.2: Introduction to multiple linear regression"
+    #reading: "1-2-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "Module 1.3: Interpretation of regression coefficients and centering"
+    #reading: "1-3-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "In-class analysis: beer consumption in Sao Paulo I"
+    #slides: ".html"
+    
+    
+  - date: "Thur, Aug 20"
+    title: "Module 1.4: Hypothesis tests, confidence intervals, and predictions"
+    #reading: "1-4-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "Module 1.5: Checking regression assumptions"
+    #reading: "1-5-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "In-class analysis: beer consumption in Sao Paulo II"
+    #slides: ".html"
+    
+  - date: " "
+    title: "Data analysis assignment I (due Aug 27)"
+    #hw: "hw-01.html"
+    
+  - date: " "
+  - date: "WEEK 2"
+  - date: " "
+     
+  - date: "Tue, Aug 25"
+    title: "Module 1.6: Leverage, influence, and standardized residuals"
+    #reading: "1-4-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "Module 1.7: Mean squared error and cross validation"
+    #reading: "1-5-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "In-class analysis: beer consumption in Sao Paulo III"
+    #slides: ".html"
+    
+  - date: "Thur, Aug 27"
+    title: "Module 1.8: Special predictors and multicollinearity"
+    #reading: "1-4-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "Module 1.9: illustration using diamonds data"
+    #reading: "1-5-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "In-class analysis: beer consumption in Sao Paulo IV"
+    #slides: ".html"
+    
+  - date: " "
+    title: "Data analysis assignment II (due Sept 3)"
+    #hw: "hw-02.html"
+    
+  - date: " "
+  - date: "WEEK 3"
+  - date: " "
 
-  - title: "WEEK 15"
   
-  - date: "Tue, Dec 3"
-    title: "Final project presentations II"
-    
-  - date: "Thur, Dec 5"
-    title: "Final project presentations III"
-    
-  - date: "Tue, Dec 10"
-    title: "Final project report due"
+  
 
     
