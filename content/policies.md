@@ -38,7 +38,7 @@ Grades may be curved at the end of the semester. Cumulative averages of 90% - 10
 #### Data Analysis Assignments
 Data analysis assignments will be posted on the course website. The assignments include questions that ask students to apply the statistical modeling skills discussed during the semester, as well as questions on the computational aspects of the methods. Students must turn in these assignments on the due date. 
 
-You are encouraged to talk to each other about general concepts, or to the instructor/TAs. However, the write-ups, solutions, and code MUST be entirely your own work. The assignments must be typed up using `R Markdown`, `LaTeX` or another word processor, and submitted on Gradescope under ``Assignments''. Note that you will not be able to make online submissions after the due date, so be sure to submit before or by the Gradescope-specified deadline.
+You are encouraged to talk to each other about general concepts, or to the instructor/TAs. However, the write-ups, solutions, and code MUST be entirely your own work. The assignments must be typed up using `R Markdown`, `LaTeX` or another word processor, and submitted on Gradescope under "Assignments". Note that you will not be able to make online submissions after the due date, so be sure to submit before or by the Gradescope-specified deadline.
 
 Solutions to the assignments will be curated from student solutions with proper attribution. Every week the TAs will select one or two representative solutions for the assigned problems with each solution being attributed to the student who wrote it. **If you would like to OPT OUT of having your solutions used for as a representative solution, let the Instructor and TAs know in advance.**
 
