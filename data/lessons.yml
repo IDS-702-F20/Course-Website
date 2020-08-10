@@ -1,10 +1,4 @@
 lessons:
-
-  - date: " "
-    title: "Module 0.1: Course overview"
-    #slides: "0-1-course-overview.html"
-    #slidespdf: "0-1-course-overview.pdf"
-    #hw: "hw-00.html"
   
   
   - date: " "
@@ -12,10 +6,22 @@ lessons:
   - date: " "
   
   
-  - title: "MODULE 1: MULTIPLE LINEAR REGRESSION"
-  
-  
   - date: "Tue, Aug 18"
+    title: "Module 0.1: Course overview and introduction"
+    #slides: "0-1-course-overview.html"
+    #slidespdf: "0-1-course-overview.pdf"
+    
+  - date: " "
+    title: "Conceptual review questions"
+    #hw: "hw-00.html"
+  
+  
+  - title: " "
+  - title: "MODULE 1: MULTIPLE LINEAR REGRESSION"
+  - title: " "
+  
+  
+  - date: "Thur, Aug 20"
     title: "Module 1.1: Motivating example"
     #reading: "1-1-reading.html"
     #slides: ".html"
@@ -41,7 +47,12 @@ lessons:
     #slides: ".html"
     
     
-  - date: "Thur, Aug 20"
+  - date: " "
+  - date: "WEEK 2"
+  - date: " "
+  
+  
+  - date: "Tue, Aug 25"
     title: "Module 1.4: Hypothesis tests, confidence intervals, and predictions"
     #reading: "1-4-reading.html"
     #slides: ".html"
@@ -60,23 +71,20 @@ lessons:
     #slides: ".html"
     
   - date: " "
-    title: "Data analysis assignment I (due Aug 27)"
+    title: "Data analysis assignment I (due Sept 1)"
     #hw: "hw-01.html"
     
-  - date: " "
-  - date: "WEEK 2"
-  - date: " "
-     
-  - date: "Tue, Aug 25"
-    title: "Module 1.6: Leverage, influence, and standardized residuals"
-    #reading: "1-4-reading.html"
+    
+  - date: "Thur, Aug 27"
+    title: "Module 1.6: Outliers and influential points"
+    #reading: "1-6-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - date: " "
     title: "Module 1.7: Mean squared error and cross validation"
-    #reading: "1-5-reading.html"
+    #reading: "1-7-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -85,16 +93,22 @@ lessons:
     title: "In-class analysis: beer consumption in Sao Paulo III"
     #slides: ".html"
     
-  - date: "Thur, Aug 27"
+    
+  - date: " "
+  - date: "WEEK 3"
+  - date: " "
+  
+    
+  - date: "Tue, Sept 1"
     title: "Module 1.8: Special predictors and multicollinearity"
-    #reading: "1-4-reading.html"
+    #reading: "1-8-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - date: " "
     title: "Module 1.9: illustration using diamonds data"
-    #reading: "1-5-reading.html"
+    #reading: "1-9-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -104,14 +118,62 @@ lessons:
     #slides: ".html"
     
   - date: " "
-    title: "Data analysis assignment II (due Sept 3)"
+    title: "Data analysis assignment II (due Sept 8)"
     #hw: "hw-02.html"
     
+    
+  - date: "Thur, Sept 3"
+    title: "Module 1.10: Model building and selection"
+    #reading: "1-10-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
   - date: " "
-  - date: "WEEK 3"
+    title: "Module 1.11: illustration using diamonds data cont'd"
+    #reading: "1-11-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  
+  - date: " "
+  - date: "WEEK 4"
   - date: " "
 
   
+  #- title: " "
+  - title: "MODULE 2: GENERALIZED LINEAR MODELS "
+  - title: " "
   
+  
+  - date: "Tue, Sept 8"
+    title: "Module 2.1: Odds, odds ratios, and relative risks"
+    #reading: "2-1-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "Module 2.2: Logistic regression with one predictor"
+    #reading: "2-2-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+    
+  - date: "Thur, Sept 10"
+    title: "Module 2.3: Model assessment and validation - binned residuals and roc curves"
+    #reading: "2-3-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: " "
+    title: "Module 2.4: Logistic regression with multiple predictors"
+    #reading: "2-4-reading.html"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
 
     
