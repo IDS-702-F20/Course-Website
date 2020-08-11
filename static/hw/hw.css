@@ -12,7 +12,8 @@ html {
 }
 
 body {
-	font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
+	font-family:'Trebuchet MS', sans-serif;
 	font-weight: lighter;
 	background-color: #fefefe;
 	color: #222;
@@ -23,21 +24,24 @@ body {
 h1.title {
 	font-weight: 400;
 	font-variant: small-caps;
-	font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
+	font-family:'Trebuchet MS', sans-serif;
 	color: #075767;
 }
 
 h1 {
 	font-style: normal;
 	font-variant: small-caps;
-	font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
+	font-family:'Trebuchet MS', sans-serif;
 	color: #075767;
 }
 
 h2 {
 	font-style: normal;
 	font-variant: small-caps;
-	font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
+	font-family:'Trebuchet MS', sans-serif;
 	font-weight: 400;
 	color: #075767;
 }
@@ -58,7 +62,8 @@ h4 {
 	font-style: normal;
 	font-variant: small-caps;
 	font-weight: 200;
-	font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
+	font-family:'Trebuchet MS', sans-serif;
 	margin-top: 1.5rem;
 	margin-bottom: 0;
 	line-height: 1;
@@ -66,7 +71,8 @@ h4 {
 
 h4.author,
 h4.date {
-	font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
+	font-family:'Trebuchet MS', sans-serif;
 	font-weight: 200;
 	font-variant: small-caps;
 }

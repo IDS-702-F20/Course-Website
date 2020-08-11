@@ -1,18 +1,12 @@
 lessons:
   
-  
-  - date: " "
-  - date: "WEEK 1"
-  - date: " "
-  
-  
-  - date: "Tue, Aug 18"
+  - week: "WEEK 1"
+    date: "Tue, Aug 18"
     title: "Module 0.1: Course overview and introduction"
     #slides: "0-1-course-overview.html"
     #slidespdf: "0-1-course-overview.pdf"
     
-  - date: " "
-    title: "Conceptual review questions"
+  - title: "Conceptual review questions"
     #hw: "hw-00.html"
   
   
@@ -28,50 +22,41 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "Module 1.2: Introduction to multiple linear regression"
+  - title: "Module 1.2: Introduction to multiple linear regression"
     #reading: "1-2-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "Module 1.3: Interpretation of regression coefficients and centering"
+  - title: "Module 1.3: Interpretation of regression coefficients and centering"
     #reading: "1-3-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "In-class analysis: beer consumption in Sao Paulo I"
+  - title: "In-class analysis: beer consumption in Sao Paulo I"
     #slides: ".html"
     
-    
-  - date: " "
-  - date: "WEEK 2"
-  - date: " "
+
   
-  
-  - date: "Tue, Aug 25"
+  - week: "WEEK 2"
+    date: "Tue, Aug 25"
     title: "Module 1.4: Hypothesis tests, confidence intervals, and predictions"
     #reading: "1-4-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "Module 1.5: Checking regression assumptions"
+  - title: "Module 1.5: Checking regression assumptions"
     #reading: "1-5-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "In-class analysis: beer consumption in Sao Paulo II"
+  - title: "In-class analysis: beer consumption in Sao Paulo II"
     #slides: ".html"
     
-  - date: " "
-    title: "Data analysis assignment I"
+  - title: "Data analysis assignment I"
     #hw: "hw-01.html"
     
     
@@ -82,46 +67,38 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "Module 1.7: Mean squared error and cross validation"
+  - title: "Module 1.7: Mean squared error and cross validation"
     #reading: "1-7-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "In-class analysis: beer consumption in Sao Paulo III"
+  - title: "In-class analysis: beer consumption in Sao Paulo III"
     #slides: ".html"
     
     
-  - date: " "
-  - date: "WEEK 3"
-  - date: " "
-  
     
-  - date: "Tue, Sept 1"
+  - week: "WEEK 3"
+    date: "Tue, Sept 1"
     title: "Module 1.8: Special predictors and multicollinearity"
     #reading: "1-8-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "Module 1.9: illustration using diamonds data"
+  - title: "Module 1.9: illustration using diamonds data"
     #reading: "1-9-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "In-class analysis: beer consumption in Sao Paulo IV"
+  - title: "In-class analysis: beer consumption in Sao Paulo IV"
     #slides: ".html"
     
   - date: "REMINDER:"
     title: "Data analysis assignment I due!"
     
-  - date: " "
-    title: "Data analysis assignment II"
+  - title: "Data analysis assignment II"
     #hw: "hw-02.html"
     
     
@@ -132,33 +109,27 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "Module 1.11: illustration using diamonds data cont'd"
+  - title: "Module 1.11: illustration using diamonds data cont'd"
     #reading: "1-11-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   
-  - date: " "
-  - date: "WEEK 4"
-  - date: " "
-
-  
-  #- title: " "
+  - title: " "
   - title: "MODULE 2: GENERALIZED LINEAR MODELS "
   - title: " "
   
   
-  - date: "Tue, Sept 8"
+  - week: "WEEK 4"
+    date: "Tue, Sept 8"
     title: "Module 2.1: Odds, odds ratios, and relative risks"
     #reading: "2-1-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "Module 2.2: Logistic regression with one predictor"
+  - title: "Module 2.2: Logistic regression with one predictor"
     #reading: "2-2-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
@@ -167,8 +138,7 @@ lessons:
   - date: "REMINDER:"
     title: "Data analysis assignment II due!"
     
-  - date: " "
-    title: "Data analysis assignment III"
+  - title: "Data analysis assignment III"
     #hw: "hw-03.html"
     
     
@@ -179,8 +149,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - date: " "
-    title: "Module 2.4: Logistic regression with multiple predictors"
+  - title: "Module 2.4: Logistic regression with multiple predictors"
     #reading: "2-4-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
