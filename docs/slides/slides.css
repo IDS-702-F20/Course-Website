@@ -11,7 +11,7 @@ h2 {
   font-family:'Trebuchet MS', sans-serif;
   font-weight: normal;
   font-variant: small-caps;
-  color: #075767;
+  color: #522700;
   font-size: 12px;
   margin: 0.25em 0 0.5em 0; 
 }
@@ -20,7 +20,7 @@ h1, h3 {
   font-family:'Trebuchet MS', sans-serif;
   font-weight: normal;
   font-variant: small-caps;
-  color: #0087A2;
+  color: #914601;
 }
 a, a > code {
   /*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
@@ -30,7 +30,7 @@ a, a > code {
 }
 
 a, a:hover, a:focus {
-  color: #bf4f22;
+  color: #AF5500;
 }
 
 .footnote {
@@ -51,7 +51,7 @@ a, a:hover, a:focus {
   /* text-shadow: 0 0 20px #333; */
 }
 .inverse h1, .inverse h2, .inverse h3 {
-  color: #075767;
+  color: #522700;
 }
 /* Two-column layout */
 .left-column {
@@ -83,7 +83,7 @@ a, a:hover, a:focus {
   clear: both;
 }
 .question {
-  background-color: #ffc5ad;
+  background-color: #e8e4c3;
   padding: 0.25px;
 }
 ul {
@@ -156,13 +156,13 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 
 .midsmall { font-size: 68% } 
 
-.block {background-color: #c0f4fc;}
+.block {background-color: #ffd7b3;}
 
 .remark-slide-content {
     font-size: 21px;
     font-weight: lighter;
 }
 
-.hlight{color: #cf814a;}
+.hlight{color: #d92e2e;}
 
 

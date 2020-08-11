@@ -45,9 +45,6 @@ Solutions to the assignments will be curated from student solutions with proper 
 Finally, students may be asked to work in pairs for one or two of the data analysis assignments when possible. When that is the case, each pair need only submit one solution per assignment.
 
 
-#### Lab Assignments
-The objective of the lab assignments is to give you more hands-on experience with data analysis using R. The labs times also gives you an additional platform to ask for help for your team and individual projects. Lab attendance is not mandatory on days when team presentations will not hold, however, each lab assignment should be submitted in timely fashion on the due date. You are REQUIRED to use R Markdown to type up your lab reports.
-
 #### Final Project
 For the final project, you will apply the knowledge and skills learned throughout this course to analyze a dataset that interests you, subject to the instructor's approval. The project should be an in-depth statistical analysis of a question that interests you. It is quite common for this final project to be based on your research interests, or topics/questions from one of your other courses. Just about every discipline has questions that are amenable to statistical analyses, including economics, engineering, environmental studies, history, the natural sciences, psychology, and even sports, so there are many options to choose from. The data should comprise several variables amenable to statistical analyses via modeling. Students can bring in their own research data sets, or they can ask the instructor for assistance with identifying appropriate data. You will be expected to present the results of your analysis. Detailed instructions will be made available later.
 

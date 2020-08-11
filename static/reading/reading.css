@@ -26,7 +26,7 @@ h1.title {
 	font-variant: small-caps;
 	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
   font-family:'Trebuchet MS', sans-serif;
-	color: #075767;
+	color: #522700;
 }
 
 h1 {
@@ -34,7 +34,7 @@ h1 {
 	font-variant: small-caps;
 	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
   font-family:'Trebuchet MS', sans-serif;
-	color: #075767;
+	color: #522700;
 }
 
 h2 {
@@ -43,12 +43,12 @@ h2 {
 	/*!font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;*/
   font-family:'Trebuchet MS', sans-serif;
 	font-weight: 400;
-	color: #075767;
+	color: #522700;
 }
 
 h3.subtitle {
 	font-style: normal;
-	color: #075767;
+	color: #522700;
 }
 
 h4 {
@@ -140,7 +140,7 @@ ol>li:before {
 	/* Increment the counter by 1 */
 	counter-increment: li;
 	position: absolute;
-	color: #075767;
+	color: #522700;
 	left: -0.5px;
 	font-weight: bold;
 }
@@ -150,6 +150,6 @@ ol ol {
 }
 
 a, a:hover, a:focus {
-  color: #bf4f22;
+  color: #AF5500;
 }
 
