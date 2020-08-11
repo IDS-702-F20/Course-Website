@@ -19,6 +19,12 @@ Note that this course, as is the case with most core courses within the MIDS pro
 ### Graded Work
 Graded work for the course will consist of participation quizzes, data analysis assignments, team projects, and a final project. Regrade requests for data analysis assignments and team projects must be done via Gradescope AT MOST **24 hours** after grades are released! Regrade requests for the final project must be done via Gradescope AT MOST **12 hours** after grades are released!
 
+There are no make-ups for any of the graded work except for medical or familial emergencies or for reasons approved by the instructor BEFORE the due date. Contact the instructor in advance of relevant due dates to discuss possible alternatives.
+	
+Grades may be curved at the end of the semester. Cumulative averages of 90% - 100% are guaranteed at least an A-, 80% - 89% at least a B-, and 70% - 79% at least a C-, however the exact ranges for letter grades will be determined at the end of the course.
+
+There is no final exam. Students' final grades will be determined as follows:
+
 {.table .table-condensed .table-striped .text-left}
 Component             | Percentage
 ----------------------|----------------
@@ -27,10 +33,6 @@ Final Project | 25%
 Team Project 1 | 17.5%
 Team Project 2 | 17.5%
 Participation | 10%
-
-There are no make-ups for any of the graded work except for medical or familial emergencies or for reasons approved by the instructor BEFORE the due date. Contact the instructor in advance of relevant due dates to discuss possible alternatives.
-	
-Grades may be curved at the end of the semester. Cumulative averages of 90% - 100% are guaranteed at least an A-, 80% - 89% at least a B-, and 70% - 79% at least a C-, however the exact ranges for letter grades will be determined at the end of the course.
 
 
 ### Descriptions of graded work
