@@ -32,7 +32,7 @@ This is an online course designed to be primarily synchronous. However, there wi
 #### Meeting Times
 <font color="#6CA0DC"><i class="fas fa-calendar-alt fa-lg"></i></font> &nbsp; **Tuesdays and Thursdays (10:15 - 11:30am)**
 
-<font color="#6CA0DC"><i class="fas fa-university fa-lg"></i></font> &nbsp; Zoom Meeting ID: **TBD** (email instructor for password).</font>  
+<font color="#6CA0DC"><i class="fas fa-university fa-lg"></i></font> &nbsp; Zoom Meeting ID: **970 9927 4711** (email instructor for password).</font>  
 
 #### Playposit
 To gain access to the pre-recorded lecture videos, you will have to create a Playposit account. There are participation quizzes embedded within the videos. These quizzes make up a part of your final grade (see: [course policies](https://ids-702-f20.github.io/Course-Website/policies/)) so take them seriously. To join the class on Playposit, you first need to create a new account as a student [here](https://www.playposit.com/join). Next, you will use the class link, which I will send out via email, to join the class site. While you need not create an account with your Duke email, I strongly suggest you do.
@@ -48,9 +48,9 @@ The easiest way for you to join the different Zoom meetings is to log in to Saka
 {.table .table-condensed .table-striped .text-left}
 <span></span>     | <span></span>     | <span></span>    | <span></span>    |  <span></span>      
 ------------------|-------------------|------------------|------------------|------------------ 
-Instructor        | [Dr. Olanrewaju Michael Akande](https://akandelanre.github.io.) | <a href="mailto:olanrewaju.akande@duke.edu" title="email"><i class="fa fa-envelope"></i></a> &nbsp; <a href="https://github.com/akandelanre" title="GitHub"><i class="fa fa-github"></i></a> | **Mondays (9am - 10am)** <br />  **Wednesdays (9am - 10am)** | Zoom Meeting ID: **TBD**
-TA               | [Altamash Rafiq](https://datascience.duke.edu/altamash-rafiq) | <a href="mailto:altamash.rafiq@duke.edu" title="email"><i class="fa fa-envelope"></i></a> | **Mondays (2:30pm -4:30pm)** <br />  **Wednesdays (5:30pm - 7:30pm)** | Zoom Meeting ID: **TBD**
-                 | [Yiran (Becky) Chen](https://datascience.duke.edu/yiran-becky-chen) | <a href="yiran.chen594@duke.edu" title="email"><i class="fa fa-envelope"></i></a> | **Thursdays (5pm - 7pm)** <br />  **Fridays (6:30pm - 8:30pm)** | Zoom Meeting ID: **TBD**
+Instructor        | [Dr. Olanrewaju Michael Akande](https://akandelanre.github.io.) | <a href="mailto:olanrewaju.akande@duke.edu" title="email"><i class="fa fa-envelope"></i></a> &nbsp; <a href="https://github.com/akandelanre" title="GitHub"><i class="fa fa-github"></i></a> | **Mondays (9am - 10am)** <br />  **Wednesdays (9am - 10am)** | Zoom Meeting ID: **991 7336 3681**
+TA               | [Altamash Rafiq](https://datascience.duke.edu/altamash-rafiq) | <a href="mailto:altamash.rafiq@duke.edu" title="email"><i class="fa fa-envelope"></i></a> | **Mondays (2:30pm -4:30pm)** <br />  **Wednesdays (5:30pm - 7:30pm)** | Zoom Meeting ID: **943 2844 6159**
+                 | [Yiran (Becky) Chen](https://datascience.duke.edu/yiran-becky-chen) | <a href="yiran.chen594@duke.edu" title="email"><i class="fa fa-envelope"></i></a> | **Thursdays (5pm - 7pm)** <br />  **Fridays (6:30pm - 8:30pm)** | Zoom Meeting ID: **970 7699 4080**
                   
 
 
