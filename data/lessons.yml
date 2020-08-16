@@ -7,31 +7,28 @@ lessons:
     date: "Tue, Aug 18"
     title: "Module 0.1: Course overview and introduction"
     #slides: "0-1-course-overview.html"
-    #slidespdf: "0-1-course-overview.pdf"
   
   
   - title: " "
   - title: "MODULE 1: MULTIPLE LINEAR REGRESSION"
+    reading: "1-reading.html"
   - title: " "
   
   
   - date: "Thur, Aug 20"
     title: "Module 1.1: Motivating example"
-    #reading: "1-1-reading.html"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "1-1-MLR-motivating-example.html"
+    slidespdf: "1-1-MLR-motivating-example.pdf"
     #video: ""
     
   - title: "Module 1.2: Introduction to multiple linear regression"
-    #reading: "1-2-reading.html"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "1-2-MLR-intro.html"
+    slidespdf: "1-2-MLR-intro.pdf"
     #video: ""
     
-  - title: "Module 1.3: Interpretation of regression coefficients and centering"
-    #reading: "1-3-reading.html"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+  - title: "Module 1.3: Model fitting and interpretation of coefficients"
+    slides: "1-3-MLR-interpreting-coefficients.html"
+    slidespdf: "1-3-MLR-interpreting-coefficients.pdf"
     #video: ""
     
   - title: "In-class analysis: beer consumption in Sao Paulo I"
@@ -42,13 +39,11 @@ lessons:
   - week: "WEEK 2"
     date: "Tue, Aug 25"
     title: "Module 1.4: Hypothesis tests, confidence intervals, and predictions"
-    #reading: "1-4-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "Module 1.5: Checking regression assumptions"
-    #reading: "1-5-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -62,13 +57,11 @@ lessons:
     
   - date: "Thur, Aug 27"
     title: "Module 1.6: Outliers and influential points"
-    #reading: "1-6-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "Module 1.7: Mean squared error and cross validation"
-    #reading: "1-7-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -81,13 +74,11 @@ lessons:
   - week: "WEEK 3"
     date: "Tue, Sept 1"
     title: "Module 1.8: Special predictors and multicollinearity"
-    #reading: "1-8-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "Module 1.9: illustration using diamonds data"
-    #reading: "1-9-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -104,20 +95,19 @@ lessons:
     
   - date: "Thur, Sept 3"
     title: "Module 1.10: Model building and selection"
-    #reading: "1-10-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "Module 1.11: illustration using diamonds data cont'd"
-    #reading: "1-11-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   
   - title: " "
-  - title: "MODULE 2: GENERALIZED LINEAR MODELS "
+  - title: "MODULE 2: LOGISTIC REGRESSION"
+    reading: "2-reading.html"
   - title: " "
   
   
@@ -154,5 +144,10 @@ lessons:
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
+    
+    
+  - title: " "
+  - title: "MODULE 3: OTHER GENERALIZED LINEAR MODELS"
+  - title: " "
 
     

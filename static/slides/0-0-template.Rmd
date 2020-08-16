@@ -2,7 +2,7 @@
 title: "IDS 702: Module 0.0"
 subtitle: "Template"
 author: "Dr. Olanrewaju Michael Akande"
-date: " "
+#date: " "
 output:
   xaringan::moon_reader:
     css: "slides.css"
