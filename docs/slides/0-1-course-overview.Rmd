@@ -81,8 +81,8 @@ Dr. Olanrewaju Michael Akande
 
 <i class="fa fa-envelope"></i> &nbsp; [olanrewaju.akande@duke.edu](mailto:olanrewaju.akande@duke.edu) <br>
 <i class="fa fa-home"></i> &nbsp; [akandelanre.github.io.](https://akandelanre.github.io/IDS702_F19/) <br>
-<i class="fa fa-university"></i> &nbsp; [256 Gross Hall (virtual for now)](https://maps.duke.edu/?id=21#!m/6866?s/Gross%20Hall) <br>
-<i class="fa fa-calendar"></i> &nbsp;  Mondays (6pm - 7pm) and  Wednesdays (9am - 10am)
+<i class="fa fa-university"></i> &nbsp; [256 Gross Hall (virtual for now)](https://maps.duke.edu/?id=21#!m/6866?s/Gross%20Hall) -- Zoom Meeting ID: **See Sakai** <br>
+<i class="fa fa-calendar"></i> &nbsp;  Mondays (9am - 10am) and  Wednesdays (9am - 10am) 
 
 
 
@@ -93,7 +93,7 @@ Dr. Olanrewaju Michael Akande
 [Altamash Rafiq](https://datascience.duke.edu/altamash-rafiq)
 
 <i class="fa fa-envelope"></i> &nbsp; [altamash.rafiq@duke.edu](mailto:altamash.rafiq@duke.edu) <br>
-<i class="fa fa-university"></i> &nbsp; Virtual -- Zoom Meeting IDs TBD <br>
+<i class="fa fa-university"></i> &nbsp; Virtual -- Zoom Meeting ID: **See Sakai** <br>
 <i class="fa fa-calendar"></i> &nbsp; TBD
 
 <br>
@@ -101,7 +101,7 @@ Dr. Olanrewaju Michael Akande
 [Yiran (Becky) Chen](https://datascience.duke.edu/yiran-becky-chen)
 
 <i class="fa fa-envelope"></i> &nbsp; [yiran.chen594@duke.edu](mailto:yiran.chen594@duke.edu) <br>
-<i class="fa fa-university"></i> &nbsp; Virtual -- Zoom Meeting IDs TBD <br>
+<i class="fa fa-university"></i> &nbsp; Virtual -- Zoom Meeting ID: **See Sakai** <br>
 <i class="fa fa-calendar"></i> &nbsp; TBD
 
 
