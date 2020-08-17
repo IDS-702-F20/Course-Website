@@ -82,7 +82,7 @@ Dr. Olanrewaju Michael Akande
 <i class="fa fa-envelope"></i> &nbsp; [olanrewaju.akande@duke.edu](mailto:olanrewaju.akande@duke.edu) <br>
 <i class="fa fa-home"></i> &nbsp; [akandelanre.github.io.](https://akandelanre.github.io/IDS702_F19/) <br>
 <i class="fa fa-university"></i> &nbsp; [256 Gross Hall (virtual for now)](https://maps.duke.edu/?id=21#!m/6866?s/Gross%20Hall) -- Zoom Meeting ID: **See Sakai** <br>
-<i class="fa fa-calendar"></i> &nbsp;  Mondays (9am - 10am) and  Wednesdays (9am - 10am) 
+<i class="fa fa-calendar"></i> &nbsp;  Mondays and  Wednesdays (9am - 10am) 
 
 
 
@@ -94,7 +94,7 @@ Dr. Olanrewaju Michael Akande
 
 <i class="fa fa-envelope"></i> &nbsp; [altamash.rafiq@duke.edu](mailto:altamash.rafiq@duke.edu) <br>
 <i class="fa fa-university"></i> &nbsp; Virtual -- Zoom Meeting ID: **See Sakai** <br>
-<i class="fa fa-calendar"></i> &nbsp; TBD
+<i class="fa fa-calendar"></i> &nbsp; Mondays (3pm - 5pm) and Thursdays (5pm - 7pm)
 
 <br>
 
@@ -102,7 +102,7 @@ Dr. Olanrewaju Michael Akande
 
 <i class="fa fa-envelope"></i> &nbsp; [yiran.chen594@duke.edu](mailto:yiran.chen594@duke.edu) <br>
 <i class="fa fa-university"></i> &nbsp; Virtual -- Zoom Meeting ID: **See Sakai** <br>
-<i class="fa fa-calendar"></i> &nbsp; TBD
+<i class="fa fa-calendar"></i> &nbsp; Wednesdays and Fridays (6:30pm - 8:30pm)
 
 
 
@@ -116,7 +116,7 @@ All materials and information will be posted on the course webpage:
 
 --
 
-- Will we cover statistical theory? Yes, but for the most part, we will prioritize data analysis over rigorous theory.
+- Will we cover statistical theory? Yes, some, but for the most part, we will prioritize data analysis over rigorous theory.
 
 --
 
@@ -124,7 +124,7 @@ All materials and information will be posted on the course webpage:
 
 --
 
-- Will we be doing "very heavy" computing? Not exactly. We will mostly work with popular statistical packages.
+- Will we be doing "very heavy" computing? Not exactly. We will mostly work with popular statistical packages and the datasets will be manageable, except maybe for your final projects.
 
 --
 
@@ -200,6 +200,10 @@ class: center, middle
 
 --
 
+- You are **expected** to watch the pre-recorded lecture videos for corresponding modules **before** class meetings.
+
+--
+
 - Class meetings are designed to be interactive; try to engage and don't be shy.
 
 --
@@ -271,6 +275,10 @@ Participation | 10%
 --
 
 - You can work with others on the assignments, but each person must write up and turn in her or his own answers. 
+
+--
+
+- You may be asked to work in pairs for one or two of the data analysis assignments when possible. When that is the case, each pair need only submit one solution per assignment.
 
 --
 
@@ -431,9 +439,9 @@ Participation | 10%
 
 - By now, you must have completed the conceptual review questions on the website.
 
-- Now open the assessment key. On the website, just go back to the class schedule, refresh the page, and click the same assignment link. 
+- Discuss responses in 10 minutes: **which three or so questions (if any) are you most confused by and why?**
 
-- Discuss the responses for in 10 minutes. Which questions did you get wrong and why?
+- Now open the assessment key. On the website, just go back to the class schedule, refresh the page, and click the same assignment link. 
 
 
 
