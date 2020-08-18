@@ -81,7 +81,7 @@ Dr. Olanrewaju Michael Akande
 
 <i class="fa fa-envelope"></i> &nbsp; [olanrewaju.akande@duke.edu](mailto:olanrewaju.akande@duke.edu) <br>
 <i class="fa fa-home"></i> &nbsp; [akandelanre.github.io.](https://akandelanre.github.io/IDS702_F19/) <br>
-<i class="fa fa-university"></i> &nbsp; [256 Gross Hall (virtual for now)](https://maps.duke.edu/?id=21#!m/6866?s/Gross%20Hall) -- Zoom Meeting ID: **See Sakai** <br>
+<i class="fa fa-university"></i> &nbsp; [256 Gross Hall](https://maps.duke.edu/?id=21#!m/6866?s/Gross%20Hall) (virtual for now) -- Zoom Meeting ID: **See Sakai** <br>
 <i class="fa fa-calendar"></i> &nbsp;  Mondays and  Wednesdays (9am - 10am) 
 
 
