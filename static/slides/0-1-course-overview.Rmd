@@ -96,6 +96,9 @@ Dr. Olanrewaju Michael Akande
 <i class="fa fa-university"></i> &nbsp; Virtual -- Zoom Meeting ID: **See Sakai** <br>
 <i class="fa fa-calendar"></i> &nbsp; Mondays (3pm - 5pm) and Thursdays (5pm - 7pm)
 
+
+--
+
 <br>
 
 [Yiran (Becky) Chen](https://datascience.duke.edu/yiran-becky-chen)
