@@ -212,7 +212,7 @@ class: center, middle
 
 --
 
-- Always revisit in-class examples and rerun the R codes to be sure you understand each topic. 
+- Always revisit in-class examples and rerun the R codes to be sure you understand each topic.
 
 
 
@@ -221,6 +221,10 @@ class: center, middle
 ## Class meetings
 
 - If you cannot attend the synchronous classes for some reason (must be a very good one), please speak with me immediately.
+
+--
+
+- When possible, we will try to take 5-minute breaks during the live sessions.
 
 --
 

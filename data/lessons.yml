@@ -7,7 +7,7 @@ lessons:
   - week: "WEEK 1"
     date: "Tue, Aug 18"
     title: "Module 0.1: Course overview and introduction"
-    #slides: "0-1-course-overview.html"
+    slides: "0-1-course-overview.html"
   
   
   - title: " "
