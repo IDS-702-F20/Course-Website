@@ -12,6 +12,10 @@ output:
       smooth_scroll: true
 ---
 
+## Instructions
+
+You are not expected to submit this on Gradescope. Just document your responses and be ready to discuss them in class.
+
 ## Questions
 
 ### Confidence Intervals
