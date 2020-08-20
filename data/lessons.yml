@@ -79,7 +79,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 1.9: illustration using diamonds data"
+  - title: "Module 1.9: bringing the MLR pieces together I (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -100,7 +100,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 1.11: illustration using diamonds data cont'd"
+  - title: "Module 1.11: bringing the MLR pieces together II (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -115,13 +115,11 @@ lessons:
   - week: "WEEK 4"
     date: "Tue, Sept 8"
     title: "Module 2.1: Odds, odds ratios, and relative risks"
-    #reading: "2-1-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "Module 2.2: Logistic regression with one predictor"
-    #reading: "2-2-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -135,13 +133,11 @@ lessons:
     
   - date: "Thur, Sept 10"
     title: "Module 2.3: Model assessment and validation - binned residuals and roc curves"
-    #reading: "2-3-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "Module 2.4: Logistic regression with multiple predictors"
-    #reading: "2-4-reading.html"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -149,6 +145,92 @@ lessons:
     
   - title: " "
   - title: "MODULE 3: OTHER GENERALIZED LINEAR MODELS"
+    #reading: "3-reading.html"
   - title: " "
+  
+  
+  - week: "WEEK 5"
+    date: "Tue, Sept 15"
+    title: "Module 3.1: Multinomial logistic regression "
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "Module 3.2: Multinomial logistic regression (illustration)"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: "REMINDER:"
+    title: "Data analysis assignment III due!"
+    
+  - title: "Team project I"
+    #project: "team-project-01.html"
+    
+    
+  - date: "Thur, Sept 17"
+    title: "Module 3.3: Proportional odds model"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "Module 3.4: Proportional odds model (illustration)"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - week: "WEEK 6"
+    date: "Tue, Sept 22"
+    title: "Module 3.5: Probit regression"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "Module 3.6: Poisson regression"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "Module 3.7: Poisson regression (illustration)"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - date: "Thur, Sept 24"
+    title: "Team project 1 presentations"
+    
+  - date: "Fri, Sept 25 | REMINDER:"
+    title: "Team project I reports due"
+    
+    
+  - title: " "
+  - title: "MODULE 4: MULTILEVEL/HIERARCHICAL MODELS"
+    #reading: "3-reading.html"
+  - title: " "
+  
+  
+  - week: "WEEK 7"
+    date: "Tue, Sept 29:"
+    title: "Module 4.1: Multilevel/hierarchical models I "
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+  
+  - title: "Module 4.2: Multilevel/hierarchical models I (illustration)"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
 
+  - date: "Thur, Oct 1"
+    title: "Module 4.3: Multilevel/hierarchical models II "
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+  
+  - title: "Module 4.4: Multilevel/hierarchical models II (illustration)"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  
     
