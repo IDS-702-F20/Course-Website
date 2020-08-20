@@ -41,7 +41,7 @@ a, a:hover, a:focus {
 }
 .remark-code, .remark-inline-code { 
   font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
-  font-size: 75%;
+  font-size: 65%;
   color: #4a290a;
 }
 .remark-code-line-highlighted     { background-color: #ffff88; }
