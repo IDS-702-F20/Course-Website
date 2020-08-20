@@ -32,8 +32,9 @@ lessons:
     slidespdf: "1-3-MLR-interpreting-coefficients.pdf"
     video: "https://api.playposit.com/go/play/802526/1403540/929415/0/IDS-702--Module-13-Model-fitting-and-interpretation-of-coefficients"
     
-  - title: "In-class analysis: beer consumption in Sao Paulo I"
-    #slides: ".html"
+  - title: "In-class analysis 1: beer consumption in Sao Paulo I"
+    inClass: "0-1-beer-consumption-in-Sao-Paulo-I.html"
+    #inClass: "0-0-template.html"
     
 
   
@@ -49,7 +50,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "In-class analysis: beer consumption in Sao Paulo II"
+  - title: "In-class analysis 2: beer consumption in Sao Paulo II"
     #slides: ".html"
     
   - title: "Data analysis assignment I"
@@ -67,7 +68,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "In-class analysis: beer consumption in Sao Paulo III"
+  - title: "In-class analysis 3: beer consumption in Sao Paulo III"
     #slides: ".html"
     
     
@@ -84,7 +85,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "In-class analysis: beer consumption in Sao Paulo IV"
+  - title: "In-class analysis 4: beer consumption in Sao Paulo IV"
     #slides: ".html"
     
   - date: "REMINDER:"
