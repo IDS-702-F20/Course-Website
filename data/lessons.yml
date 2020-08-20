@@ -105,6 +105,12 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
+  - title: "In-class: Q&A and review session"
+    
+  - date: "Fri, Sept 4"
+    title: "Final project outline"   
+    
+    
   
   - title: " "
   - title: "MODULE 2: LOGISTIC REGRESSION"
@@ -124,6 +130,8 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
+  - title: "In-class analysis 5: predicting nba wins I"
+    
   - date: "REMINDER:"
     title: "Data analysis assignment II due!"
     
@@ -142,6 +150,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
+  - title: "In-class analysis 6: predicting nba wins II"
     
   - title: " "
   - title: "MODULE 3: OTHER GENERALIZED LINEAR MODELS"
@@ -161,6 +170,8 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
+  - title: "In-class: Q&A and discussion session"
+    
   - date: "REMINDER:"
     title: "Data analysis assignment III due!"
     
@@ -179,6 +190,8 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
+  - title: "In-class: Q&A and discussion session"
+    
   - week: "WEEK 6"
     date: "Tue, Sept 22"
     title: "Module 3.5: Probit regression"
@@ -196,8 +209,10 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
+  - title: "In-class: Q&A and discussion session"
+    
   - date: "Thur, Sept 24"
-    title: "Team project 1 presentations"
+    title: "Team project I presentations"
     
   - date: "Fri, Sept 25 | REMINDER:"
     title: "Team project I reports due"
@@ -220,6 +235,8 @@ lessons:
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
+    
+  - title: "In-class analysis 7: do more beautiful professors get higher evaluations I"
 
   - date: "Thur, Oct 1"
     title: "Module 4.3: Multilevel/hierarchical models II "
@@ -231,6 +248,8 @@ lessons:
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
+    
+  - title: "In-class analysis 8: do more beautiful professors get higher evaluations II"
     
   
     
