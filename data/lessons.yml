@@ -225,13 +225,13 @@ lessons:
   
   
   - week: "WEEK 7"
-    date: "Tue, Sept 29:"
-    title: "Module 4.1: Multilevel/hierarchical models I "
+    date: "Tue, Sept 29"
+    title: "Module 4.1: Multilevel/hierarchical linear models I"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
   
-  - title: "Module 4.2: Multilevel/hierarchical models I (illustration)"
+  - title: "Module 4.2: Multilevel/hierarchical linear models I (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -239,17 +239,32 @@ lessons:
   - title: "In-class analysis 7: do more beautiful professors get higher evaluations I"
 
   - date: "Thur, Oct 1"
-    title: "Module 4.3: Multilevel/hierarchical models II "
+    title: "Module 4.3: Multilevel/hierarchical linear models II"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
   
-  - title: "Module 4.4: Multilevel/hierarchical models II (illustration)"
+  - title: "Module 4.4: Multilevel/hierarchical linear models II (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "In-class analysis 8: do more beautiful professors get higher evaluations II"
+  
+  
+  - week: "WEEK 8"
+    date: "Tue, Oct 6"
+    title: "Module 4.5: Multilevel/hierarchical logistic models"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+  
+  - title: "Module 4.6:Multilevel/hierarchical logistic models (illustration)"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "In-class analysis 9: do more beautiful professors get higher evaluations III"
     
   
     
