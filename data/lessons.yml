@@ -58,13 +58,13 @@ lessons:
     
   - date: "Thur, Aug 27"
     title: "Module 1.6: Outliers and influential points"
-    #slides: "1-6-MLR-outliers.html"
-    #slidespdf: "1-6-MLR-outliers.pdf"
+    slides: "1-6-MLR-outliers.html"
+    slidespdf: "1-6-MLR-outliers.pdf"
     #video: ""
     
   - title: "Module 1.7: Mean squared error and cross validation"
-    #slides: "1-7-MLR-validation.html"
-    #slidespdf: "1-7-MLR-validation.pdf"
+    slides: "1-7-MLR-validation.html"
+    slidespdf: "1-7-MLR-validation.pdf"
     #video: ""
     
   - title: "In-class analysis 3: beer consumption in Sao Paulo III"

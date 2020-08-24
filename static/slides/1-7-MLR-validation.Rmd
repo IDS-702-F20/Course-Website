@@ -74,7 +74,7 @@ $$\textrm{MSE} = \dfrac{1}{n} \sum_{i=1}^{n} \left(y_i - \hat{y}_i \right)^2.$$
 
 --
 
-- While it may be useful to calculate .hlight[within-sample MSE] using the same dataset (usually referred to as .hlight[training data]) that was used to fit the model, it is often more useful to calculate .hlight[out-of-sample MSE] using a different dataset (usually referred to as  .hlight[test data]).
+- While it may be useful to calculate .hlight[within-sample MSE] using the same dataset that was used to fit the model (usually referred to as .hlight[training data]), it is often more useful to calculate .hlight[out-of-sample MSE] using a different dataset (usually referred to as  .hlight[test data]).
 
 --
 
@@ -103,7 +103,7 @@ $$\textrm{MSE}_\textrm{test} = \dfrac{1}{n_\textrm{test}} \sum_{i=1}^{n_\textrm{
 ]
 ]
 
-  where $\hat{y}_{1i}$ is the predicted response for a new observation in the test dataset using the model developed in the training dataset, and $n_\textrm{test}$ is the number of new observations in the test dataset. 
+  where $\hat{y}_{1i}$ is the predicted response for a new observation in the test dataset **using the model fitted using the training dataset**, and $n_\textrm{test}$ is the number of new observations in the test dataset. 
 
 --
 
@@ -111,17 +111,17 @@ $$\textrm{MSE}_\textrm{test} = \dfrac{1}{n_\textrm{test}} \sum_{i=1}^{n_\textrm{
 
 --
 
-- However, because "small" can be relative depending on the scale of $y$, we often use MSEs when comparing different models (again, particularly when the goal is prediction). We will see this in the next class.
+- However, because "small" can be relative depending on the scale of $y$, we often use MSEs when comparing different models (again, particularly when the goal is prediction). We will see this later.
 
 
 ---
 ## Training and test data
 
-- Test data are important because of the problem of .hlight[overfitting].
+- Using test data is often important because of the problem of .hlight[overfitting].
 
 --
 
-- Overfitting arises when the model is working too hard to find the perfect predictions in the training data and is not broadly generalizable because it has been picking up some patterns that are just reflecting random error.
+- Overfitting arises when the model is working too hard to find the perfect predictions in the training data and is not broadly generalizable because it ends up picking up patterns that are just reflecting random error.
 
 --
 
@@ -183,7 +183,7 @@ sqrt(testMSE)
 
 For the final split, we have
 ```{r, include=TRUE, eval=TRUE}
-#now change the seed
+#change the seed one more time
 set.seed(12345)
 train_index <- sample(nrow(wages),round(0.7*nrow(wages)),replace=F)
 train <- wages[train_index,]
@@ -233,7 +233,7 @@ $$\textrm{Avg.MSE} = \dfrac{1}{K} \sum_{k=1}^{K} \textrm{MSE}_\textrm{test}^{(k)
 
 --
 
-- In the case of least squares, we can get an estimate of the average MSE from leave-one-out cross-validation using a simple formula (sadly, this does not hold in other models) based on the fit of only one model!
+- In the case of least squares, we can get an estimate of the average MSE from leave-one-out cross-validation using a simple formula (sadly, this does not hold in most models) based on the fit of only one model!
 
 --
 
@@ -265,7 +265,7 @@ How would high leverage points affect Avg.MSE in this case?
 
 --
 
-- You will write your own code for doing $k$-fold cross validation in tomorrow's lab.
+- You will write your own code for doing $k$-fold cross validation in class.
 
 --
 
@@ -277,7 +277,7 @@ How would high leverage points affect Avg.MSE in this case?
 
 --
 
-- In the next class, we will start to explore methods for model selection and including interaction effects in MLRs.
+- Over the next few modules, we will explore methods for model selection and including interaction effects in MLRs.
 
 
 

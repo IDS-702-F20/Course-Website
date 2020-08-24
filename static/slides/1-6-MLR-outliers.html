@@ -27,10 +27,6 @@ class: center, middle, inverse, title-slide
 
 ## Leverage, influence, and standardized residuals
 
-- The summer review material briefly covered outlier, high leverage and influential points.
-
---
-
 - Individual observations can have large impact on the estimates of coefficients and SEs.
 
 --
@@ -51,11 +47,16 @@ class: center, middle, inverse, title-slide
 When does a data point have high leverage? When is a data point influential? How can we identify them?
 &lt;/div&gt;
 
+--
+
+- Those are the questions we seek to answer in this module.
+
+
 
 ---
 ## Leverage
 
-- Points with extreme predictor values are called .hlight[high leverage] points. 
+- Points with **extreme predictor/covariate/feature values** are called .hlight[high leverage] points. 
 
 --
 
@@ -75,7 +76,7 @@ How?
 
 --
 
-- For those very comfortable with linear algebra, the leverage score `\(h_{ii}\)` for record `\(i\)` is defined as the `\(i^\textrm{th}\)` diagonal element of the projection or hat matrix.
+- First, note that the leverage score `\(h_{ii}\)`, for observation `\(i\)`, is defined as the `\(i^\textrm{th}\)` diagonal element of the projection or hat matrix.
 .block[
 .small[
 `$$\boldsymbol{H} = \boldsymbol{X} \left(\boldsymbol{X}^T \boldsymbol{X}\right)^{-1} \boldsymbol{X}^T.$$`
@@ -85,7 +86,7 @@ How?
 
 
 ---
-## In class exercise (5 mins)
+## Quick exercise
 
 - Just to see what the hat matrix (and leverage scores) looks like, you will compute it for a very simple example.
 
@@ -105,7 +106,7 @@ $$
 ]
 ]
 
-  that is, we have one predictor and an intercept.
+  that is, we have one predictor and an intercept. You can set this up in R using the .hlight[matrix] function.
 
 - Compute the corresponding hat matrix for this design matrix
 .block[
@@ -133,7 +134,11 @@ Which diagonal element is the largest? What do you think about that observation?
 
 --
 
-- Therefore, the leverage score `\(h_{ii}\)` for observation `\(i\)` measures how far away the independent variable values of that `\(i^\textrm{th}\)` observation are from those of the other observations.
+- The leverage score `\(h_{ii}\)` for observation `\(i\)` measures how far away the values of the independent variables for the `\(i^\textrm{th}\)` observation are from those of other observations.
+
+--
+
+- That leverage score then clearly impacts predictions since, again, `\(\hat{\boldsymbol{y}} = \boldsymbol{H}\boldsymbol{y}\)`. Think about the exercise you just completed.
 
 --
 
@@ -143,22 +148,22 @@ Which diagonal element is the largest? What do you think about that observation?
   
   - `\(\mathbb{Var}[e_i] = (1-h_{ii}) \sigma^2\)`.
   
-  - High leverage points are often determined by paying attention to any observation for which `\(h_{ii} &gt; 2p/n\)`.
+  - High leverage points are often determined by paying attention to any observation for which `\(h_{ii} &gt; 2(p+1)/n\)`.
   
-  - Points with `\(h_{ii}\)` close to 1 will thus tend to have more of an impact on model fit.
+  - Points with `\(h_{ii}\)` close to 1 will have more of an impact on model fit.
   
 
 ---
 ## Back to our example
 
-Can we try to identify any high leverage points?
+Let's identify any high leverage points. Here, `\(2(p+1)/n = 16/93 \approx 0.17\)`.
 
 
 ```r
 n &lt;- nrow(model.matrix(regwagecsquares)); p &lt;- ncol(model.matrix(regwagecsquares))
 lev_scores &lt;- hatvalues(regwagecsquares) #can also use influence(regwagecsquares)$hat 
 plot(lev_scores,col=ifelse(lev_scores &gt; (2*p/n), 'red2', 'navy'),type="h",
-     ylab="Leverage score",xlab="Obs. number",main="Leverage Scores")
+     ylab="Leverage score",xlab="Index",main="Leverage Scores for all observations")
 text(x=c(1:n)[lev_scores &gt; (2*p/n)]+c(rep(2,4),-2,2),y=lev_scores[lev_scores &gt; (2*p/n)],
      labels=c(1:n)[lev_scores &gt; (2*p/n)])
 ```
@@ -185,11 +190,15 @@ text(x=c(1:n)[lev_scores &gt; (2*p/n)]+c(rep(2,4),-2,2),y=lev_scores[lev_scores 
 
 --
 
-- Just because a point is a high leverage point does not mean it will have a large effect on regression. When this happens, we say that the observation is .hlight[influential].
+- Just because a point is a high leverage point does not mean it will have a large effect on regression.
 
 --
 
-- Whether or not a high leverage point actually affects the regression line depends on the value of the response variable...
+- When a point has a large effect on the regression, we say that the observation is .hlight[influential].
+
+--
+
+- Whether or not a high leverage point actually affects the regression line depends on the value of the response variable `\(y\)`.
 
 
 ---
@@ -254,7 +263,7 @@ Can we try to identify any influential points?
 
 
 ```r
-plot(regwagecsquares,which=4)
+plot(regwagecsquares,which=4,col=c("blue4"))
 ```
 
 &lt;img src="1-6-MLR-outliers_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
@@ -263,7 +272,7 @@ plot(regwagecsquares,which=4)
 ---
 ## Let's compare to the leverage score
 
-Which of the highlighted points actually have high leverage?
+Which of the potentially influential points actually have high leverage?
 
 
 ```r
@@ -322,7 +331,7 @@ legitimate observations and dropping them is essentially cheating by changing th
 
 --
 
-- Intuition: the regression line tries to fit high leverage points as closely as possible, which results in smaller residuals for those points.
+- .block[Intuition: the regression line tries to fit high leverage points as closely as possible, which results in smaller residuals for those points.]
 
 
 ---
@@ -332,7 +341,11 @@ legitimate observations and dropping them is essentially cheating by changing th
 
 --
 
-- Values with large standardized residuals are outliers, in that they don’t fit the pattern implied by the line.
+- Values with large standardized residuals are outliers.
+
+--
+
+- How large is large? Well, remember that 95% of any normal distribution should lie within 2 standard deviations of the mean...
 
 --
 
@@ -344,7 +357,11 @@ legitimate observations and dropping them is essentially cheating by changing th
 
 --
 
-- In fact, really one should do residual plots with standardized residuals instead of regular ones, since they can reflect constant variance assumption when it is true.
+- .block[Bottomline: make a plot of the standardized residuals to check for outliers, but also find a way to add leverage scores and investigate observations with high Cook's distance in the same plot.]
+
+--
+
+- Very easy to do in R.
 
 
 ---
@@ -352,7 +369,7 @@ legitimate observations and dropping them is essentially cheating by changing th
 
 
 ```r
-plot(regwagecsquares,which=5)
+plot(regwagecsquares,which=5,col=c("blue4"))
 ```
 
 &lt;img src="1-6-MLR-outliers_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
