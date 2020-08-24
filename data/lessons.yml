@@ -42,12 +42,12 @@ lessons:
     title: "Module 1.4: Hypothesis tests, confidence intervals, and predictions"
     slides: "1-4-MLR-hypothesis-test-confidence-intervals.html"
     slidespdf: "1-4-MLR-hypothesis-test-confidence-intervals.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/812950/1403540/929415/0/IDS-702--Module-14-Hypothesis-tests-confidence-intervals-and-predictions"
     
   - title: "Module 1.5: Checking main regression assumptions"
     slides: "1-5-MLR-checking-assumptions.html"
     slidespdf: "1-5-MLR-checking-assumptions.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/813025/1403540/929415/0/IDS-702--Module-15-Checking-main-regression-assumptions"
     
   - title: "In-class analysis 2: beer consumption in Sao Paulo II"
     #slides: ".html"
@@ -58,13 +58,13 @@ lessons:
     
   - date: "Thur, Aug 27"
     title: "Module 1.6: Outliers and influential points"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    #slides: "1-6-MLR-outliers.html"
+    #slidespdf: "1-6-MLR-outliers.pdf"
     #video: ""
     
   - title: "Module 1.7: Mean squared error and cross validation"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    #slides: "1-7-MLR-validation.html"
+    #slidespdf: "1-7-MLR-validation.pdf"
     #video: ""
     
   - title: "In-class analysis 3: beer consumption in Sao Paulo III"
