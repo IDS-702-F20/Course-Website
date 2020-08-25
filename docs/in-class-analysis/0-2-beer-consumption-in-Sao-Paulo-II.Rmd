@@ -89,17 +89,43 @@ beer_cons_liters | Beer consumption in liters.
 
 
 # Exercises
-Once again, treat the variable `beer_cons_liters` as your response variable and the other variables as potential predictors.
+Once again, fit a linear model for `beer_cons_liters` using `weekend`, `precip_mm`, and `temp_median_c` as your predictors.
 
-1. Make a histogram of `beer_cons_liters`. Describe the distribution. Is the normality assumption a plausible one here? You don't need to include any plots in your report.
+1. Assess the fitted model. Describe in a few sentences whether or not you think the four main regression assumptions are plausible based on residual plots (no need to include the plots). How do your conclusions line up with the findings from your EDA in the last in-class exercise?
 
-2. Make exploratory plots of `beer_cons_liters` versus each potential predictor. Are all the relationships linear? If any one of them is nonlinear, describe the relationship. You don't need to include any plots in your report.
+2. Are there any (potential) outliers, leverage points or influential points?
 
-3. Intuitively, and without using any statistical test or method, does it make sense to include all three of `temp_median_c`, `temp_min_c` and `temp_max_c` as predictors in a MLR model for predicting `beer_cons_liters`? Justify your response in one or two sentences.
+3. Are there any potential limitations of the model you have fit? If yes, what are two potential limitations?
 
-4. Fit a linear model for `beer_cons_liters` using `weekend`, `precip_mm`, and `temp_median_c` as your predictors. Interpret all the significant parameters of the fitted regression model in context of the data. 
+4. Compute the in-sample <font color="blue">root mean squared error (RMSE)</font> for your regression model. Refer back to the class notes for details on how to compute in-sample (or within-sample) RMSE.
 
-5. Based on your results, what percent of the variability in `beer_cons_liters` is explained by your model? Also, which of the variables appears to be the best covariate for explaining or predicting beer consumption? Why?
+5. Write a code for doing $k$-fold cross validation. Refer back to the class notes for details on $k$-fold cross validation. Let $k=10$ and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model?
+
+    *Hint: if you are not sure how to begin writing your code for doing the cross validation, you should consider writing a "for loop". A "for loop" is actually not the most efficient way to get this done but it will work just fine here. If you don't know how to write a "for loop", use the skeleton code below as a guide for writing your own "for loop" for this question.*
+    ```{r eval = FALSE}
+# Suppose your data is stored in the object "Data"
+# First set a seed to ensure your results are reproducible
+set.seed(...) # use whatever number you want
+# Now randomly re-shuffle the data
+Data <- Data[sample(nrow(Data)),]
+# Define the number of folds you want
+K <- ...
+# Define a matrix to save your results into
+RSME <- matrix(0,nrow=K,ncol=1)
+# Split the row indexes into k equal parts
+kth_fold <- cut(seq(1,nrow(Data)),breaks=K,labels=FALSE)
+# Now write the for loop for the k-fold cross validation
+for(k in 1:K){
+# Split your data into the training and test datasets
+test_index <- which(kth_fold==k)
+train <- Data[-test_index,]
+test <- Data[test_index,]
+# Now that you've split the data, 
+RSME[k,] <- ... # write your code for computing RMSE for each k here
+# You should consider using your code for question 7 above
+}
+... #Calculate the average of all values in the RSME matrix here.
+```
 
 
 

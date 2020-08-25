@@ -67,6 +67,11 @@ lessons:
     slidespdf: "1-7-MLR-validation.pdf"
     video: "https://api.playposit.com/go/play/818899/1403540/929415/0/IDS-702--Module-17-Mean-squared-error-and-cross-validation"
     
+  - title: "Module 1.8: Transformations"
+    slides: "1-8-MLR-transformations.html"
+    slidespdf: "1-8-MLR-transformations.pdf"
+    #video: ""
+    
   - title: "In-class analysis 3: beer consumption in Sao Paulo III"
     #slides: ".html"
     
@@ -74,12 +79,12 @@ lessons:
     
   - week: "WEEK 3"
     date: "Tue, Sept 1"
-    title: "Module 1.8: Special predictors and multicollinearity"
+    title: "Module 1.9: Special predictors and multicollinearity"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 1.9: bringing the MLR pieces together I (illustration)"
+  - title: "Module 1.10: bringing the MLR pieces together I (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -95,12 +100,12 @@ lessons:
     
     
   - date: "Thur, Sept 3"
-    title: "Module 1.10: Model building and selection"
+    title: "Module 1.11: Model building and selection"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 1.11: bringing the MLR pieces together II (illustration)"
+  - title: "Module 1.12: bringing the MLR pieces together II (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
