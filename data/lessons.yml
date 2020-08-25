@@ -79,7 +79,7 @@ lessons:
     
   - week: "WEEK 3"
     date: "Tue, Sept 1"
-    title: "Module 1.9: Special predictors and multicollinearity"
+    title: "Module 1.9: Special predictors, F-tests, and multicollinearity"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
