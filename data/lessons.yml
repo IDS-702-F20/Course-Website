@@ -50,7 +50,7 @@ lessons:
     video: "https://api.playposit.com/go/play/813025/1403540/929415/0/IDS-702--Module-15-Checking-main-regression-assumptions"
     
   - title: "In-class analysis 2: beer consumption in Sao Paulo II"
-    #inClass: "0-2-beer-consumption-in-Sao-Paulo-II.html"
+    inClass: "0-2-beer-consumption-in-Sao-Paulo-II.html"
     
   - title: "Data analysis assignment I"
     #hw: "hw-01.html"

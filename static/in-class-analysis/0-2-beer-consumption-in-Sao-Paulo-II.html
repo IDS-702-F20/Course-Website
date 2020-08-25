@@ -575,34 +575,11 @@ background-color: #AF5500;
 <h1>Exercises</h1>
 <p>Once again, fit a linear model for <code>beer_cons_liters</code> using <code>weekend</code>, <code>precip_mm</code>, and <code>temp_median_c</code> as your predictors.</p>
 <ol style="list-style-type: decimal">
-<li><p>Assess the fitted model. Describe in a few sentences whether or not you think the four main regression assumptions are plausible based on residual plots (no need to include the plots). How do your conclusions line up with the findings from your EDA in the last in-class exercise?</p></li>
-<li><p>Are there any (potential) outliers, leverage points or influential points?</p></li>
-<li><p>Are there any potential limitations of the model you have fit? If yes, what are two potential limitations?</p></li>
-<li><p>Compute the in-sample <font color="blue">root mean squared error (RMSE)</font> for your regression model. Refer back to the class notes for details on how to compute in-sample (or within-sample) RMSE.</p></li>
-<li><p>Write a code for doing <span class="math inline">\(k\)</span>-fold cross validation. Refer back to the class notes for details on <span class="math inline">\(k\)</span>-fold cross validation. Let <span class="math inline">\(k=10\)</span> and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model?</p>
-<p><em>Hint: if you are not sure how to begin writing your code for doing the cross validation, you should consider writing a “for loop”. A “for loop” is actually not the most efficient way to get this done but it will work just fine here. If you don’t know how to write a “for loop”, use the skeleton code below as a guide for writing your own “for loop” for this question.</em></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Suppose your data is stored in the object &quot;Data&quot;</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># First set a seed to ensure your results are reproducible</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw">set.seed</span>(...) <span class="co"># use whatever number you want</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># Now randomly re-shuffle the data</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">Data &lt;-<span class="st"> </span>Data[<span class="kw">sample</span>(<span class="kw">nrow</span>(Data)),]</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co"># Define the number of folds you want</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7">K &lt;-<span class="st"> </span>...</a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co"># Define a matrix to save your results into</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9">RSME &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">0</span>,<span class="dt">nrow=</span>K,<span class="dt">ncol=</span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co"># Split the row indexes into k equal parts</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11">kth_fold &lt;-<span class="st"> </span><span class="kw">cut</span>(<span class="kw">seq</span>(<span class="dv">1</span>,<span class="kw">nrow</span>(Data)),<span class="dt">breaks=</span>K,<span class="dt">labels=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co"># Now write the for loop for the k-fold cross validation</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>K){</a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co"># Split your data into the training and test datasets</span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15">test_index &lt;-<span class="st"> </span><span class="kw">which</span>(kth_fold<span class="op">==</span>k)</a>
-<a class="sourceLine" id="cb2-16" data-line-number="16">train &lt;-<span class="st"> </span>Data[<span class="op">-</span>test_index,]</a>
-<a class="sourceLine" id="cb2-17" data-line-number="17">test &lt;-<span class="st"> </span>Data[test_index,]</a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co"># Now that you've split the data, </span></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19">RSME[k,] &lt;-<span class="st"> </span>... <span class="co"># write your code for computing RMSE for each k here</span></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co"># You should consider using your code for question 7 above</span></a>
-<a class="sourceLine" id="cb2-21" data-line-number="21">}</a>
-<a class="sourceLine" id="cb2-22" data-line-number="22">... <span class="co">#Calculate the average of all values in the RSME matrix here.</span></a></code></pre></div></li>
+<li><p>Assess the fitted model. Describe in a few sentences whether or not you think the main regression assumptions are plausible based on residual plots (no need to include the plots). If you think any of the assumptions are violated, can you provide suggestions for how we might fix them?</p></li>
+<li><p>How do your conclusions line up with the findings from your EDA in the last in-class exercise?</p></li>
+<li><p>We will cover transformations later but make a histogram of <code>log(beer_cons_liters)</code>. Does that look more normal than <code>beer_cons_liters</code>? Fit a linear model for <code>log(beer_cons_liters)</code> using <code>weekend</code>, <code>precip_mm</code>, and <code>temp_median_c</code> as your predictors. Provide a 95% confidence interval for the effect of <code>weekend</code>. Interpret this interval in the context of the question.</p></li>
+<li><p>Assess the new fitted model. Describe in a few sentences whether or not you think the four main regression assumptions are plausible based on residual plots (no need to include the plots).</p></li>
+<li><p>Overall, are there any potential limitations of this analysis? If yes, what are two potential limitations?</p></li>
 </ol>
 </div>
 <div id="acknowledgement" class="section level1">
