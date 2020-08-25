@@ -89,13 +89,11 @@ beer_cons_liters | Beer consumption in liters.
 
 
 # Exercises
-Once again, fit a linear model for `beer_cons_liters` using `weekend`, `precip_mm`, and `temp_median_c` as your predictors.
+Continue with the linear model for `log(beer_cons_liters)` using `weekend`, `precip_mm`, and `temp_median_c` as your predictors.
 
-1. Assess the fitted model. Describe in a few sentences whether or not you think the four main regression assumptions are plausible based on residual plots (no need to include the plots). How do your conclusions line up with the findings from your EDA in the last in-class exercise?
+1. Are there any (potential) outliers, leverage points or influential points?
 
-2. Are there any (potential) outliers, leverage points or influential points?
-
-3. Are there any potential limitations of the model you have fit? If yes, what are two potential limitations?
+2. Time to try to address the issues with the `precip_mm` variable. Create a 
 
 4. Compute the in-sample <font color="blue">root mean squared error (RMSE)</font> for your regression model. Refer back to the class notes for details on how to compute in-sample (or within-sample) RMSE.
 

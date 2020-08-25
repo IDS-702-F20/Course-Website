@@ -573,11 +573,10 @@ background-color: #AF5500;
 </div>
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
-<p>Once again, fit a linear model for <code>beer_cons_liters</code> using <code>weekend</code>, <code>precip_mm</code>, and <code>temp_median_c</code> as your predictors.</p>
+<p>Continue with the linear model for <code>log(beer_cons_liters)</code> using <code>weekend</code>, <code>precip_mm</code>, and <code>temp_median_c</code> as your predictors.</p>
 <ol style="list-style-type: decimal">
-<li><p>Assess the fitted model. Describe in a few sentences whether or not you think the four main regression assumptions are plausible based on residual plots (no need to include the plots). How do your conclusions line up with the findings from your EDA in the last in-class exercise?</p></li>
 <li><p>Are there any (potential) outliers, leverage points or influential points?</p></li>
-<li><p>Are there any potential limitations of the model you have fit? If yes, what are two potential limitations?</p></li>
+<li><p>Time to try to address the issues with the <code>precip_mm</code> variable. Create a</p></li>
 <li><p>Compute the in-sample <font color="blue">root mean squared error (RMSE)</font> for your regression model. Refer back to the class notes for details on how to compute in-sample (or within-sample) RMSE.</p></li>
 <li><p>Write a code for doing <span class="math inline">\(k\)</span>-fold cross validation. Refer back to the class notes for details on <span class="math inline">\(k\)</span>-fold cross validation. Let <span class="math inline">\(k=10\)</span> and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model?</p>
 <p><em>Hint: if you are not sure how to begin writing your code for doing the cross validation, you should consider writing a “for loop”. A “for loop” is actually not the most efficient way to get this done but it will work just fine here. If you don’t know how to write a “for loop”, use the skeleton code below as a guide for writing your own “for loop” for this question.</em></p>

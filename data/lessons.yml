@@ -53,7 +53,7 @@ lessons:
     inClass: "0-2-beer-consumption-in-Sao-Paulo-II.html"
     
   - title: "Data analysis assignment I"
-    #hw: "hw-01.html"
+    hw: "hw-01.html"
     
     
   - date: "Thur, Aug 27"
@@ -73,7 +73,7 @@ lessons:
     video: "https://api.playposit.com/go/play/820889/1403540/929415/0/IDS-702--Module-18-Transformations"
     
   - title: "In-class analysis 3: beer consumption in Sao Paulo III"
-    #slides: ".html"
+    #inClass: "0-3-beer-consumption-in-Sao-Paulo-III.html"
     
     
     

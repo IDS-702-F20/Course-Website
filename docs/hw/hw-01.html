@@ -1731,26 +1731,22 @@ div.tocify {
 <div id="instructions" class="section level2">
 <h2>Instructions</h2>
 <p>This assignment involves linear regression. The data can be found on Sakai: go to Resources <span class="math inline">\(\rightarrow\)</span> Datasets <span class="math inline">\(\rightarrow\)</span> Data Analysis Assignments <span class="math inline">\(\rightarrow\)</span> Assignment 1. Please type your solutions using R Markdown, LaTeX or any other word processor but YOU MUST knit or convert the final output file to “.pdf”. Submissions should be made on gradescope: go to Assignments <span class="math inline">\(\rightarrow\)</span> Data Analysis Assignment 1.</p>
+<p><font color="red"><strong>DO NOT INCLUDE R CODE OR OUTPUT IN YOUR SOLUTIONS</strong> <em>All R code can be included in an appendix, and R outputs should be converted to nicely formatted tables. Feel free to use R packages such as <code>kable</code> and <code>xtable</code>.</em></font></p>
+<p><strong>Reminder: You are allowed and even encouraged to talk to each other about general concepts, or to the instructor/TAs. However, the write-ups, solutions, and code MUST be entirely your own work.</strong></p>
 </div>
 <div id="questions" class="section level2">
 <h2>Questions</h2>
-<p>The questions below were taken and adapted from Chapter 7 of <a href="https://www.amazon.com/Statistical-Sleuth-Course-Methods-Analysis/dp/1133490670">Ramsey, F.L. and Schafer, D.W. (2013), “The Statistical Sleuth: A Course in Methods of Data Analysis (3rd ed).”</a>.</p>
+<p>Question 1 and 2 below were taken and adapted from Chapter 7 of <a href="https://www.amazon.com/Statistical-Sleuth-Course-Methods-Analysis/dp/1133490670">Ramsey, F.L. and Schafer, D.W. (2013), “The Statistical Sleuth: A Course in Methods of Data Analysis (3rd ed).”</a>.</p>
 <p><font color="green"><strong>Side Note:</strong> We will use textbook datasets on some of the data analysis assignments. This is intentional as a way to start with clean and small datasets. For team projects, we will focus a bit more on “messy” datasets.</font></p>
 <ol style="list-style-type: decimal">
-<li><font color="blue">OLD FAITHFUL.</font> Old Faithful Geyser in Yellowstone National Park, Wyoming, derives its name and its considerable fame from the regularity (and beauty) of its eruptions. As they do with most <a href="https://en.wikipedia.org/wiki/Geyser">geysers</a> in the park, rangers post the predicted times of eruptions on signs nearby, and people gather beforehand to witness the show. R.A. Hutchinson, a park geologist, collected measurements of the eruption durations (in minutes) and the subsequent intervals before the next eruption (also in minutes) over an 8-day period.<br />
-<em>The data for this question can be found in the file “OldFaithful.csv” on Sakai.</em>
-<ul>
-<li>Write down a regression model for predicting the interval between eruptions from the duration of the previous one. Make sure to use the right mathematical notation.</li>
-<li>Fit the model to the data and interpret your results. In your answer, make sure you include the output from the regression model including the estimated intercept, slope, residual standard error, and <span class="math inline">\(R^2\)</span>.</li>
-<li>Also, include the 95% confidence interval for the slope, and explain what the interval reveals about the relationship between duration and waiting time.</li>
-<li>Describe in a few sentences whether or not you think the regression assumptions are plausible based on residual plots (you don’t need to include the plots).</li>
-<li>Construct 95% prediction intervals for the waiting time until the next eruption if the duration of the previous one was 2 minutes, 2.5 minutes, 3 minutes, 3.5 minutes and 4 minutes. Present your answer as a single plot.</li>
-</ul></li>
 <li><font color="blue">RESPIRATORY RATES FOR CHILDREN</font>. A high respiratory rate is a potential diagnostic indicator of respiratory infection in children. To judge whether a respiratory rate is truly “high,” however, a physician must have a clear picture of the distribution of “normal” respiratory rates. To this end, Italian researchers measured the respiratory rates of 618 children between the ages of 15 days and 3 years.<br />
 <em>The data for this question can be found in the file “Respiratory.csv” on Sakai.</em>
 <ul>
-<li>Analyze the data and include a useful plot that a physician could use to assess a normal range of respiratory rate for children of any age between 0 and 3.</li>
-<li>Include the output of the regression that predicts respiratory rates from age. Also, is there enough evidence that the model assumptions are reasonable for this data? You should consider transformations (think log transformations etc) for both variables if you think the original relationship is nonlinear.</li>
+<li>Do exploratory analysis on the data and include a useful plot that a physician could use to assess a “normal” range of respiratory rates for children of any age between 0 and 3.</li>
+<li>Write down a regression model for predicting respiratory rates from age. Make sure to use the right mathematical notation.</li>
+<li>Fit the model to the data and interpret your results.</li>
+<li>Include a table showing the output from the regression model including the estimated intercept, slope, residual standard error, and proportion of variation explained by the model.</li>
+<li>Is there enough evidence that the model assumptions are reasonable for this data? You should consider transformations (think log transformations, etc) if you think there’s a violation of normality and/or linearity.</li>
 <li>Demonstrate the usefulness of the model by providing 95% prediction intervals for the rate for three individual children: a 1 month old, an 18 months old, and a 29 months old.</li>
 </ul></li>
 <li><font color="blue">THE DRAMATIC U.S. PRESIDENTIAL ELECTION OF 2000.</font> The U.S. presidential election of November 7, 2000 was one of the closest in history. As returns were counted on election night it became clear that the outcome in the state of Florida would determine the next president. At one point in the evening, television networks projected that the state was carried by the Democratic nominee, Al Gore, but a retraction of the projection followed a few hours later. Then, early in the morning of November 8, the networks projected that the Republican nominee, George W. Bush, had carried Florida and won the presidency. Gore called Bush to concede. While on route to his concession speech, though, the Florida count changed rapidly in his favor. The networks once again reversed their projection, and Gore called Bush to retract his concession. When the roughly 6 million Florida votes had been counted, Bush was shown to be leading by only 1,738, and the narrow margin triggered an automatic recount. The recount, completed in the evening of November 9, showed Bush’s lead to be less than 400.<br />
@@ -1762,10 +1758,66 @@ Voters were to register their vote by punching the circle corresponding to their
 <em>The data for this question can be found in the file “Elections.csv” on Sakai.</em>
 <ul>
 <li>Make a scatterplot of the variables <em>Buchanan2000</em> and <em>Bush2000</em>. What evidence is there in the scatterplot that Buchanan received more votes than expected in Palm Beach County?</li>
-<li>Analyze the data without Palm Beach County results to obtain an equation for predicting Buchanan votes from Bush votes. You should consider transformations (think log transformations etc) for both variables if you think the original relationship is nonlinear.</li>
+<li>Fit a linear regression model to the data to predict Buchanan votes from Bush votes, without using Palm Beach County results. You should consider transformations for both variables if you think there’s a violation of normality and/or linearity.</li>
 <li>Include the output from the final regression model that you used, as well as evidence that the model fits the assumptions reasonably well.</li>
 <li>Obtain a 95% prediction interval for the number of Buchanan votes in Palm Beach from this result, assuming the relationship is the same in this county as in the others. If it is assumed that Buchanan’s actual count contains a number of votes intended for Gore, what can be said about the likely size of this number from the prediction interval?</li>
 </ul></li>
+<li><font color="blue">AIRBNB LISTINGS FOR SEATTLE, WA.</font> AirBnB is a rental online marketplace. The company itself is based in San Francisco CA, and there are millions of listings in cities across the world. In this problem, you will only focus on data for AirBnB listings in Queen Anne, Seattle, WA. Specifically, you will try to understand how certain factors influence the price of a listing. The data we will use here is a very small subset of the overall available data. For more on the data, or if you are interested in using AirBnB data, see <a href="http://insideairbnb.com/get-the-data.html" class="uri">http://insideairbnb.com/get-the-data.html</a>.<br />
+<em>The data for this question can be found in the file “Listings_QueenAnne.txt” on Sakai.</em>
+<ul>
+<li>Analyze the data using <code>host_is_superhost</code>,<code>host_identity_verified</code>, <code>room_type</code>, <code>accommodates</code>, <code>bathrooms</code> and <code>bedrooms</code> as predictors. You should start by doing EDA, then model fitting, and model assessment. You should consider transformations if needed.</li>
+<li>Include the output from the final regression model that you used, as well as evidence that the model fits the assumptions reasonably well. Your regression output should includes a table with coefficients and SEs, and p-values or confidence intervals.</li>
+<li>Interpret the results of your fitted model in the context of the data.</li>
+<li>Are there any (potential) outliers, leverage points or influential points? Provide evidence to support your response. Also, if there are influential points and/or outliers, exclude the points, fit your model without them, and report the changes in your overall conclusions.</li>
+<li>Overall, are there any potential limitations of this analysis? If yes, what are two potential limitations?</li>
+</ul>
+<p><strong>Code Book</strong></p>
+<table>
+<colgroup>
+<col width="41%"></col>
+<col width="58%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">id</td>
+<td align="left">Unique identifier for listings</td>
+</tr>
+<tr class="even">
+<td align="left">host_is_superhost</td>
+<td align="left">Whether or not the host is a “superhost,” meaning they satisfy AirBnB’s criteria for high-quality listings, high response rate, and reliability</td>
+</tr>
+<tr class="odd">
+<td align="left">host_identity_verified</td>
+<td align="left">Whether not not the host has verified their identity with AirBnB</td>
+</tr>
+<tr class="even">
+<td align="left">room_type</td>
+<td align="left">Entire home/apt, private room, or shared room</td>
+</tr>
+<tr class="odd">
+<td align="left">accommodates</td>
+<td align="left">Number of people that the listing can accommodate</td>
+</tr>
+<tr class="even">
+<td align="left">bathrooms</td>
+<td align="left">Number of bathrooms in the listing</td>
+</tr>
+<tr class="odd">
+<td align="left">bedrooms</td>
+<td align="left">Number of bedrooms in the listing</td>
+</tr>
+<tr class="even">
+<td align="left">price</td>
+<td align="left">Price of the listing for one night <br /> <em>(Use this as the response variable)</em></td>
+</tr>
+</tbody>
+</table></li>
 </ol>
 </div>
 <div id="grading" class="section level2">
