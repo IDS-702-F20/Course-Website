@@ -70,7 +70,7 @@ lessons:
   - title: "Module 1.8: Transformations"
     slides: "1-8-MLR-transformations.html"
     slidespdf: "1-8-MLR-transformations.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/820889/1403540/929415/0/IDS-702--Module-18-Transformations"
     
   - title: "In-class analysis 3: beer consumption in Sao Paulo III"
     #slides: ".html"
