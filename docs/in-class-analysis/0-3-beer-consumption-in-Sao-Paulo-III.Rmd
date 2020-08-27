@@ -1,7 +1,7 @@
 ---
-title: "IDS 702 In-class analysis 2"
-subtitle: "Beer consumption in Sao Paulo II"
-date: "August 25, 2020"
+title: "IDS 702 In-class analysis 3"
+subtitle: "Beer consumption in Sao Paulo III"
+date: "August 27, 2020"
 output: 
   tufte::tufte_html:
     tufte_variant: "envisioned"
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(eval = FALSE)
 ```
 
 
-**Due:** 30 minutes after class ends
+**Due:** 1 hour after class ends
 
 
 
@@ -63,7 +63,8 @@ It is always a good idea to take a look at the first few rows of the raw file to
 
 ```{r eval = FALSE}
 beer <- read.csv("data/consumo_cerveja.csv",
-                 stringsAsFactors = FALSE, sep = ",",dec=",")
+                 stringsAsFactors = FALSE, sep = ",",
+                 dec=",",nrows=365)
 # rename the variables
 beer$date <- beer$Data
 beer$temp_median_c <- beer$Temperatura.Media..C.
@@ -89,13 +90,19 @@ beer_cons_liters | Beer consumption in liters.
 
 
 # Exercises
-Continue with the linear model for `log(beer_cons_liters)` using `weekend`, `precip_mm`, and `temp_median_c` as your predictors.
 
-1. Are there any (potential) outliers, leverage points or influential points?
+Time to address the issues with the `precip_mm` variable. As hopefully everyone has figured out by now, most of the days in the dataset are "dry" days, so that there is a "point mass" at zero for this variable. There are a few ways to get around this problem but we will only look at one.  
+*Please note that there is a bit more wiggle room in terms of potential fixes because this is a predictor and not a response variable. Also, by making this transformation, we are actually losing some of the information encoded in the original variable. We will revisit this much later in the course.*
 
-2. Time to try to address the issues with the `precip_mm` variable. Create a 
+Create a new variable called `rain` from `precip_mm`. Make this a categorical/factor variable with three levels: <font color="blue">**0 = no rain**</font>, <font color="blue">**1 = light to moderate rain**</font>, and <font color="blue">**2 = heavy rain**</font>. Set the cutoff values for these levels as you like, but they MUST be scientifically meaningful **(ok to google meaningful ranges)**. In R, remember to treat the variable as a factor variable and not a discrete variable.
 
-4. Compute the in-sample <font color="blue">root mean squared error (RMSE)</font> for your regression model. Refer back to the class notes for details on how to compute in-sample (or within-sample) RMSE.
+1. Fit a linear model for `log(beer_cons_liters)` using `weekend`, `rain`, and `temp_median_c` as your predictors. Interpret the coefficient(s) of `rain`.
+
+2. From the residual plots, are there any clear violations of any of the assumptions? You do not need to discuss all the assumptions. Just point out the ones that are violated, if any.
+
+3. Are there any (potential) outliers, leverage points or influential points?
+
+4. Compute the "in-sample" <font color="blue">root mean squared error (RMSE)</font> for your regression model. Refer back to the class notes for details on how to compute in-sample (or within-sample) RMSE. 
 
 5. Write a code for doing $k$-fold cross validation. Refer back to the class notes for details on $k$-fold cross validation. Let $k=10$ and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model?
 

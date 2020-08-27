@@ -63,7 +63,7 @@ It is always a good idea to take a look at the first few rows of the raw file to
 
 ```{r eval = FALSE}
 beer <- read.csv("data/consumo_cerveja.csv",
-                 stringsAsFactors = FALSE, sep = ",",dec=",")
+                 stringsAsFactors = FALSE, sep = ",",dec=",",nrows=365)
 # rename the variables
 beer$date <- beer$Data
 beer$temp_median_c <- beer$Temperatura.Media..C.

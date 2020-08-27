@@ -11,9 +11,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-27" />
 
-<title>IDS 702 In-class analysis 2</title>
+<title>IDS 702 In-class analysis 3</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -473,9 +473,9 @@ background-color: #AF5500;
 
 
 
-<h1 class="title toc-ignore">IDS 702 In-class analysis 2</h1>
-<h3 class="subtitle">Beer consumption in Sao Paulo II</h3>
-<h4 class="date">August 25, 2020</h4>
+<h1 class="title toc-ignore">IDS 702 In-class analysis 3</h1>
+<h3 class="subtitle">Beer consumption in Sao Paulo III</h3>
+<h4 class="date">August 27, 2020</h4>
 
 
 <div id="TOC">
@@ -492,7 +492,7 @@ background-color: #AF5500;
 </ul>
 </div>
 
-<p><strong>Due:</strong> 30 minutes after class ends</p>
+<p><strong>Due:</strong> 1 hour after class ends</p>
 <div id="housekeeping" class="section level1">
 <h1>Housekeeping</h1>
 <div id="structure-and-format" class="section level2">
@@ -521,16 +521,17 @@ background-color: #AF5500;
 <p>Download the data (named <code>consumo_cerveja.csv</code>) from Sakai and save it locally to the same directory as your R markdown file. To find the data file on Sakai, go to Resources <span class="math inline">\(\rightarrow\)</span> Datasets <span class="math inline">\(\rightarrow\)</span> In-Class Analyses. Once you have downloaded the data file into the SAME folder as your R markdown file, load and clean the data by using the following R code.</p>
 <p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">It is always a good idea to take a look at the first few rows of the raw file to see what the data looks like before loading the data. In this raw ‘consumo_cerveja’ file, you will notice that commas are actually used both as decimals and to separate the columns. Thus, you need to let R know by specifying the <em>sep</em> and <em>dec</em> options as in the code below.</span></span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">beer &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data/consumo_cerveja.csv&quot;</span>,</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">                 <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>,<span class="dt">dec=</span><span class="st">&quot;,&quot;</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># rename the variables</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">beer<span class="op">$</span>date &lt;-<span class="st"> </span>beer<span class="op">$</span>Data</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">beer<span class="op">$</span>temp_median_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Media..C.</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">beer<span class="op">$</span>temp_min_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Minima..C.</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">beer<span class="op">$</span>temp_max_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Maxima..C.</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">beer<span class="op">$</span>precip_mm &lt;-<span class="st"> </span>beer<span class="op">$</span>Precipitacao..mm.</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">beer<span class="op">$</span>weekend &lt;-<span class="st"> </span><span class="kw">factor</span>(beer<span class="op">$</span>Final.de.Semana)</a>
-<a class="sourceLine" id="cb1-10" data-line-number="10">beer<span class="op">$</span>beer_cons_liters &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(beer<span class="op">$</span>Consumo.de.cerveja..litros.)</a>
-<a class="sourceLine" id="cb1-11" data-line-number="11">beer &lt;-<span class="st"> </span>beer[ , <span class="dv">8</span><span class="op">:</span><span class="kw">ncol</span>(beer)]</a></code></pre></div>
+<a class="sourceLine" id="cb1-2" data-line-number="2">                 <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>,</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">                 <span class="dt">dec=</span><span class="st">&quot;,&quot;</span>,<span class="dt">nrows=</span><span class="dv">365</span>)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co"># rename the variables</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">beer<span class="op">$</span>date &lt;-<span class="st"> </span>beer<span class="op">$</span>Data</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">beer<span class="op">$</span>temp_median_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Media..C.</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">beer<span class="op">$</span>temp_min_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Minima..C.</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">beer<span class="op">$</span>temp_max_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Maxima..C.</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">beer<span class="op">$</span>precip_mm &lt;-<span class="st"> </span>beer<span class="op">$</span>Precipitacao..mm.</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">beer<span class="op">$</span>weekend &lt;-<span class="st"> </span><span class="kw">factor</span>(beer<span class="op">$</span>Final.de.Semana)</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">beer<span class="op">$</span>beer_cons_liters &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(beer<span class="op">$</span>Consumo.de.cerveja..litros.)</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">beer &lt;-<span class="st"> </span>beer[ , <span class="dv">8</span><span class="op">:</span><span class="kw">ncol</span>(beer)]</a></code></pre></div>
 <p>After renaming the variables using the code above, your data will be saved in the object <code>beer</code>, and the relevant variables plus their meanings are given in the table below:</p>
 <table>
 <thead>
@@ -573,11 +574,14 @@ background-color: #AF5500;
 </div>
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
-<p>Continue with the linear model for <code>log(beer_cons_liters)</code> using <code>weekend</code>, <code>precip_mm</code>, and <code>temp_median_c</code> as your predictors.</p>
+<p>Time to address the issues with the <code>precip_mm</code> variable. As hopefully everyone has figured out by now, most of the days in the dataset are “dry” days, so that there is a “point mass” at zero for this variable. There are a few ways to get around this problem but we will only look at one.<br />
+<em>Please note that there is a bit more wiggle room in terms of potential fixes because this is a predictor and not a response variable. Also, by making this transformation, we are actually losing some of the information encoded in the original variable. We will revisit this much later in the course.</em></p>
+<p>Create a new variable called <code>rain</code> from <code>precip_mm</code>. Make this a categorical/factor variable with three levels: <font color="blue"><strong>0 = no rain</strong></font>, <font color="blue"><strong>1 = light to moderate rain</strong></font>, and <font color="blue"><strong>2 = heavy rain</strong></font>. Set the cutoff values for these levels as you like, but they MUST be scientifically meaningful <strong>(ok to google meaningful ranges)</strong>. In R, remember to treat the variable as a factor variable and not a discrete variable.</p>
 <ol style="list-style-type: decimal">
+<li><p>Fit a linear model for <code>log(beer_cons_liters)</code> using <code>weekend</code>, <code>rain</code>, and <code>temp_median_c</code> as your predictors. Interpret the coefficient(s) of <code>rain</code>.</p></li>
+<li><p>From the residual plots, are there any clear violations of any of the assumptions? You do not need to discuss all the assumptions. Just point out the ones that are violated, if any.</p></li>
 <li><p>Are there any (potential) outliers, leverage points or influential points?</p></li>
-<li><p>Time to try to address the issues with the <code>precip_mm</code> variable. Create a</p></li>
-<li><p>Compute the in-sample <font color="blue">root mean squared error (RMSE)</font> for your regression model. Refer back to the class notes for details on how to compute in-sample (or within-sample) RMSE.</p></li>
+<li><p>Compute the “in-sample” <font color="blue">root mean squared error (RMSE)</font> for your regression model. Refer back to the class notes for details on how to compute in-sample (or within-sample) RMSE.</p></li>
 <li><p>Write a code for doing <span class="math inline">\(k\)</span>-fold cross validation. Refer back to the class notes for details on <span class="math inline">\(k\)</span>-fold cross validation. Let <span class="math inline">\(k=10\)</span> and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model?</p>
 <p><em>Hint: if you are not sure how to begin writing your code for doing the cross validation, you should consider writing a “for loop”. A “for loop” is actually not the most efficient way to get this done but it will work just fine here. If you don’t know how to write a “for loop”, use the skeleton code below as a guide for writing your own “for loop” for this question.</em></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Suppose your data is stored in the object &quot;Data&quot;</span></a>
