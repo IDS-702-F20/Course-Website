@@ -80,13 +80,13 @@ lessons:
   - week: "WEEK 3"
     date: "Tue, Sept 1"
     title: "Module 1.9: Special predictors, F-tests, and multicollinearity"
-    #slides: "1-9-MLR-special-predictors.html"
-    #slidespdf: "1-9-MLR-special-predictors.pdf"
+    slides: "1-9-MLR-special-predictors.html"
+    slidespdf: "1-9-MLR-special-predictors.pdf"
     #video: ""
     
   - title: "Module 1.10: Bringing the MLR pieces together I (illustration)"
-    #slides: "1-10-MLR-full-illustration-1.html"
-    #slidespdf: "1-10-MLR-full-illustration-1.pdf"
+    slides: "1-10-MLR-full-illustration-I.html"
+    slidespdf: "1-10-MLR-full-illustration-I.pdf"
     #video: ""
     
   - title: "In-class analysis 4: Beer consumption in Sao Paulo IV"
