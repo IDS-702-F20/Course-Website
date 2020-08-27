@@ -69,7 +69,7 @@ AirBnB is a rental online marketplace. The company itself is based in San Franci
     :------------- | :-------------------
     id | Unique identifier for listings
     host_is_superhost | Whether or not the host is a “superhost,” meaning they satisfy AirBnB’s criteria for high-quality listings, high response rate, and reliability
-    host_identity_verified | Whether not not the host has verified their identity with AirBnB
+    host_identity_verified | Whether or not the host has verified their identity with AirBnB
     room_type | Entire home/apt, private room, or shared room
     accommodates | Number of people that the listing can accommodate
     bathrooms | Number of bathrooms in the listing
