@@ -101,13 +101,13 @@ lessons:
     
   - date: "Thur, Sept 3"
     title: "Module 1.11: Model building and selection"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "1-11-MLR-model-building.html"
+    slidespdf: "1-11-MLR-model-building.pdf"
     #video: ""
     
   - title: "Module 1.12: Bringing the MLR pieces together II (illustration)"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "1-12-MLR-full-illustration-II.html"
+    slidespdf: "1-12-MLR-full-illustration-II.pdf"
     #video: ""
     
   - title: "In-class: Q&A and review session"
