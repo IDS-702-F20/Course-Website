@@ -103,12 +103,12 @@ lessons:
     title: "Module 1.11: Model building and selection"
     slides: "1-11-MLR-model-building.html"
     slidespdf: "1-11-MLR-model-building.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/839757/1403540/929415/0/IDS-702--Module-111-Model-building-and-selection"
     
   - title: "Module 1.12: Bringing the MLR pieces together II (illustration)"
     slides: "1-12-MLR-full-illustration-II.html"
     slidespdf: "1-12-MLR-full-illustration-II.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/839797/1403540/929415/0/Module-112-Bringing-the-MLR-pieces-together-II-illustration"
     
   - title: "In-class: Q&A and review session"
     
