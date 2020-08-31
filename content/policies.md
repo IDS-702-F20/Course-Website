@@ -54,7 +54,7 @@ For the final project, you will apply the knowledge and skills learned throughou
 For the team projects, students will work in teams to analyze data selected by the instructor. Each team will be expected to write a report with their data analysis findings. Students may also be given the opportunity to present their results in class. Detailed instructions will be made available later.
 
 #### Participation
-Each student will be assigned a participation grade based on their level of participation throughout the semester. Participation will be accessed based on performance on  PlayPosit and in-class quizzes, engagement during live meeting sessions and breakout rooms, and generally how each students engages with other students on Piazza, especially regarding feedback on the project presentations.
+Each student will be assigned a participation grade based on their level of participation throughout the semester. Participation will be assessed based on performance on  PlayPosit and in-class quizzes, engagement during live meeting sessions and breakout rooms, and generally how each students engages with other students on Piazza, especially regarding feedback on the project presentations.
 
 
 ### Late Submission Policy
