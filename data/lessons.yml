@@ -90,8 +90,7 @@ lessons:
     slidespdf: "1-10-MLR-full-illustration-I.pdf"
     video: "https://api.playposit.com/go/play/833748/1403540/929415/0/IDS-702--Module-110-Bringing-the-MLR-pieces-together-I-illustration"
     
-  - title: "In-class analysis 4: Beer consumption in Sao Paulo IV"
-    #inClass: "0-4-beer-consumption-in-Sao-Paulo-IV.html"
+  - title: "In-class: Q&A and discussion session"
     
   - date: "DELIVERABLES:"
     title: "Data analysis assignment I due!"
@@ -112,7 +111,8 @@ lessons:
     slidespdf: "1-12-MLR-full-illustration-II.pdf"
     video: "https://api.playposit.com/go/play/839797/1403540/929415/0/Module-112-Bringing-the-MLR-pieces-together-II-illustration"
     
-  - title: "In-class: Q&A and review session"
+  - title: "In-class analysis 4: Beer consumption in Sao Paulo IV"
+    #inClass: "0-4-beer-consumption-in-Sao-Paulo-IV.html" 
     
   - date: "Fri, Sept 4"
     title: "Final project outline"   
