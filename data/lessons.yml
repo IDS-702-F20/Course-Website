@@ -90,13 +90,13 @@ lessons:
     video: "https://api.playposit.com/go/play/833748/1403540/929415/0/IDS-702--Module-110-Bringing-the-MLR-pieces-together-I-illustration"
     
   - title: "In-class analysis 4: Beer consumption in Sao Paulo IV"
-    #slides: ".html"
+    #inClass: "0-4-beer-consumption-in-Sao-Paulo-IV.html"
     
   - date: "REMINDER:"
     title: "Data analysis assignment I due!"
     
   - title: "Data analysis assignment II"
-    #hw: "hw-02.html"
+    hw: "hw-02.html"
     
     
   - date: "Thur, Sept 3"
