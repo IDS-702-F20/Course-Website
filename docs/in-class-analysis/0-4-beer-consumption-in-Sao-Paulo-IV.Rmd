@@ -1,7 +1,7 @@
 ---
 title: "IDS 702 In-class analysis 4"
 subtitle: "Beer consumption in Sao Paulo IV"
-date: "September 1, 2020"
+date: "September 3, 2020"
 output: 
   tufte::tufte_html:
     tufte_variant: "envisioned"
@@ -93,7 +93,9 @@ beer_cons_liters | Beer consumption in liters.
 
 Continue with the `rain` variable from last time. Again, In R, remember to treat the variable as a **factor variable** and not a discrete variable. Fit the same model as last time. That is, fit a linear model for `log(beer_cons_liters)` using `weekend`, `rain`, and `temp_median_c` as your predictors.
 
-1. Write a code for doing $k$-fold cross validation. Refer back to the class notes for details on $k$-fold cross validation. Let $k=10$ and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model? Skip the question if you were able to complete it last time.
+1. Write a code for doing $k$-fold cross validation. Refer back to the class notes for details on $k$-fold cross validation. Let $k=10$ and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model?
+
+    **If you were able to complete this question last time, just write your answer down again.**
 
     *Hint: if you are not sure how to begin writing your code for doing the cross validation, you should consider writing a "for loop". A "for loop" is actually not the most efficient way to get this done but it will work just fine here. If you don't know how to write a "for loop", use the skeleton code below as a guide for writing your own "for loop" for this question.*
     ```{r eval = FALSE}
@@ -124,20 +126,20 @@ RSME[k,] <- ... # write your code for computing RMSE for each k here
 
 2. Now, do EDA to explore interaction effects between all your predictors. Summarize your findings in a few sentences.
 
-3. Extend your linear model to include interaction terms between `weekend` and the other two predictors. Are the interaction terms significant? Interpret the significant predictors.
+3. Extend your linear model to include interaction terms between `weekend` and the other two predictors. Are the interaction terms significant? What are the implications of these findings in the context of the data?
 
     *To include an interaction term between two variables x1 and x2 in your linear model, use*
     ```{r eval = FALSE}
-"model name here" <- lm(y ~ x1 + x2 + x1:x2)
+"model name or object here" <- lm(y ~ x1 + x2 + x1:x2)
 ```
     *OR*
     ```{r eval = FALSE}
-"model name here" <- lm(y ~ x1*x2)
+"model name or object here" <- lm(y ~ x1*x2)
 ```
 
-4. Investigate the residual plots for the new model with the interaction terms (remember that linearity will only apply to your continuous predictor). Summarize your findings in a few sentences.
+4. Do stepwise model selection using AIC and BIC with the "full model" set to the model from question 3. Summarize your findings in a few sentences.
 
-5. Use your code for the $k$-fold cross validation from question 1 to compute the average RMSE for the new model in question 9. Is the new RMSE model lower or higher? What can you infer from that?
+5. Use your code for the $k$-fold cross validation from question 1 to compute the average RMSE for the new model in question 3. Is the new RMSE model lower or higher than your result from question 1? What can you infer from that?
 
 
 # Acknowledgement

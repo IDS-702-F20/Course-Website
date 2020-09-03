@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-<meta name="date" content="2020-09-01" />
+<meta name="date" content="2020-09-03" />
 
 <title>IDS 702 In-class analysis 4</title>
 
@@ -475,7 +475,7 @@ background-color: #AF5500;
 
 <h1 class="title toc-ignore">IDS 702 In-class analysis 4</h1>
 <h3 class="subtitle">Beer consumption in Sao Paulo IV</h3>
-<h4 class="date">September 1, 2020</h4>
+<h4 class="date">September 3, 2020</h4>
 
 
 <div id="TOC">
@@ -576,7 +576,8 @@ background-color: #AF5500;
 <h1>Exercises</h1>
 <p>Continue with the <code>rain</code> variable from last time. Again, In R, remember to treat the variable as a <strong>factor variable</strong> and not a discrete variable. Fit the same model as last time. That is, fit a linear model for <code>log(beer_cons_liters)</code> using <code>weekend</code>, <code>rain</code>, and <code>temp_median_c</code> as your predictors.</p>
 <ol style="list-style-type: decimal">
-<li><p>Write a code for doing <span class="math inline">\(k\)</span>-fold cross validation. Refer back to the class notes for details on <span class="math inline">\(k\)</span>-fold cross validation. Let <span class="math inline">\(k=10\)</span> and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model? Skip the question if you were able to complete it last time.</p>
+<li><p>Write a code for doing <span class="math inline">\(k\)</span>-fold cross validation. Refer back to the class notes for details on <span class="math inline">\(k\)</span>-fold cross validation. Let <span class="math inline">\(k=10\)</span> and use <font color="blue">average RMSE</font> as the metric for quantifying predictive error. What is the <font color="blue">average RMSE</font> for your regression model?</p>
+<p><strong>If you were able to complete this question last time, just write your answer down again.</strong></p>
 <p><em>Hint: if you are not sure how to begin writing your code for doing the cross validation, you should consider writing a “for loop”. A “for loop” is actually not the most efficient way to get this done but it will work just fine here. If you don’t know how to write a “for loop”, use the skeleton code below as a guide for writing your own “for loop” for this question.</em></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Suppose your data is stored in the object &quot;Data&quot;</span></a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># First set a seed to ensure your results are reproducible</span></a>
@@ -601,13 +602,13 @@ background-color: #AF5500;
 <a class="sourceLine" id="cb2-21" data-line-number="21">}</a>
 <a class="sourceLine" id="cb2-22" data-line-number="22">... <span class="co">#Calculate the average of all values in the RSME matrix here.</span></a></code></pre></div></li>
 <li><p>Now, do EDA to explore interaction effects between all your predictors. Summarize your findings in a few sentences.</p></li>
-<li><p>Extend your linear model to include interaction terms between <code>weekend</code> and the other two predictors. Are the interaction terms significant? Interpret the significant predictors.</p>
+<li><p>Extend your linear model to include interaction terms between <code>weekend</code> and the other two predictors. Are the interaction terms significant? What are the implications of these findings in the context of the data?</p>
 <p><em>To include an interaction term between two variables x1 and x2 in your linear model, use</em></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="st">&quot;model name here&quot;</span> &lt;-<span class="st"> </span><span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>x1 <span class="op">+</span><span class="st"> </span>x2 <span class="op">+</span><span class="st"> </span>x1<span class="op">:</span>x2)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="st">&quot;model name or object here&quot;</span> &lt;-<span class="st"> </span><span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>x1 <span class="op">+</span><span class="st"> </span>x2 <span class="op">+</span><span class="st"> </span>x1<span class="op">:</span>x2)</a></code></pre></div>
 <p><em>OR</em></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="st">&quot;model name here&quot;</span> &lt;-<span class="st"> </span><span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>x1<span class="op">*</span>x2)</a></code></pre></div></li>
-<li><p>Investigate the residual plots for the new model with the interaction terms (remember that linearity will only apply to your continuous predictor). Summarize your findings in a few sentences.</p></li>
-<li><p>Use your code for the <span class="math inline">\(k\)</span>-fold cross validation from question 1 to compute the average RMSE for the new model in question 9. Is the new RMSE model lower or higher? What can you infer from that?</p></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="st">&quot;model name or object here&quot;</span> &lt;-<span class="st"> </span><span class="kw">lm</span>(y <span class="op">~</span><span class="st"> </span>x1<span class="op">*</span>x2)</a></code></pre></div></li>
+<li><p>Do stepwise model selection using AIC and BIC with the “full model” set to the model from question 3. Summarize your findings in a few sentences.</p></li>
+<li><p>Use your code for the <span class="math inline">\(k\)</span>-fold cross validation from question 1 to compute the average RMSE for the new model in question 3. Is the new RMSE model lower or higher than your result from question 1? What can you infer from that?</p></li>
 </ol>
 </div>
 <div id="acknowledgement" class="section level1">

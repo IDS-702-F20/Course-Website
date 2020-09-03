@@ -112,7 +112,7 @@ lessons:
     video: "https://api.playposit.com/go/play/839797/1403540/929415/0/Module-112-Bringing-the-MLR-pieces-together-II-illustration"
     
   - title: "In-class analysis 4: Beer consumption in Sao Paulo IV"
-    #inClass: "0-4-beer-consumption-in-Sao-Paulo-IV.html" 
+    inClass: "0-4-beer-consumption-in-Sao-Paulo-IV.html" 
     
   - date: "Fri, Sept 4"
     title: "Final project outline"   
