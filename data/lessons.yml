@@ -131,17 +131,17 @@ lessons:
     title: "Module 2.1: Odds, odds ratios, and relative risks"
     slides: "2-1-logistic-intro.html"
     slidespdf: "2-1-logistic-intro.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/855924/1403540/929415/0/IDS-702--Module-21-Odds-odds-ratios-and-relative-risks"
     
   - title: "Module 2.2: Logistic regression with one predictor"
     slides: "2-2-logistic-one-predictor.html"
     slidespdf: "2-2-logistic-one-predictor.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/855938/1403540/929415/0/IDS-702--Module-22-Logistic-regression-with-one-predictor"
     
   - title: "Module 2.3: Logistic regression with one predictor (illustration)"
     slides: "2-3-logistic-one-predictor-illustration.html"
     slidespdf: "2-3-logistic-one-predictor-illustration.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/855968/1403540/929415/0/IDS-702--Module-23-Logistic-regression-with-one-predictor-illustration"
     
   - title: "In-class analysis 5: Predicting nba wins I"
     

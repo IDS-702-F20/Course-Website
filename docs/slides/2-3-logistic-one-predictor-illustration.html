@@ -186,7 +186,7 @@ stargazer(nbareg,type = "html", header = FALSE,single.row = TRUE)
 
 
 ```r
-#Let's mean-center the temperature for interpretation.
+#Let's mean-center the opposition points for interpretation.
 nba$Opp_cent &lt;- nba$Opp - mean(nba$Opp)
 nbareg &lt;- glm(win~Opp_cent,family=binomial(link=logit),data=nba)
 stargazer(nbareg,type = "html", header = FALSE,single.row = TRUE)
@@ -209,7 +209,7 @@ stargazer(nbareg,type = "html", header = FALSE,single.row = TRUE)
 
 
 ---
-## The Challenger analysis
+## Predicting nba wins
 
 Confidence intervals for the coefficients. Remember that this is on the log-odds scale.
 
@@ -243,7 +243,7 @@ Can you interpret the intervals?
 &lt;/div&gt;
 
 ---
-## The Challenger analysis
+## Predicting nba wins
 
 Let's transform to the odds scale.
 
@@ -279,7 +279,7 @@ Can you interpret the intervals?
 
 
 ---
-## The Challenger analysis
+## Predicting nba wins
 
 We can get the predicted probabilities for the observed cases.
 
@@ -316,7 +316,7 @@ nba[1:20,]
 
 
 ---
-## The Challenger analysis
+## Predicting nba wins
 
 Useful to examine a plot of predicted probabilities by `\(x\)`, that is, opposition points.
 
