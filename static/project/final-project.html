@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -1402,7 +1401,8 @@ html {
 font-size: 12px;
 }
 body {
-font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+
+font-family:'Trebuchet MS', sans-serif;
 font-weight: lighter;
 background-color: #fefefe;
 color: #222;
@@ -1412,44 +1412,49 @@ font-size: 15px;
 h1.title {
 font-weight: 400;
 font-variant: small-caps;
-font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
-color: #075767;
+
+font-family:'Trebuchet MS', sans-serif;
+color: #522700;
 }
 h1 {
 font-style: normal;
 font-variant: small-caps;
-font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
-color: #075767;
+
+font-family:'Trebuchet MS', sans-serif;
+color: #522700;
 }
 h2 {
 font-style: normal;
 font-variant: small-caps;
-font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+
+font-family:'Trebuchet MS', sans-serif;
 font-weight: 400;
-color: #075767;
+color: #522700;
 }
 h3.subtitle {
 font-style: normal;
 font-variant: small-caps;
-color: #075767;
+color: #522700;
 }
 h3 {
 font-style: normal;
 font-variant: small-caps;
-color: #075767;
+color: #522700;
 }
 h4 {
 font-style: normal;
 font-variant: small-caps;
 font-weight: 200;
-font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+
+font-family:'Trebuchet MS', sans-serif;
 margin-top: 1.5rem;
 margin-bottom: 0;
 line-height: 1;
 }
 h4.author,
 h4.date {
-font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif;
+
+font-family:'Trebuchet MS', sans-serif;
 font-weight: 200;
 font-variant: small-caps;
 }
@@ -1513,7 +1518,7 @@ content: "Question " counter(li)". " ;
 
 counter-increment: li;
 position: absolute;
-color: #075767;
+color: #522700;
 left: -12px;
 font-weight: normal;
 }
@@ -1521,13 +1526,13 @@ ol ol {
 counter-reset: subitem;
 }
 a, a:hover, a:focus {
-color: #bf4f22;
+color: #AF5500;
 }
 .tocify {
 font-variant: small-caps;
 }
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-background-color: #bf4f22;
+background-color: #AF5500;
 }
 </style>
 
@@ -1545,7 +1550,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -1607,6 +1611,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -1635,6 +1640,12 @@ summary {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -1721,9 +1732,9 @@ div.tocify {
 <div id="due-dates" class="section level2">
 <h2>Due dates</h2>
 <ul>
-<li>Project proposals are due Tuesday, November 5.</li>
-<li>Each student will present their project in class either on Tuesday, November 26, Tuesday, December 3 or Thursday, December 5.</li>
-<li>Final project reports are due Tuesday, December 10.</li>
+<li>Project proposals are due Wednesday, October 28.</li>
+<li>Each student will present their project (pre-recorded presentations) in class either on Tuesday, November 17, or Thursday, November 19.</li>
+<li>Final project reports are due Tuesday, November 24.</li>
 </ul>
 </div>
 <div id="scope" class="section level2">
@@ -1732,11 +1743,15 @@ div.tocify {
 </div>
 <div id="no-data-what-to-do" class="section level2">
 <h2>No data, what to do?</h2>
-<p>If you do not have a dataset or an inferential problem in mind that you might be interested in, please come talk to me at least two weeks before the proposal due date, so we can explore ideas.</p>
+<p>If you do not have a dataset or an inferential problem in mind that you might be interested in, please come talk to me AT LEAST TWO WEEKS before the proposal due date, so we can explore ideas.</p>
+<div id="github" class="section level3">
+<h3>GitHub</h3>
+<p>Each student MUST use GitHub. A blank repository will be created for this project. Follow this link: <a href="https://classroom.github.com/a/YoXp3I7x" class="uri">https://classroom.github.com/a/YoXp3I7x</a> to gain access. Feel free to create other folders within the repository as needed but you must push your final reports and presentation slides to the corresponding folders already created for you. Your repository must include your R code. Do not worry if you are not very familiar with working with GitHub. More instructions will be provided later.</p>
+</div>
 </div>
 <div id="format" class="section level2">
 <h2>Format</h2>
-<p>The final report should be concise, well written and must not exceed 5 pages. Your report should be written according to the following outline:</p>
+<p>The final report should be concise, well written and MUST NOT exceed 5 pages (excluding references and the appendix). Your report should be written according to the following outline:</p>
 <ul>
 <li><h3 id="summary">Summary</h3>
 <p>A few sentences describing the inferential question(s), the method used and the most important results.</p></li>
@@ -1749,7 +1764,6 @@ div.tocify {
 <li><h3 id="conclusions">Conclusions</h3>
 <p>In this section, you should present the importance of your findings, and describe any limitations of the study. You can also address future work here if there are extensions of your analysis you find interesting, especially those that may address some of the limitations already mentioned.</p></li>
 </ul>
-<p><em>You should create a GitHub repository for this final project which must include your R code.</em></p>
 </div>
 <div id="grading" class="section level2">
 <h2>Grading</h2>

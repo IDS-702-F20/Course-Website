@@ -24,9 +24,9 @@ For the final project, you will apply the knowledge and skills that you have lea
 
 ## Due dates
 
-- Project proposals are due Tuesday, November 5. 
-- Each student will present their project in class either on Tuesday, November 26, Tuesday, December 3 or Thursday, December 5.
-- Final project reports are due Tuesday, December 10.
+- Project proposals are due Wednesday, October 28.
+- Each student will present their project (pre-recorded presentations) in class either on Tuesday, November 17, or Thursday, November 19.
+- Final project reports are due Tuesday, November 24.
 
 
 ## Scope
@@ -36,12 +36,16 @@ The project should be an in-depth statistical analysis of a question that intere
 
 ## No data, what to do?
 
-If you do not have a dataset or an inferential problem in mind that you might be interested in, please come talk to me at least two weeks before the proposal due date, so we can explore ideas.
+If you do not have a dataset or an inferential problem in mind that you might be interested in, please come talk to me AT LEAST TWO WEEKS before the proposal due date, so we can explore ideas.
 
+
+### GitHub
+
+Each student MUST use GitHub. A blank repository will be created for this project. Follow this link: https://classroom.github.com/a/YoXp3I7x to gain access. Feel free to create other folders within the repository as needed but you must push your final reports and presentation slides to the corresponding folders already created for you. Your repository must include your R code. Do not worry if you are not very familiar with working with GitHub. More instructions will be provided later.
 
 ## Format
 
-The final report should be concise, well written and must not exceed 5 pages. Your report should be written according to the following outline:
+The final report should be concise, well written and MUST NOT exceed 5 pages (excluding references and the appendix). Your report should be written according to the following outline:
 
 - ### Summary  
 A few sentences describing the inferential question(s), the method used and the most important results.
@@ -57,8 +61,6 @@ A detailed description of the model used, how you selected the model, how you se
 
 - ### Conclusions
 In this section, you should present the importance of your findings, and describe any limitations of the study. You can also address future work here if there are extensions of your analysis you find interesting, especially those that may address some of the limitations already mentioned.
-
-*You should create a GitHub repository for this final project which must include your R code.*
 
 
 ## Grading

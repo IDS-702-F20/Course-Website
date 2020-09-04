@@ -183,7 +183,7 @@ class: center, middle
   
 --
 
-  + Drop the variable that leads to the smallest value of AIC or BIC, or the largest value of $\textrm{Adj.}R^2$.  
+  + Drop the variable that leads to the smallest "change" in AIC, BIC, or $\textrm{Adj.}R^2$.  
     *You might even consider using average MSE from k-fold cross-validation if the goal is prediction.*
 
 --

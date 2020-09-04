@@ -116,6 +116,7 @@ lessons:
     
   - date: "Fri, Sept 4"
     title: "Final project outline"   
+    project: "final-project.html"
     
     
   
@@ -128,13 +129,18 @@ lessons:
   - week: "WEEK 4"
     date: "Tue, Sept 8"
     title: "Module 2.1: Odds, odds ratios, and relative risks"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "2-1-logistic-intro.html"
+    slidespdf: "2-1-logistic-intro.pdf"
     #video: ""
     
   - title: "Module 2.2: Logistic regression with one predictor"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "2-2-logistic-one-predictor.html"
+    slidespdf: "2-2-logistic-one-predictor.pdf"
+    #video: ""
+    
+  - title: "Module 2.3: Logistic regression with one predictor (illustration)"
+    slides: "2-3-logistic-one-predictor-illustration.html"
+    slidespdf: "2-3-logistic-one-predictor-illustration.pdf"
     #video: ""
     
   - title: "In-class analysis 5: Predicting nba wins I"
@@ -148,12 +154,12 @@ lessons:
     
     
   - date: "Thur, Sept 10"
-    title: "Module 2.3: Model assessment and validation - binned residuals and roc curves"
+    title: "Module 2.4: Model assessment and validation - binned residuals and roc curves"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 2.4: Logistic regression with multiple predictors"
+  - title: "Module 2.5: Logistic regression with multiple predictors"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
