@@ -143,7 +143,7 @@ lessons:
     slidespdf: "2-3-logistic-one-predictor-illustration.pdf"
     video: "https://api.playposit.com/go/play/855968/1403540/929415/0/IDS-702--Module-23-Logistic-regression-with-one-predictor-illustration"
     
-  - title: "In-class analysis 5: Predicting nba wins I"
+  - title: "In-class: Q&A and discussion session"
     
   - date: "DELIVERABLES:"
     title: "Data analysis assignment II due!"
@@ -157,14 +157,14 @@ lessons:
     title: "Module 2.4: Model assessment and validation - binned residuals and roc curves"
     slides: "2-4-logistic-model-assessment.html"
     slidespdf: "2-4-logistic-model-assessment.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/860851/1403540/929415/0/IDS-702--Module-24-Model-assessment-and-validation---binned-residuals-and-roc-curves"
     
   - title: "Module 2.5: Logistic regression with multiple predictors I"
     slides: "2-5-logistic-multiple-predictors-I.html"
     slidespdf: "2-5-logistic-multiple-predictors-I.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/860920/1403540/929415/0/IDS-702--Module-25-Logistic-regression-with-multiple-predictors-I"
     
-  - title: "In-class analysis 6: Predicting nba wins II"
+  - title: "In-class analysis 5: Predicting nba wins I"
     
   - title: " "
   - title: "MODULE 3: OTHER GENERALIZED LINEAR MODELS"
@@ -184,7 +184,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "In-class: Q&A and discussion session"
+  - title: "In-class analysis 6: Predicting nba wins II"
   
   - date: "DELIVERABLES:"
     title: "Data analysis assignment III due!"

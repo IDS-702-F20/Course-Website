@@ -33,7 +33,7 @@ table(arsenic$switch)
 ## We can do boxplots for the numeric variables
 # First, let's look at arsenic vs switch
 ggplot(arsenic,aes(x=switch_fac, y=arsenic, fill=switch_fac)) +
-  geom_boxplot() + #coord_flip() +
+  geom_boxplot() + coord_flip() +
   scale_fill_brewer(palette="Reds") +
   labs(title="Amount of arsenic in well vs switching wells",
        x="Switched to safe well?",y="Amount of arsenic in well") + 
