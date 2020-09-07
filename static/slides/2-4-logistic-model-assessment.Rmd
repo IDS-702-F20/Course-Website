@@ -72,7 +72,7 @@ $$e_i^P = \dfrac{y_i - \hat{\pi}_i}{\sqrt{\hat{\pi}_i(1-\hat{\pi}_i)}},$$
 - .hlight[Deviance residuals]
   .block[
 .small[
-$$e_i^D = \textrm{sign}(y_i - \hat{\pi}_i) \times 2\left(y_i \textrm{log}\dfrac{y_i}{\hat{\pi}_i} + (1-y_i) \textrm{log}\dfrac{1-y_i}{1-\hat{\pi}_i} \right),$$
+$$e_i^D = \textrm{sign}(y_i - \hat{\pi}_i) \times 2\left(y_i \textrm{log}\dfrac{1}{\hat{\pi}_i} + (1-y_i) \textrm{log}\dfrac{1}{1-\hat{\pi}_i} \right),$$
 ]
 ]
  
