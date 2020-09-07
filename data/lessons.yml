@@ -150,81 +150,78 @@ lessons:
     
   - date: "NEW ASSIGNMENT:"
     title: "Data analysis assignment III"
-    #hw: "hw-03.html"
+    hw: "hw-03.html"
     
     
   - date: "Thur, Sept 10"
     title: "Module 2.4: Model assessment and validation - binned residuals and roc curves"
-    #slides: ".html"
-    #slidespdf: ".pdf"
-    #video: ""
+    slides: "2-4-logistic-model-assessment.html"
+    slidespdf: "2-4-logistic-model-assessment.pdf"
+    video: ""
     
-  - title: "Module 2.5: Logistic regression with multiple predictors"
-    #slides: ".html"
-    #slidespdf: ".pdf"
-    #video: ""
+  - title: "Module 2.5: Logistic regression with multiple predictors I"
+    slides: "2-5-logistic-multiple-predictors-I.html"
+    slidespdf: "2-5-logistic-multiple-predictors-I.pdf"
+    video: ""
     
   - title: "In-class analysis 6: Predicting nba wins II"
     
   - title: " "
   - title: "MODULE 3: OTHER GENERALIZED LINEAR MODELS"
-    #reading: "3-reading.html"
+    reading: "3-reading.html"
   - title: " "
   
   
   - week: "WEEK 5"
     date: "Tue, Sept 15"
-    title: "Module 3.1: Multinomial logistic regression "
-    #slides: ".html"
-    #slidespdf: ".pdf"
-    #video: ""
+    title: "Module 2.6: Logistic regression with multiple predictors II"
+    #slides: "2-6-logistic-multiple-predictors-II.html"
+    #slidespdf: "2-6-logistic-multiple-predictors-II.pdf"
+    video: ""
     
-  - title: "Module 3.2: Multinomial logistic regression (illustration)"
+  - title: "Module 3.1: Probit regression"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "In-class: Q&A and discussion session"
-    
+  
   - date: "DELIVERABLES:"
     title: "Data analysis assignment III due!"
     
   - date: "NEW ASSIGNMENT:"
     title: "Team project I"
     #project: "team-project-01.html"
-    
+  
     
   - date: "Thur, Sept 17"
-    title: "Module 3.3: Proportional odds model"
+    title: "Module 3.2: Poisson regression"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 3.4: Proportional odds model (illustration)"
+  - title: "Module 3.3: Poisson regression (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "In-class: Q&A and discussion session"
-    
+  
+  
   - week: "WEEK 6"
     date: "Tue, Sept 22"
-    title: "Module 3.5: Probit regression"
+    title: "Module 3.4: Multinomial logistic regression "
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 3.6: Poisson regression"
-    #slides: ".html"
-    #slidespdf: ".pdf"
-    #video: ""
-    
-  - title: "Module 3.7: Poisson regression (illustration)"
+  - title: "Module 3.5: Multinomial logistic regression (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
   - title: "In-class: Q&A and discussion session"
+    
     
   - date: "Thur, Sept 24"
     title: "Team project I presentations"
@@ -233,14 +230,28 @@ lessons:
     title: "Team project I reports due"
     
     
-  - title: " "
-  - title: "MODULE 4: MULTILEVEL/HIERARCHICAL MODELS"
-    #reading: "3-reading.html"
-  - title: " "
-  
-  
   - week: "WEEK 7"
     date: "Tue, Sept 29"
+    title: "Module 3.6: Proportional odds model"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "Module 3.7: Proportional odds model (illustration)"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "In-class: Q&A and discussion session"
+  
+    
+  - title: " "
+  - title: "MODULE 4: MULTILEVEL/HIERARCHICAL MODELS"
+    #reading: "4-reading.html"
+  - title: " "
+  
+  
+  - date: "Thur, Oct 1"
     title: "Module 4.1: Multilevel/hierarchical linear models I"
     #slides: ".html"
     #slidespdf: ".pdf"
@@ -253,7 +264,9 @@ lessons:
     
   - title: "In-class analysis 7: Do more beautiful professors get higher evaluations I"
 
-  - date: "Thur, Oct 1"
+
+  - week: "WEEK 8"
+    date: "Tue, Oct 6"
     title: "Module 4.3: Multilevel/hierarchical linear models II"
     #slides: ".html"
     #slidespdf: ".pdf"
@@ -266,9 +279,12 @@ lessons:
     
   - title: "In-class analysis 8: Do more beautiful professors get higher evaluations II"
   
+  - date: "NEW ASSIGNMENT:"
+    title: "Team project II"
+    #project: "team-project-02.html"
   
-  - week: "WEEK 8"
-    date: "Tue, Oct 6"
+  
+  - date: "Thur, Oct 8"
     title: "Module 4.5: Multilevel/hierarchical logistic models"
     #slides: ".html"
     #slidespdf: ".pdf"
@@ -280,6 +296,46 @@ lessons:
     #video: ""
     
   - title: "In-class analysis 9: Do more beautiful professors get higher evaluations III"
+  
+  
+  - title: " "
+  - title: "MODULE 5: DEALING WITH MESSY DATA"
+    #reading: "5-reading.html"
+  - title: " "
+  
+  
+  - week: "WEEK 9"
+    date: "Tue, Oct 13"
+    title: "Module 5.1: Introduction to missing data"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+  
+  - title: "Module 5.2: Imputation methods I"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "Module 5.3: Imputation methods II"
+    #slides: ".html"
+    #slidespdf: ".pdf"
+    #video: ""
+    
+  - title: "In-class: Q&A and discussion session"
+    
+  - date: "Thur, Oct 15"
+    title: "Team project II presentations"
+    
+  - date: "Fri, Oct 16 | DELIVERABLES:"
+    title: "Team project II reports due"
+    
+    
+  - title: " "
+  - title: "MODULE 5: METHODS FOR CAUSAL INFERENCE"
+    #reading: "5-reading.html"
+  - title: " "
+  
+  
     
   
     

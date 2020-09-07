@@ -1,6 +1,6 @@
 ---
-title: "Methods and Data Analysis 3"
-date: "Due: 11:59pm, Friday, Sept 27"
+title: "Data Analysis Assignment 3"
+date: "Due: 11:59pm, Tuesday, Sept 15"
 output: 
   html_document: 
     css: hw.css
@@ -14,43 +14,53 @@ output:
 
 ## Instructions
 
-This assignment involves logistic regression with multiple predictors. 
-<!-- The datasets (for question 2) can be found on Sakai: go to Resources $\rightarrow$ Datasets $\rightarrow$ Homework Datasets $\rightarrow$ Methods and Data Analysis 2.  -->
-Please type your solutions using R Markdown, LaTeX or any other word processor but be sure to knit or convert the final output file to ".pdf". Submissions should be made on gradescope: go to Assignments $\rightarrow$ Methods and Data Analysis 3.
+This assignment involves multiple linear regression. You will use the same data from Data Analysis Assignment 3. YOU SHOULD USE THE SAME VERSION OF THE DATA YOU USED FOR THAT ASSIGNMENT. 
+<!-- The data can be found on Sakai: go to Resources $\rightarrow$ Datasets $\rightarrow$ Data Analysis Assignments $\rightarrow$ Assignment 2.   -->
+Please type your solutions using R Markdown, LaTeX or any other word processor but YOU MUST knit or convert the final output file to ".pdf". Submissions should be made on gradescope: go to Assignments $\rightarrow$ Data Analysis Assignment 3.
+
+<font color="red">**DO NOT INCLUDE R CODE OR OUTPUT IN YOUR SOLUTIONS/REPORTS** *All R code can be included in an appendix, and R outputs should be converted to nicely formatted tables. Feel free to use R packages such as `kable`, `xtable`, and `stargazer`.*</font>
+
+<font color="red">*Also, you can round up ALL numbers/estimates to 2 decimal places (4 decimal places at the most to avoid exact zeros when possible).*</font>
+
+**Reminder: You are allowed and even encouraged to talk to each other about general concepts, or to the instructor/TAs. However, the write-ups, solutions, and code MUST be entirely your own work.**
 
 ## Questions
 
-<!-- Question 1 was taken and adapted from Chapter 7 of [Ramsey, F.L. and Schafer, D.W. (2013), "The Statistical Sleuth: A Course in Methods of Data Analysis (3rd ed)."](https://www.amazon.com/Statistical-Sleuth-Course-Methods-Analysis/dp/1133490670) -->
-
 <font color="blue">MATERNAL SMOKING AND PRE-TERM BIRTH</font>.
-This question is a continuation of the question on maternal smoking and birth weigths from the last homework. Remember that the data file contained an indicator variable called Premature (gestational age < 270 days), which is just a recoding of gestational age. For this homework, use that as your outcome variable.
+This question is a continuation of the question on maternal smoking and birth weigths from the last assignment. Remember that the data file contained an indicator variable called Premature (gestational age < 270 days), which is just a recoding of gestational age. For this assignment, use that as your outcome/response variable.
 
-Our questions of interest are very similar to the last homework as well, except using the new outcome variable. The questions are as follows:
+Our questions of interest are very similar to the last assignment as well, except using the new response variable. The questions are as follows:
 
   + Do mothers who smoke tend to have higher chances of pre-term birth than mothers who do not smoke? What is a likely range for the odds ratio of pre-term birth for smokers and non-smokers?
   + Is there any evidence that the odds ratio of pre-term birth for smokers and non-smokers differs by mother's race? If so, characterize those differences.
   + Are there other interesting associations with the odds of pre-term birth that are worth mentioning?
+  
+<font color="blue">*First build your model, then do model assessment and validation. You should only proceed to answer the questions when you are satisfied with your final model; you should answer all the questions using that final model.*</font>
       
-Analyze the data and investigate these questions using a logistic regression model. Also, do the following.
+<font color="green">Analyze the data and investigate these questions using a logistic regression model.</font> Also, do the following.
 
-  + Write a report (maximum of 5 pages) describing your findings. Make sure to provide direct answers to each question using your model.
+  + Write a report <font color="red">(maximum of 5 pages)</font> describing your findings. Code and additional plots can be placed in an appendix. <font color="red">You will be penalized should your report exceed 5 pages!</font>
   + Be sure to also include the following in your report: 
     - the model you ultimately decided to use,
-    - a justification for that model (e.g., why you chose certain transformations and why you decided the final model is reasonable to use based on binned residual diagnostics, ROC curves and other metrics for model comparison, such as change in deviance),
-    - the relevant regression output (includes: a table with coefficients and SEs, and p-values or confidence intervals; and somewhere in the text or table the area under the curve for your final model),
+    - clear model building, that is, justification for the final model (e.g., why you chose certain transformations and why you decided the final model is reasonable to use based on binned residual diagnostics, ROC curves and other metrics for model comparison, such as change in deviance),
+    - the relevant regression output (includes: a table with coefficients and SEs, and p-values or confidence intervals; and somewhere in the text or table the "area under the curve" for your final model),
     - your interpretation of the results in the context of the questions of interest, and
     - any potential limitations of the analysis.
 
-<font color="blue">*First build your model, then do model assessment and validation. You should only proceed to answer the questions when you are satisfied with your final model; you should answer all the questions using that final model.*</font>
+To help organize your thoughts, you should organize your report into sections as follows.
 
-<font color="red">**DO NOT INCLUDE R CODE OR OUTPUT IN YOUR REPORT!** *All R code must be included in the Appendix, and R outputs should be converted to nicely formatted tables. Feel free to use R packages such as `kable` and `xtable`. Also, you will be penalized should your report exceed 5 pages.*</font>
+  + <font color="brown">**Summary**</font>: a few sentences describing the inferential question(s), the method used and the most important results.
+  + <font color="brown">**Introduction**</font>: a short but more in-depth introduction to the inferential question(s) of interest. Here, you are basically writing the experiment and questions of interest given in your own words.
+  + <font color="brown">**Data**</font>: your EDA, interesting features of the data, and how you dealt with missing/erroneous values. Try to include one or two plots of your most interesting EDA findings.
+  + <font color="brown">**Model**</font>: a detailed description of the model used, how you selected the model, how you selected the variables, model assessment, model validation, and presentation of the model results. What are your overall conclusions in context of the inferential problem(s)? Try to include one or two plots that can help drive your point home.
+  + <font color="brown">**Conclusion**</font>: the importance of your findings and potential limitations of the study.
 
 
 <br />
 <br />
-<font color="red">**FEW THINGS TO KEEP IN MIND LIKE THE LAST HOMEWORK:**</font>
+<font color="red">**FEW THINGS TO KEEP IN MIND LIKE THE LAST ASSIGNMENT:**</font>
 
-<font color="red">*There are some complexities in this dataset to be aware of since this is the same dataset as the last homework. Some variables again have missing values. In particular, you will see from the .csv file that the height and weight of the father are missing quite frequently. This is typical in data on births: it is often difficult to get data about the fathers. I recommend that you not consider father's height and weight when modeling. Some of the other variables have a few missing cases here and there. For this analysis, you can drop them from the modeling. This is not the ideal way to handle missing data in an analysis--and we will learn better methods later in the course--but for now it will move the analysis forward. I strongly recommend that you make a data file that has complete observations on every single case for all the variables you are thinking about including in the model, and run the regression using that file. For example, I posted such a file in the Sakai site that excludes all of the variables on the fathers. You are welcome to use this file, or make your own if you want to use fathers' data. **The modified data can be found in the file "smoking.csv" on Sakai.** *</font>
+<font color="red">*There are some complexities in this dataset to be aware of since this is the same dataset as the last assignment. Some variables again have missing values. In particular, you will see from the .csv file that the height and weight of the father are missing quite frequently. This is typical in data on births: it is often difficult to get data about the fathers. I recommend that you not consider father's height and weight when modeling. Some of the other variables have a few missing cases here and there. For this analysis, you can drop them from the modeling. This is not the ideal way to handle missing data in an analysis--and we will learn better methods later in the course--but for now it will move the analysis forward. I strongly recommend that you make a data file that has complete observations on every single case for all the variables you are thinking about including in the model, and run the regression using that file. For example, I posted such a file in the Sakai site that excludes all of the variables on the fathers. You are welcome to use this file, or make your own if you want to use fathers' data. **The modified data can be found in the file "smoking.csv" on Sakai.** *</font>
     
 <font color="red">**The file contains an indicator variable for Premature (gestational age < 270 days), which is just a recoding of gestational age; we use that as our outcome variable.** *The data files also contain two other outcome variables: gestational age and birth weight. Both of these could be affected by smoking, so both are outcomes rather than predictors. It does not make sense scientifically to include one as a predictor of the other; the two variables happen simultaneously and hence are a bivariate outcome. For this analysis, we exclude birth weight from the modeling. Of course, one could do a separate regression for birth weight to see if smoking has an effect on gestational ages. Even better, one could treat birth weight and gestational age as a bivariate outcome and fit a regression model that predicts the bivariate outcome. This is a model we won't have to time to learn about in our course, but come find the instructor if you want to learn more.*</font>
     
@@ -64,8 +74,8 @@ Variable       |        Description
 :------------- | :-------------------
 Id             |        id number
 birth          |       birth date where 1096 = January1, 1961 
-gestation      |       length of gestation in days
-bwt            |       birth weight in ounces (999 = unknown)
+gestation      |       length of gestation in days <br /> *Ignore this for this assignment .*
+bwt            |       birth weight in ounces (999 = unknown) <br /> *Ignore this for this assignment .*
 parity         |      total number of previous pregnancies, including fetal deaths and still births. (99=unknown)
 mrace          |      mother's race or ethnicity <br /> 0-5=white <br /> 6=mexican <br /> 7=black <br /> 8=asian <br /> 9=mix <br /> 99=unknown
 mage           |      mother's age in years at termination of pregnancy
@@ -82,7 +92,7 @@ income           |    family yearly income in 2500 increments. 0 = under 2500, 1
 smoke            |    does mother smoke? <br /> 0 = never <br /> 1 = smokes now <br /> 2 = until preg <br /> 3 = once did, not now
 time             |       If mother quit, how long ago did she quit? <br /> 0 = never smoked, <br /> 1 = still smokes, <br /> 2 = quit during pregnancy, <br /> 3 = up to 1 yr ago, <br /> 4 = up to 2 yr ago, <br /> 5 = up to 3 yr ago, <br /> 6 = up to 4 yr ago, <br /> 7 = 5 to 9yr ago, <br /> 8 = 10+yr ago, <br /> 9 = quit and don't know, <br /> 98 = unknown
 number           |      number of cigs smoked a day for past and current smokers <br /> 0 = never smoked <br /> 1 = 1-4 <br /> 2 = 5-9 <br /> 3 = 10-14 <br /> 4 = 15-19 <br /> 5 = 20-29 <br /> 6 = 30-39 <br /> 7 = 40-60 <br /> 8 = 60+, <br /> 9 = smoke but don't know
-Premature       |        1 = baby born before gestational age of 270, and 0 = otherwise. <br /> *This is a dichotomized function of the gestational age. We use it as the outcome variable.*
+Premature       |        1 = baby born before gestational age of 270, and 0 = otherwise. <br /> *This is a dichotomized function of the gestational age. We use it as the outcome/response variable.*
 
 
 ## Grading
