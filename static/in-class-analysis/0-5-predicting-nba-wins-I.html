@@ -11,9 +11,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-09-10" />
 
-<title>IDS 702 In-class analysis 2</title>
+<title>IDS 702 In-class analysis 5</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -473,9 +473,9 @@ background-color: #AF5500;
 
 
 
-<h1 class="title toc-ignore">IDS 702 In-class analysis 2</h1>
-<h3 class="subtitle">Beer consumption in Sao Paulo II</h3>
-<h4 class="date">August 25, 2020</h4>
+<h1 class="title toc-ignore">IDS 702 In-class analysis 5</h1>
+<h3 class="subtitle">Predicting nba wins I</h3>
+<h4 class="date">September 10, 2020</h4>
 
 
 <div id="TOC">
@@ -486,7 +486,10 @@ background-color: #AF5500;
 <li><a href="#gradescope">Gradescope</a></li>
 </ul></li>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#the-data">The data</a></li>
+<li><a href="#the-data">The data</a><ul>
+<li><a href="#code-book">Code book</a></li>
+<li><a href="#team-abbreviations-and-acronyms">Team abbreviations and acronyms</a></li>
+</ul></li>
 <li><a href="#exercises">Exercises</a></li>
 <li><a href="#acknowledgement">Acknowledgement</a></li>
 </ul>
@@ -512,27 +515,46 @@ background-color: #AF5500;
 </div>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>The purpose of this exercise is to give you additional practice working with multiple linear regression. We will continue with the Kaggle beer consumption dataset (<a href="https://www.kaggle.com/dongeorge/beer-consumption-sao-paulo/" class="uri">https://www.kaggle.com/dongeorge/beer-consumption-sao-paulo/</a>). You will demonstrate the impacts of some variables on beer consumption in a given region and the consumption forecast for certain scenarios. The data (sample) were collected in Sao Paulo, Brazil, in a university area, where there are some parties with groups of students from 18 to 28 years of age (average).</p>
+<p>The purpose of this exercise is to give you additional practice working with logistic regression. The exercise is based on the NBA Team Game Stats dataset found here: <a href="https://www.kaggle.com/ionaskel/nba-games-stats-from-2014-to-2018/" class="uri">https://www.kaggle.com/ionaskel/nba-games-stats-from-2014-to-2018/</a>. Read more about the problem and dataset under the description section of the link.</p>
 <p>Kaggle is a great online community of data scientists. To learn more about Kaggle, follow this link: <a href="https://www.kaggle.com/getting-started/44916" class="uri">https://www.kaggle.com/getting-started/44916</a>.</p>
+<p><font color="brown"><strong>For this exercise, you will need to select ONLY ONE NBA team in the data. Also, you will need to set aside data for the 2017/2018 season as test data. write the name of the team you selected at the top of your report</strong></font></p>
 </div>
 <div id="the-data" class="section level1">
 <h1>The data</h1>
-<p>This is the same data from the last in-class exercise. so you should already have it saved locally. Just in case you do not, follow the instructions below.</p>
-<p>Download the data (named <code>consumo_cerveja.csv</code>) from Sakai and save it locally to the same directory as your R markdown file. To find the data file on Sakai, go to Resources <span class="math inline">\(\rightarrow\)</span> Datasets <span class="math inline">\(\rightarrow\)</span> In-Class Analyses. Once you have downloaded the data file into the SAME folder as your R markdown file, load and clean the data by using the following R code.</p>
-<p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">It is always a good idea to take a look at the first few rows of the raw file to see what the data looks like before loading the data. In this raw ‘consumo_cerveja’ file, you will notice that commas are actually used both as decimals and to separate the columns. Thus, you need to let R know by specifying the <em>sep</em> and <em>dec</em> options as in the code below.</span></span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">beer &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data/consumo_cerveja.csv&quot;</span>,</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">                 <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>,<span class="dt">dec=</span><span class="st">&quot;,&quot;</span>,<span class="dt">nrows=</span><span class="dv">365</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># rename the variables</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">beer<span class="op">$</span>date &lt;-<span class="st"> </span>beer<span class="op">$</span>Data</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">beer<span class="op">$</span>temp_median_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Media..C.</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">beer<span class="op">$</span>temp_min_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Minima..C.</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">beer<span class="op">$</span>temp_max_c &lt;-<span class="st"> </span>beer<span class="op">$</span>Temperatura.Maxima..C.</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">beer<span class="op">$</span>precip_mm &lt;-<span class="st"> </span>beer<span class="op">$</span>Precipitacao..mm.</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">beer<span class="op">$</span>weekend &lt;-<span class="st"> </span><span class="kw">factor</span>(beer<span class="op">$</span>Final.de.Semana)</a>
-<a class="sourceLine" id="cb1-10" data-line-number="10">beer<span class="op">$</span>beer_cons_liters &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(beer<span class="op">$</span>Consumo.de.cerveja..litros.)</a>
-<a class="sourceLine" id="cb1-11" data-line-number="11">beer &lt;-<span class="st"> </span>beer[ , <span class="dv">8</span><span class="op">:</span><span class="kw">ncol</span>(beer)]</a></code></pre></div>
-<p>After renaming the variables using the code above, your data will be saved in the object <code>beer</code>, and the relevant variables plus their meanings are given in the table below:</p>
+<p>Download the data (named <code>nba_games_stats.csv</code>) from Sakai and save it locally to the same directory as your R markdown file. To find the data file on Sakai, go to Resources <span class="math inline">\(\rightarrow\)</span> Datasets <span class="math inline">\(\rightarrow\)</span> In-Class Analyses. Once you have downloaded the data file into the SAME folder as your R markdown file, load and clean the data by using the following R code.</p>
+<p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">Again, you are expected to select ONLY ONE NBA team in the data. Also, set aside data for the 2017/2018 season as test data.</span></span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">nba &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;nba_games_stats.csv&quot;</span>,<span class="dt">header =</span> <span class="ot">TRUE</span>,<span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>,<span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># Set factor variables</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">nba<span class="op">$</span>Home &lt;-<span class="st"> </span><span class="kw">factor</span>(nba<span class="op">$</span>Home)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">nba<span class="op">$</span>Team &lt;-<span class="st"> </span><span class="kw">factor</span>(nba<span class="op">$</span>Team)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">nba<span class="op">$</span>WINorLOSS &lt;-<span class="st"> </span><span class="kw">factor</span>(nba<span class="op">$</span>WINorLOSS)</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co"># Convert date to the right format</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">nba<span class="op">$</span>Date &lt;-<span class="st"> </span><span class="kw">as.Date</span>(nba<span class="op">$</span>Date, <span class="st">&quot;%Y-%m-%d&quot;</span>)</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co"># Also create a binary variable from WINorLOSS. </span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co"># This is not always necessary but can be useful </span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#particularly for R functions that prefer numeric binary variables</span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#to the original factor variables</span></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">nba<span class="op">$</span>Win &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>,<span class="kw">nrow</span>(nba))</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">nba<span class="op">$</span>Win[nba<span class="op">$</span>WINorLOSS<span class="op">==</span><span class="st">&quot;W&quot;</span>] &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18"><span class="co"># I picked the Charlotte Hornets (CHO) as an example,</span></a>
+<a class="sourceLine" id="cb1-19" data-line-number="19"><span class="co">#you should pick any team you want</span></a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">nba_reduced &lt;-<span class="st"> </span>nba[nba<span class="op">$</span>Team <span class="op">==</span><span class="st"> &quot;CHO&quot;</span>, ]</a>
+<a class="sourceLine" id="cb1-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb1-22" data-line-number="22"><span class="co"># Set aside the 2017/2018 season as your test data</span></a>
+<a class="sourceLine" id="cb1-23" data-line-number="23">nba_reduced_train &lt;-<span class="st"> </span>nba_reduced[nba_reduced<span class="op">$</span>Date <span class="op">&lt;</span><span class="st"> &quot;2017-10-01&quot;</span>,]</a>
+<a class="sourceLine" id="cb1-24" data-line-number="24">nba_reduced_test &lt;-<span class="st"> </span>nba_reduced[nba_reduced<span class="op">$</span>Date <span class="op">&gt;=</span><span class="st"> &quot;2017-10-01&quot;</span>,]</a></code></pre></div>
+<p>You will only use the <code>nba_reduced_train</code> data today, but will use the <code>nba_reduced_test</code> data in the next in-class exercise.</p>
+<div id="code-book" class="section level2">
+<h2>Code book</h2>
 <table>
+<colgroup>
+<col width="51%"></col>
+<col width="48%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Variable</th>
@@ -541,46 +563,321 @@ background-color: #AF5500;
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">date</td>
-<td align="left">Date the data for each observation was recorded.</td>
+<td align="left">Team</td>
+<td align="left">Abbreviation for the name of the team</td>
 </tr>
 <tr class="even">
-<td align="left">temp_median_c</td>
-<td align="left">Median temperature in <span class="math inline">\(^0C\)</span>.</td>
+<td align="left">Game</td>
+<td align="left">Game index for the season. Each team plays 82 games per season</td>
 </tr>
 <tr class="odd">
-<td align="left">temp_min_c</td>
-<td align="left">Minimum temperature in <span class="math inline">\(^0C\)</span>.</td>
+<td align="left">Date</td>
+<td align="left">Date of the game</td>
 </tr>
 <tr class="even">
-<td align="left">temp_max_c</td>
-<td align="left">Maximum temperature in <span class="math inline">\(^0C\)</span>.</td>
+<td align="left">Home</td>
+<td align="left">Home or away game?</td>
 </tr>
 <tr class="odd">
-<td align="left">precip_mm</td>
-<td align="left">Precipitation in <span class="math inline">\(mm\)</span>.</td>
+<td align="left">Opponent</td>
+<td align="left">Abbreviation for the name of the opposing team</td>
 </tr>
 <tr class="even">
-<td align="left">weekend</td>
-<td align="left">Indicator variable for weekend: 1 = weekend, 0 = weekday.</td>
+<td align="left">WinorLoss</td>
+<td align="left">Did the team win? W = win, L = loss</td>
 </tr>
 <tr class="odd">
-<td align="left">beer_cons_liters</td>
-<td align="left">Beer consumption in liters.</td>
+<td align="left">Win</td>
+<td align="left">Binary re-coding of WinorLoss. 1 = win, 0 = loss</td>
+</tr>
+<tr class="even">
+<td align="left">TeamPoints</td>
+<td align="left">Number of total points scored in the game</td>
+</tr>
+<tr class="odd">
+<td align="left">OpponentPoints</td>
+<td align="left">Number of total points scored by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td align="left">FieldGoals</td>
+<td align="left">Number of field goals made in the game (also includes 3 point shots but not free throws)</td>
+</tr>
+<tr class="odd">
+<td align="left">FieldGoalsAttempted</td>
+<td align="left">Number of field goals attempted in the game (also includes 3 point shots but not free throws)</td>
+</tr>
+<tr class="even">
+<td align="left">FieldGoals.</td>
+<td align="left">FieldGoals/FieldGoalsAttempted</td>
+</tr>
+<tr class="odd">
+<td align="left">X3PointShots</td>
+<td align="left">Number of 3 point shots made in the game</td>
+</tr>
+<tr class="even">
+<td align="left">X3PointShotsAttempted</td>
+<td align="left">Number of 3 point shots attempted in the game</td>
+</tr>
+<tr class="odd">
+<td align="left">X3PointShots.</td>
+<td align="left">X3PointShots/X3PointShotsAttempted</td>
+</tr>
+<tr class="even">
+<td align="left">FreeThrows</td>
+<td align="left">Number of free throws made in the game</td>
+</tr>
+<tr class="odd">
+<td align="left">FreeThrowsAttempted</td>
+<td align="left">Number of free throws attempted in the game</td>
+</tr>
+<tr class="even">
+<td align="left">FreeThrows.</td>
+<td align="left">FreeThrows/FreeThrowsAttempted</td>
+</tr>
+<tr class="odd">
+<td align="left">OffRebounds</td>
+<td align="left">Number of offensive rebounds grabbed in the game</td>
+</tr>
+<tr class="even">
+<td align="left">TotalRebounds</td>
+<td align="left">Total number of rebounds grabbed in the game (includes OffRebounds)</td>
+</tr>
+<tr class="odd">
+<td align="left">Assists</td>
+<td align="left">Total number of assists (passes leading to a made field goal) in the game</td>
+</tr>
+<tr class="even">
+<td align="left">Steals</td>
+<td align="left">Total number of steals (balls stolen from the opposing team while the opposing team has possession) in the game</td>
+</tr>
+<tr class="odd">
+<td align="left">Blocks</td>
+<td align="left">Total number of blocks (direct prevention of a made field goal after the ball has been shot by an opposing player) in the game</td>
+</tr>
+<tr class="even">
+<td align="left">Turnovers</td>
+<td align="left">Total number of times the ball was lost back to the opposing team while the team had possession.</td>
+</tr>
+<tr class="odd">
+<td align="left">TotalFouls</td>
+<td align="left">Total number of fouls committed on players on the opposing team</td>
+</tr>
+<tr class="even">
+<td align="left">Opp.FieldGoals</td>
+<td align="left">Number of field goals made by the opposing team in the game (also includes 3 point shots but not free throws)</td>
+</tr>
+<tr class="odd">
+<td align="left">Opp.FieldGoalsAttempted</td>
+<td align="left">Number of field goals attempted by the opposing team in the game (also includes 3 point shots but not free throws)</td>
+</tr>
+<tr class="even">
+<td align="left">Opp.FieldGoals.</td>
+<td align="left">Opp.FieldGoals/Opp.FieldGoalsAttempted</td>
+</tr>
+<tr class="odd">
+<td align="left">Opp.X3PointShots</td>
+<td align="left">Number of 3 point shots made by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td align="left">Opp.X3PointShotsAttempted</td>
+<td align="left">Number of 3 point shots attempted by the opposing team in the game</td>
+</tr>
+<tr class="odd">
+<td align="left">Opp.X3PointShots.</td>
+<td align="left">Opp.X3PointShots/Opp.X3PointShotsAttempted</td>
+</tr>
+<tr class="even">
+<td align="left">Opp.FreeThrows</td>
+<td align="left">Number of free throws made by the opposing team in the game</td>
+</tr>
+<tr class="odd">
+<td align="left">Opp.FreeThrowsAttempted</td>
+<td align="left">Number of free throws attempted by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td align="left">Opp.FreeThrows.</td>
+<td align="left">Opp.FreeThrows/Opp.FreeThrowsAttempted</td>
+</tr>
+<tr class="odd">
+<td align="left">Opp.OffRebounds</td>
+<td align="left">Number of offensive rebounds grabbed by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td align="left">Opp.TotalRebounds</td>
+<td align="left">Total number of rebounds grabbed by the opposing team in the game (includes Opp.OffRebounds)</td>
+</tr>
+<tr class="odd">
+<td align="left">Opp.Assists</td>
+<td align="left">Total number of assists (passes leading to a made field goal) by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td align="left">Opp.Steals</td>
+<td align="left">Total number of steals (balls stolen from the team while the team has possession) by the opposing team in the game</td>
+</tr>
+<tr class="odd">
+<td align="left">Opp.Blocks</td>
+<td align="left">Total number of blocks (direct prevention of a made field goal after the ball has been shot by a player on the team) by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td align="left">Opp.Turnovers</td>
+<td align="left">Total number of times the ball was won back from the opposing team while the opposing team had possession.</td>
+</tr>
+<tr class="odd">
+<td align="left">Opp.TotalFouls</td>
+<td align="left">Total number of fouls committed by players on the opposing team</td>
 </tr>
 </tbody>
 </table>
 </div>
+<div id="team-abbreviations-and-acronyms" class="section level2">
+<h2>Team abbreviations and acronyms</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Abbreviation/<br />Acronym</th>
+<th align="left">Franchise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ATL</td>
+<td align="left">Atlanta Hawks</td>
+</tr>
+<tr class="even">
+<td align="left">BOS</td>
+<td align="left">Boston Celtics</td>
+</tr>
+<tr class="odd">
+<td align="left">BRK</td>
+<td align="left">Brooklyn Nets</td>
+</tr>
+<tr class="even">
+<td align="left">CHO</td>
+<td align="left">Charlotte Hornets</td>
+</tr>
+<tr class="odd">
+<td align="left">CHI</td>
+<td align="left">Chicago Bulls</td>
+</tr>
+<tr class="even">
+<td align="left">CLE</td>
+<td align="left">Cleveland Cavaliers</td>
+</tr>
+<tr class="odd">
+<td align="left">DAL</td>
+<td align="left">Dallas Mavericks</td>
+</tr>
+<tr class="even">
+<td align="left">DEN</td>
+<td align="left">Denver Nuggets</td>
+</tr>
+<tr class="odd">
+<td align="left">DET</td>
+<td align="left">Detroit Pistons</td>
+</tr>
+<tr class="even">
+<td align="left">GSW</td>
+<td align="left">Golden State Warriors</td>
+</tr>
+<tr class="odd">
+<td align="left">HOU</td>
+<td align="left">Houston Rockets</td>
+</tr>
+<tr class="even">
+<td align="left">IND</td>
+<td align="left">Indiana Pacers</td>
+</tr>
+<tr class="odd">
+<td align="left">LAC</td>
+<td align="left">Los Angeles Clippers</td>
+</tr>
+<tr class="even">
+<td align="left">LAL</td>
+<td align="left">Los Angeles Lakers</td>
+</tr>
+<tr class="odd">
+<td align="left">MEM</td>
+<td align="left">Memphis Grizzlies</td>
+</tr>
+<tr class="even">
+<td align="left">MIA</td>
+<td align="left">Miami Heat</td>
+</tr>
+<tr class="odd">
+<td align="left">MIL</td>
+<td align="left">Milwaukee Bucks</td>
+</tr>
+<tr class="even">
+<td align="left">MIN</td>
+<td align="left">Minnesota Timberwolves</td>
+</tr>
+<tr class="odd">
+<td align="left">NOP</td>
+<td align="left">New Orleans Pelicans</td>
+</tr>
+<tr class="even">
+<td align="left">NYK</td>
+<td align="left">New York Knicks</td>
+</tr>
+<tr class="odd">
+<td align="left">OKC</td>
+<td align="left">Oklahoma City Thunder</td>
+</tr>
+<tr class="even">
+<td align="left">ORL</td>
+<td align="left">Orlando Magic</td>
+</tr>
+<tr class="odd">
+<td align="left">PHI</td>
+<td align="left">Philadelphia 76ers</td>
+</tr>
+<tr class="even">
+<td align="left">PHO</td>
+<td align="left">Phoenix Suns</td>
+</tr>
+<tr class="odd">
+<td align="left">POR</td>
+<td align="left">Portland Trail Blazers</td>
+</tr>
+<tr class="even">
+<td align="left">SAC</td>
+<td align="left">Sacramento Kings</td>
+</tr>
+<tr class="odd">
+<td align="left">SAS</td>
+<td align="left">San Antonio Spurs</td>
+</tr>
+<tr class="even">
+<td align="left">TOR</td>
+<td align="left">Toronto Raptors</td>
+</tr>
+<tr class="odd">
+<td align="left">UTA</td>
+<td align="left">Utah Jazz</td>
+</tr>
+<tr class="even">
+<td align="left">WAS</td>
+<td align="left">Washington Wizards</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
-<p>Once again, fit a linear model for <code>beer_cons_liters</code> using <code>weekend</code>, <code>precip_mm</code>, and <code>temp_median_c</code> as your predictors.</p>
+<p>Treat the variable <code>Win</code> (or <code>WinorLoss</code>) as your response variable and the other variables as potential predictors. Answer all questions using only the <code>nba_reduced_train</code> data. Leave the <code>nba_reduced_test</code> data for next time.</p>
 <ol style="list-style-type: decimal">
-<li><p>Assess the fitted model. Describe in a few sentences whether or not you think the main regression assumptions are plausible based on residual plots (no need to include the plots). If you think any of the assumptions are violated, can you provide suggestions for how we might fix them?</p></li>
-<li><p>How do your conclusions line up with the findings from your EDA in the last in-class exercise?</p></li>
-<li><p>We will cover transformations later but make a histogram of <code>log(beer_cons_liters)</code>. Does that look more normal than <code>beer_cons_liters</code>? Fit a linear model for <code>log(beer_cons_liters)</code> using <code>weekend</code>, <code>precip_mm</code>, and <code>temp_median_c</code> as your predictors. Provide a 95% confidence interval for the effect of <code>weekend</code>. Interpret this interval in the context of the question.</p></li>
-<li><p>Assess the new fitted model. Describe in a few sentences whether or not you think the four main regression assumptions are plausible based on residual plots (no need to include the plots).</p></li>
-<li><p>Overall, are there any potential limitations of this analysis? If yes, what are two potential limitations?</p></li>
+<li><p>Make exploratory plots to explore the relationships between <code>Win</code> and the following variables: <code>Home</code>, <code>TeamPoints</code>, <code>FieldGoals.</code>, <code>Assists</code>, <code>Steals</code>, <code>Blocks</code> and <code>Turnovers</code>. Don’t include any of the plots, just briefly describe the relationships.</p></li>
+<li><p>Just by looking at the code book, there are several combinations of variables we should not include as predictors in the logistic model. Identify at least two pairs and explain in at most two sentences, why we should not include them in the model at the same time.</p></li>
+<li><p>Fit a logistic regression model for <code>Win</code> (or <code>WinorLoss</code>) using <code>Home</code>, <code>TeamPoints</code>, <code>FieldGoals.</code>, <code>Assists</code>, <code>Steals</code>, <code>Blocks</code> and <code>Turnovers</code>. as your predictors. Using the <code>vif</code> function, are there are any concerns regarding multicollinearity in this model?</p></li>
+<li><p>Present the output of the fitted model and interpret the significant coefficients in terms of the odds of your team winning an NBA game.</p></li>
+<li><p>Using 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the predicted probabilities, what is the accuracy of this model? Plot the roc curve for the fitted model. What is the AUC value?</p></li>
 </ol>
+<!-- 6. Now add `Opp.FieldGoals.` as a predictor to the previous model. Is the coefficient significant? If yes, interpret the coefficient in the context of the question. -->
+<!-- 7. What is the accuracy of this new model? Plot the roc curve for the fitted model. What is the new AUC value? Which model predicts the odds of winning better? -->
+<!-- 8. Using the results of the model with the better predictive ability, what suggestions do you have for the coach of your team trying to improve the odds of his team winning a regular season game? -->
+<!-- 8. Use this model to predict out-of-sample probabilities for the `nba_reduced_test` data. Using 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the out-of-sample predicted probabilities, what is the out-of-sample accuracy? How well does your model do in predicting data for the 2017/2018 season? -->
+<!-- 10. Using the change in deviance test, test whether including `Opp.Assists` and `Opp.Blocks` in the model at the same time would improve the model. Is there any other variable in this dataset which we did not consider that you think might improve our model? Which one and why? -->
 </div>
 <div id="acknowledgement" class="section level1">
 <h1>Acknowledgement</h1>

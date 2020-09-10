@@ -165,6 +165,7 @@ lessons:
     video: "https://api.playposit.com/go/play/860920/1403540/929415/0/IDS-702--Module-25-Logistic-regression-with-multiple-predictors-I"
     
   - title: "In-class analysis 5: Predicting nba wins I"
+    inClass: "0-5-predicting-nba-wins-I.html" 
     
   - title: " "
   - title: "MODULE 3: OTHER GENERALIZED LINEAR MODELS"

@@ -24,7 +24,7 @@ knitr::opts_chunk$set(eval = FALSE)
 ```
 
 
-**Due:** 30 minutes after class ends
+**Due:** 1 hour after class ends
 
 
 
