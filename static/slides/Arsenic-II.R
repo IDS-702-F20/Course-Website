@@ -5,6 +5,10 @@
 ###########################################################################
 ###########################################################################
 
+
+################################## PART I #################################
+
+
 ###### Clear environment and load libraries
 rm(list = ls())
 library(arm)
@@ -232,22 +236,7 @@ roc(arsenic$switch,fitted(arsreg1),plot=T,print.thres="best",legacy.axes=T,
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+################################## PART II ################################
 ## Model building
 
 #based on binned residual plot, let's try a log of arsenic to start with, and see what happens.

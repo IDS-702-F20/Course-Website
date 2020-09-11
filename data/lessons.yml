@@ -165,24 +165,19 @@ lessons:
     video: "https://api.playposit.com/go/play/860920/1403540/929415/0/IDS-702--Module-25-Logistic-regression-with-multiple-predictors-I"
     
   - title: "In-class analysis 5: Predicting nba wins I"
-    inClass: "0-5-predicting-nba-wins-I.html" 
-    
-  - title: " "
-  - title: "MODULE 3: OTHER GENERALIZED LINEAR MODELS"
-    reading: "3-reading.html"
-  - title: " "
+    inClass: "0-5-predicting-nba-wins-I.html"
   
   
   - week: "WEEK 5"
     date: "Tue, Sept 15"
     title: "Module 2.6: Logistic regression with multiple predictors II"
-    #slides: "2-6-logistic-multiple-predictors-II.html"
-    #slidespdf: "2-6-logistic-multiple-predictors-II.pdf"
-    video: ""
+    slides: "2-6-logistic-multiple-predictors-II.html"
+    slidespdf: "2-6-logistic-multiple-predictors-II.pdf"
+    #video: ""
     
-  - title: "Module 3.1: Probit regression"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+  - title: "Module 2.7: Aggregated outcomes; Probit regression"
+    slides: "2-7-aggregated-outcomes.html"
+    slidespdf: ".pdf"
     #video: ""
     
   - title: "In-class analysis 6: Predicting nba wins II"
@@ -193,15 +188,21 @@ lessons:
   - date: "NEW ASSIGNMENT:"
     title: "Team project I"
     #project: "team-project-01.html"
+    
+    
+  - title: " "
+  - title: "MODULE 3: OTHER GENERALIZED LINEAR MODELS"
+    reading: "3-reading.html"
+  - title: " "
   
     
   - date: "Thur, Sept 17"
-    title: "Module 3.2: Poisson regression"
+    title: "Module 3.1: Poisson regression"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 3.3: Poisson regression (illustration)"
+  - title: "Module 3.2: Poisson regression (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -211,12 +212,12 @@ lessons:
   
   - week: "WEEK 6"
     date: "Tue, Sept 22"
-    title: "Module 3.4: Multinomial logistic regression "
+    title: "Module 3.3: Multinomial logistic regression "
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 3.5: Multinomial logistic regression (illustration)"
+  - title: "Module 3.4: Multinomial logistic regression (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -233,12 +234,12 @@ lessons:
     
   - week: "WEEK 7"
     date: "Tue, Sept 29"
-    title: "Module 3.6: Proportional odds model"
+    title: "Module 3.5: Proportional odds model"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "Module 3.7: Proportional odds model (illustration)"
+  - title: "Module 3.6: Proportional odds model (illustration)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
