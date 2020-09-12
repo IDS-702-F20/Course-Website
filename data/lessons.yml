@@ -177,7 +177,7 @@ lessons:
     
   - title: "Module 2.7: Aggregated outcomes; Probit regression"
     slides: "2-7-aggregated-outcomes.html"
-    slidespdf: ".pdf"
+    slidespdf: "2-7-aggregated-outcomes.pdf"
     #video: ""
     
   - title: "In-class analysis 6: Predicting nba wins II"
