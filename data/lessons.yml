@@ -173,12 +173,12 @@ lessons:
     title: "Module 2.6: Logistic regression with multiple predictors II"
     slides: "2-6-logistic-multiple-predictors-II.html"
     slidespdf: "2-6-logistic-multiple-predictors-II.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/877488/1403540/929415/0/IDS-702--Module-26-Logistic-regression-with-multiple-predictors-II"
     
   - title: "Module 2.7: Aggregated outcomes; Probit regression"
     slides: "2-7-aggregated-outcomes.html"
     slidespdf: "2-7-aggregated-outcomes.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/877498/1403540/929415/0/IDS-702--Module-27-Aggregated-outcomes-Probit-regression"
     
   - title: "In-class analysis 6: Predicting nba wins II"
   

@@ -389,17 +389,27 @@ binnedplot(arsenic$logarsenic_c[arsenic$assoc=="Active in community"],
 #even less reason to suspect an interaction effect from this plot.
 
 #how about distance and education?
-#first plot for educnew = 0
+#first plot for assoc = 0
 binnedplot(arsenic$dist_c[arsenic$assoc=="Not active in community"], 
            y=arsenic$switch[arsenic$assoc=="Not active in community"], 
            xlab = "Distance", ylab = "Switch cases", main = "Binned Distance and Switch cases (Educ < 7)") 
-#next the plot for educnew = 1
+#next the plot for assoc = 1
 binnedplot(arsenic$dist_c[arsenic$assoc=="Active in community"], 
            y=arsenic$switch[arsenic$assoc=="Active in community"],
            xlab = "Distance", ylab = "Switch cases", main = "Binned Distance and Switch cases (Educ > 6)") 
 
 #this is a little more interesting -- we see one plot flatten and the other decrease.  
 #here an interaction might be useful.
+
+
+# Next, distance vs switch by education
+ggplot(arsenic,aes(x=switch_fac, y=dist, fill=switch_fac)) +
+  geom_boxplot() + #coord_flip() +
+  scale_fill_brewer(palette="Reds") +
+  labs(title="Distance to nearest safe well vs switching wells, by education",
+       x="Switched to safe well?",y="Distance to nearest safe well") + 
+  theme_classic() + theme(legend.position="none") +
+  facet_wrap( ~ educnew)
 
 
 #let's first try the model with all the interactions 
@@ -442,7 +452,8 @@ summary(arsreg5)
 
 #let's use the stepwise function to do model selection (using BIC)
 n <- nrow(arsenic)
-step(glm(switch~1,data=arsenic,family=binomial),scope=formula(arsreg4),direction="both",
+null_model <- glm(switch~1,data=arsenic,family=binomial)
+step(null_model,scope=formula(arsreg4),direction="both",
      trace=0,k = log(n))
 #pretty much agrees with arsreg5 except for assoc. 
 #Let's keep it just because we will try to interpret it (even though it isn't significant)
