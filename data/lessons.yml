@@ -198,13 +198,13 @@ lessons:
     
   - date: "Thur, Sept 17"
     title: "Module 3.1: Poisson regression"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "3-1-poisson-regression.html"
+    slidespdf: "3-1-poisson-regression.pdf"
     #video: ""
     
   - title: "Module 3.2: Poisson regression (illustration)"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "3-2-poisson-regression-illustration.html"
+    slidespdf: "3-2-poisson-regression-illustration.pdf"
     #video: ""
     
   - title: "In-class: Q&A and discussion session"
