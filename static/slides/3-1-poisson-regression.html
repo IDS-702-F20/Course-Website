@@ -288,6 +288,95 @@ $$y_i | \boldsymbol{x}_i \sim \textrm{Poisson}(\lambda_i); \ \ \ i=1,\ldots,n. $
 -  We will look at an example soon.
 
 
+
+---
+## Poisson regression in terms of rate
+
+- Recall that for aggregated data, the logistic regression model is
+.block[
+.small[
+`$$y_i | x_i \sim \textrm{Bin}(n_i,\pi_i); \ \ \ \textrm{log}\left(\dfrac{\pi_i}{1-\pi_i}\right) = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip},$$`
+]
+]
+
+  where `\(n_i\)` represents the .hlight[population size] for each "count" `\(y_i\)`.
+
+--
+
+- Here, we are really interested in learning about, explaining or estimating the probability/proportion/rate, `\(\pi_i \in (0,1)\)`.
+
+--
+
+- The maximum likelihood estimate of each `\(\hat{\pi}_i = \frac{y_i}{n_i}\)`.
+
+--
+
+- When dealing with very rare events, the rates `\(\pi_i\)` will be very small, and sometimes really close to `\(0\)`. Using the logistic regression model in these applications may not be ideal.
+
+--
+
+- Generally, estimation under the logistic regression model often fails for rates or probabilities close to `\(0\)` or `\(1\)`.
+
+--
+
+- When dealing with these rare events, it turns out that we often will be able to take advantage of the Poisson approximation to the binomial.
+
+
+
+---
+## Poisson regression in terms of rate
+
+- To take advantage of this relationship, one way to rewrite the Poisson regression model is
+.block[
+.small[
+$$
+`\begin{split}
+y_i | \boldsymbol{x}_i &amp; \sim \textrm{Poisson}\left(\lambda_i = n_i\pi_i\right); \ \ \ i=1,\ldots,n.
+\end{split}`
+$$
+]
+]
+
+--
+
+- However, since we are really interested in the original rate `\(\pi_i\)`, we want to model that instead of the "expected counts" `\(\lambda_i\)`.
+
+--
+
+- That is, we can write
+.block[
+.small[
+$$
+`\begin{split}
+\textrm{log}\left(\pi_i = \frac{\lambda_i}{n_i}\right) &amp; = \beta_{0} + \beta_{1} x_{i1} + \beta_{2} x_{i2} + \ldots + \beta_{p} x_{ip}.
+\end{split}`
+$$
+]
+]
+
+--
+
+- Since each `\(n_i\)` is then known, we can write
+.block[
+.small[
+$$
+`\begin{split}
+\Rightarrow \textrm{log}\left(\lambda_i\right) &amp; = \beta_{0} + \beta_{1} x_{i1} + \beta_{2} x_{i2} + \ldots + \beta_{p} x_{ip} + \textrm{log}\left(n_i\right).
+\end{split}`
+$$
+]
+]
+
+--
+
+- Thus, .hlight[rate data] can be modeled by including the `\(\text{log}(n)\)` term with coefficient of `\(1\)` (called an .hlight[offset]). This offset is modeled with `offset()` option in R.
+  
+  ```r
+  Model &lt;- glm(successes ~ predictor, data=Data_agg, offset=log(n), family=poisson)
+  ```
+  
+
+
 ---
 
 class: center, middle
