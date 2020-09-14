@@ -181,6 +181,7 @@ lessons:
     video: "https://api.playposit.com/go/play/877498/1403540/929415/0/IDS-702--Module-27-Aggregated-outcomes-Probit-regression"
     
   - title: "In-class analysis 6: Predicting nba wins II"
+    #inClass: "0-6-predicting-nba-wins-II.html"
   
   - date: "DELIVERABLES:"
     title: "Data analysis assignment III due!"
@@ -200,12 +201,12 @@ lessons:
     title: "Module 3.1: Poisson regression"
     slides: "3-1-poisson-regression.html"
     slidespdf: "3-1-poisson-regression.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/883707/1403540/929415/0/IDS-702--Module-31-Poisson-regression"
     
   - title: "Module 3.2: Poisson regression (illustration)"
     slides: "3-2-poisson-regression-illustration.html"
     slidespdf: "3-2-poisson-regression-illustration.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/884051/1403540/929415/0/IDS-702--Module-32-Poisson-regression-illustration"
     
   - title: "In-class: Q&A and discussion session"
   

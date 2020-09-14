@@ -55,13 +55,14 @@ table(springbok$DATE14,springbok$LOCNUMBER)
 ### Now we can explore the relationship between COUNTS and each predictor
 ## HourFromNoon
 ggplot(springbok, aes(x = HourFromNoon, y = COUNTS)) +
-  geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="loess",col="red3") +
+  geom_point(alpha = .5,colour="blue4") + theme_classic() +
+  geom_smooth(method="lm",col="red3") +
   labs(title="Springbok counts vs hours from noon")
 #we have an obvious outlier
-ggplot(springbok[(springbok$HourFromNoon!=min(springbok$HourFromNoon)),], aes(x = HourFromNoon, y = COUNTS)) +
+ggplot(springbok[(springbok$HourFromNoon!=min(springbok$HourFromNoon)),],
+       aes(x = HourFromNoon, y = COUNTS)) +
   geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="lm",col="red3") + #also, try lm
+  geom_smooth(method="lm",col="red3") +
   labs(title="Springbok counts vs hours from noon")
 #let's keep it for now but we need to assess it later
 #it will probably infuence the results
@@ -69,7 +70,9 @@ ggplot(springbok[(springbok$HourFromNoon!=min(springbok$HourFromNoon)),], aes(x 
 
 ## LOCNUMBER
 ggplot(springbok, aes(x = LOCNUMBER, y = COUNTS,fill=LOCNUMBER)) +
-  geom_boxplot() +
+  geom_boxplot() + theme_classic() +
+  #scale_fill_brewer(palette="Blues") +
+  theme(legend.position="none") +
   labs(title="Springbok counts by location")
 #three locations have way more springboks than others
 
@@ -78,7 +81,8 @@ ggplot(springbok, aes(x = LOCNUMBER, y = COUNTS,fill=LOCNUMBER)) +
 #first, let's use the raw points
 ggplot(springbok, aes(x = YEAR, y = COUNTS)) +
   geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="loess",col="red3") +
+  geom_smooth(method="lm",col="red3") +
+  theme_classic() +
   labs(title="Springbok counts vs year")
 #no obvious overall upward or downward trend
 
@@ -87,14 +91,16 @@ springbok_year <- aggregate(springbok$COUNTS,list(YEAR=springbok$YEAR),mean)
 colnames(springbok_year)[2] <- "COUNTS_AGG"
 ggplot(springbok_year, aes(x =YEAR, y = COUNTS_AGG)) +
   geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="lm",col="red3") + #change loess to lm to make it easire to see linear trend
+  geom_smooth(method="lm",col="red3") +
+  theme_classic() +
   labs(title="Mean springbok counts vs year")
 #still no obvious overall upward or downward trend
 
 #How about YEAR by LOCNUMBER
 ggplot(springbok, aes(x =YEAR, y = COUNTS)) +
   geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="loess",col="red3") +
+  geom_smooth(method="lm",col="red3") +
+  theme_classic() +
   labs(title="Springbok counts vs year by location") +
   facet_wrap( ~ LOCNUMBER,ncol=4)
 #there are multiple observations by year 
@@ -107,7 +113,8 @@ colnames(springbok_yearsite)[3] <- "COUNTS_AGG"
 #remember that we should see an exponential relationship
 ggplot(springbok_yearsite, aes(x =YEAR, y = COUNTS_AGG)) +
   geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="loess",col="red3") + #change loess to lm to make it easire to see linear trend
+  geom_smooth(method="lm",col="red3") + #change loess to lm to make it easire to see linear trend
+  theme_classic() +
   labs(title="Mean springbok counts vs year by location") +
   facet_wrap( ~ LOCNUMBER,ncol=4)
 #we see different trends for some sites. We should control for year by site
@@ -120,6 +127,7 @@ ggplot(springbok_yearsite, aes(x =YEAR, y = COUNTS_AGG)) +
 ggplot(springbok, aes(x = DATE, y = COUNTS)) +
   geom_point(alpha = .5,colour="blue4") +
   geom_smooth(method="loess",col="red3") +
+  theme_classic() +
   labs(title="Springbok counts vs date")
 #slight downward trend
 
@@ -128,14 +136,16 @@ springbok_date <- aggregate(springbok$COUNTS,list(DATE=springbok$DATE),mean)
 colnames(springbok_date)[2] <- "COUNTS_AGG"
 ggplot(springbok_date, aes(x =DATE, y = COUNTS_AGG)) +
   geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="loess",col="red3") + #change loess to lm to make it easire to see linear trend
+  geom_smooth(method="lm",col="red3") + #change loess to lm to make it easire to see linear trend
+  theme_classic() +
   labs(title="Mean springbok counts vs year")
 #more obvious downward trend
 
 #How about DATE by LOCNUMBER
 ggplot(springbok, aes(x =DATE, y = COUNTS)) +
   geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="loess",col="red3") +
+  geom_smooth(method="lm",col="red3") +
+  theme_classic() +
   labs(title="Springbok counts vs date by location") +
   facet_wrap( ~ LOCNUMBER,ncol=4)
 #different trend for some locations
@@ -148,7 +158,8 @@ colnames(springbok_datesite)[3] <- "COUNTS_AGG"
 #remember that we should see an exponential relationship
 ggplot(springbok_datesite, aes(x =DATE, y = COUNTS_AGG)) +
   geom_point(alpha = .5,colour="blue4") +
-  geom_smooth(method="loess",col="red3") + 
+  geom_smooth(method="lm",col="red3") + 
+  theme_classic() +
   labs(title="Mean springbok counts vs date by location") +
   facet_wrap( ~ LOCNUMBER,ncol=4)
 #we also see different trends for some sites.
@@ -172,23 +183,22 @@ springregpred1 <- predict(springreg1,type="response")
 qplot(y=springregresid1, x=springregpred1,data=springbok,col=LOCNUMBER, geom="point",
       xlab = "Predicted Counts", ylab = "Pearson Residuals")
 #not good! we have two separate groups!
-#we have not accounted for something, perhaps an interaction
-#clearly we have a variance/over-dispersion issue
+#we may also have a variance/over-dispersion issue
 
 #residuals vs HourFromNoon
-qplot(y=springregresid1, x=springbok$HourFromNoon,data=springbok,col=LOCNUMBER, geom="point",
+qplot(y=springregresid1, x=HourFromNoon,data=springbok,col=LOCNUMBER, geom="point",
       xlab = "Hour From Noon", ylab = "Pearson Residuals")
 #Also really tough see much here!
 #That outlier might be a problem!
 
 #residuals vs YEAR90
-qplot(y=springregresid1, x=springbok$YEAR90,data=springbok,col=LOCNUMBER, geom="point",
+qplot(y=springregresid1, x=YEAR90,data=springbok,col=LOCNUMBER, geom="point",
       xlab = "YEAR90", ylab = "Pearson Residuals")
-#tough to really tough see much here!
+#tough to really see much here!
 #we do know that we still need to address the interactions
 
 #residuals vs DATE14
-qplot(y=springregresid1, x=springbok$DATE14,data=springbok,col=LOCNUMBER, geom="point",
+qplot(y=springregresid1, x=DATE14,data=springbok,col=LOCNUMBER, geom="point",
       xlab = "DATE14", ylab = "Pearson Residuals")
 #Also really tough see much here!
 #maybe some polynomial function
@@ -210,7 +220,7 @@ springregpred2 <- predict(springreg2,type="response")
 #residuals vs fitted
 qplot(y=springregresid2, x=springregpred2,data=springbok,col=LOCNUMBER, geom="point",
       xlab = "Predicted Counts", ylab = "Pearson Residuals")
-#addressed the separation but
+#addressed some of the separation but
 #clearly we still have that some variance/over-dispersion issue
 
 
@@ -286,20 +296,21 @@ ggplot(springbok_newdata, aes(x = YEAR, y = pred, colour = LOCNUMBER)) +
   geom_line(size = 1) +
   labs(x = "Year", y = "Predicted Expected Counts") +
   theme(legend.position="none") +
+  theme_classic() +
   geom_text(data = springbok_newdata,aes(label = LOCNUMBER), hjust = 0.5, vjust = 1)
 #With time of day set at noon and date=24 (week 24),
 #We see an increasing trend in counts across years for sites 12, 16 and 23.
-#We also see a decreasing trend for the other sites with the most trendobserved in site 24.
+#We also see a decreasing trend for the other sites with the most trend observed in site 24.
 
-
+summary(springreg4)
 exp(coef(springreg4))
 #Given all other predictors are held constant, every additional hour from noon increases
-#the expected count of springbok we see at any site by 3%. 
+#the expected count of springbok we see at any site by exp(0.033201), meaning, 3%. 
 #This is only really significant at the 0.1 significant level
 
 #Given all other predictors are held constant, every one week increase
 #results in a decrease in the expected count of springbok we see at any site by about 2%. 
-#we are less likely to see more sprinboks later in a year (close to winter) than earlier.
+#we are less likely to see more springboks later in a year (close to winter) than earlier.
 
 
 
