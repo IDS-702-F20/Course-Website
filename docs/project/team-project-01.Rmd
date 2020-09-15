@@ -111,7 +111,7 @@ Use regression models with multiple predictors (to control for the effects of po
   + Are there other interesting associations with positive wages that are worth mentioning?
 
 
-### Code Book
+### Code book
       
 Variable       |        Description
 :------------- | :-------------------
