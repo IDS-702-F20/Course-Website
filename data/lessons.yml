@@ -181,7 +181,7 @@ lessons:
     video: "https://api.playposit.com/go/play/877498/1403540/929415/0/IDS-702--Module-27-Aggregated-outcomes-Probit-regression"
     
   - title: "In-class analysis 6: Predicting nba wins II"
-    #inClass: "0-6-predicting-nba-wins-II.html"
+    inClass: "0-6-predicting-nba-wins-II.html"
   
   - date: "DELIVERABLES:"
     title: "Data analysis assignment III due!"
