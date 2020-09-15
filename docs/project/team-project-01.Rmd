@@ -13,95 +13,66 @@ output:
 ## Due dates
 
 - In-class presentations: 10:15 - 11:30am, Thursday, September 24.
-- Final reports: 11:59pm, Friday, September 25.
+- Final reports: 11:59pm, Sunday, September 27.
+- Evaluation of team members: 11:59pm, Monday, September 28.
 
 
 
 ## General instructions
-
 ### Team work
+You MUST work within your assigned teams.
 
-You MUST work within your MIDS-assigned teams.
-
-- <font color="red">Each team member must work on understanding the data, exploring the data, building the models and providing answers to the questions of interest.</font>
-- You are free to divide all other work any way you choose but be sure to divide the responsibilities fairly equally within teams. For example
-  + One student could focus on cleaning the data,
-  + Another student could focus on writing code,
-  + Another student could focus on writing the report, 
-  + Another student could focus on the presentation slides, and so on.
-- You should also sesignate a coordinator, recorder, reproducibility checker, and monitor/reviewer. For 5-person teams, split the roles of reviewer and monitor. For 3-person teams, combine the roles of coordinator and reproducibility checker.
-- Coordinator keeps everyone on task and makes sure everyone is involved, recorder prepares final products to be turned in, monitor makes sure everyone understands the solution, including the coding, the checker double-checks the work for reproducibility (and errors!), and the reviewer is responsible for (1) sharing comments on the graded project (and interim submissions) with the team (2) leading a discussion about them, with a focus on how to improve moving forward, and (3) reviewing effort apportionment in a constructive conversation with the team.
-- Checker turns in assignment, which also indicates which student took on each role in the first bullet point.
-- All team members must complete a short written evaluation, quickly describing the effort put forth by other team members.
-  + The evaluation should include a list of all other team members (not including you) and considering all the work on the assignment that was not done by you, a breakdown of the fraction of work done by each other team member. For example, if you are on a 4 person team and the other team members all contributed equally, you would assign the fraction 1/3 to each of them (regardless of whether you all did 1/4 of the work overall, or whether you personally did half the work and the others each did 1/6).
-  + In the case you feel one or more team members deserves a different grade on the assignment than the others, you should provide a description of why that member or members deserves a different grade. (In this case you can talk about your own relative contribution.)
-
+- <font color="red">Each team member must work on understanding the data, exploring the data, building the models and providing answers to the questions of interest. This should be the focus of the team meetings.</font>
+- The other responsibilities must be divided according to the following designations:
+  + <font color="green">Checker:</font> Double-checks the work for reproducibility and errors. Also responsible for submitting the report and presentation files.
+  + <font color="green">Coordinator:</font> Keeps everyone on task and makes sure everyone is involved. Also responsible for coordinating team meetings and defining the objectives for each meeting.
+  + <font color="green">Presenter:</font> Primarily responsible for putting the team presentations together, including the presentation slides and recorded videos.
+  + <font color="green">Programmer:</font> Primarily responsible for all things coding. The programmer is responsible for putting everyone's code together and making sure the final product is "readable".
+  + <font color="green">Writer:</font> Prepares the final report.
+- <font color="red">Four-person teams should combine the roles of checker and coordinator into a single role. Three-person teams should combine the roles of checker and writer into a single role, and the roles of coordinator and presenter into a single role.</font>
 
 
 ### Presentations
+<font color="red">Each team will create/record a (6-7 minute) video presentation of their findings. Feel free to get creative; fun animations are welcome!</font>
 
-<font color="red">Each team will create/record a (6-7 minute) video presentation of their findings</font>
-
-  + Teams 1, 3, 5, 7, and 9 will only present findings and results for Part I, while Teams 2, 4, 6, and 8 will only present findings and results for Part II.
+  + In the videos, Teams 1, 3, 5, 7, and 9 should only present findings and results for Part I of this project, while Teams 2, 4, 6, and 8 should only present findings and results for Part II of this project.
   + The presentation for each team should only cover a brief introduction as well as your most interesting and important findings. At least one EDA plot must be included.
-  + Create your presentation slides with the time limit in mind. You should consider making between 5 and 7 slides (excluding the title slide), so that you have approximately one minute to get through each one.
-  + You are free to create your presentation slides using PowerPoint, LaTeX or any other application you choose.
-  + The order of the presentations will be randomized for each part of the project; each team is expected to come to class fully prepared to present first.
-  +  <font color="red">Each team's presentation must be submitted on Sakai by 9:00am on Thursday, September 24.</font> 
+  + If you choose to use presentation slides, you should create them with the time limit in mind. You should consider making between 5 and 7 slides (excluding the title slide), so that you have approximately one minute to get through each one. You are free to create your presentation slides using PowerPoint, LaTeX or any other application you choose. 
+  + You are free to record the presentation videos using any application you choose.
+  + The order of the in-class presentations will be randomized for each part of the project; each team is expected to come to class fully prepared to present first.
+  +  <font color="red">Each team's presentation files (videos and slides) must be submitted on Sakai by 9:00am on Thursday, September 24. The checker should upload the files to their Dropbox folder on Sakai.</font> 
 
 
 ### Reports
-
-Each team MUST turn in only one report with team members' names at the top of the report, and the different designations (coordinator, recorder, reproducibility checker, and monitor/reviewer).
+Each team MUST turn in only one report with team members' names at the top of the report, and the different designations (checker, coordinator, presenter, programmer, and writer).
 
   + Please limit your combined PDF document for both parts of the project to 10 pages in total. <font color="red">You will be penalized should your combined report exceed 10 pages!</font>
   + Please type your reports using R Markdown, LaTeX or any other word processor but be sure to knit or convert the final output file to `.pdf`. 
-  + <font color="red">**DO NOT INCLUDE R CODE OR OUTPUT IN YOUR SOLUTIONS/REPORTS** *All R code can be included in an appendix, and R outputs should be converted to nicely formatted tables. Feel free to use R packages such as `kable`, `xtable`, and `stargazer`.*</font>
+  + <font color="red">**DO NOT INCLUDE R CODE OR OUTPUT IN YOUR SOLUTIONS/REPORTS** *All R code can be included in an appendix, and R outputs should be converted to nicely formatted tables. Feel free to use R packages such as `kable`, `xtable`, `stargazer`, etc.*</font>
   + All R-code must be included in the appendix. Feel free to also include any supplemental material that is important for your analysis, such as diagnostic checks or exploratory plots that you feel justify the conclusions in your report.
-  + In addition to pushing the reports to GitHub, they should also be submitted on gradescope: go to Assignments $\rightarrow$ Team Project 2. Gradescope will let you select your team mates when submitting, so make sure to do so. Only one person needs to submit the report. 
+  + All reports must be submitted on Gradescope: go to Assignments $\rightarrow$ Team Project 1 Reports. Gradescope will let you select your team mates when submitting, so make sure to do so. The checker is responsible for submitting the report.
+  
+
+
+### Evaluations
+<font color="red">All team members must complete a very short written evaluation, quickly describing the effort put forth by other team members.</font>
+
+  + The evaluation should include a list of all other team members (not including you) and considering all the work on the assignment that was not done by you, a breakdown of the fraction of work done by each other team member. For example, if you are on a 4 person team and the other team members all contributed equally, you would assign the fraction 1/3 to each of them (regardless of whether you all did 1/4 of the work overall, or whether you personally did half the work and the others each did 1/6).
+  + In the case you feel one or more team members deserves a different grade on the assignment than the others, you should provide a description of why that member or members deserves a different grade. (In this case you can talk about your own relative contribution.)
+  + Submit on Gradescope: go to Assignments $\rightarrow$ Team Project 1 Evaluations.
+
 
 
 ### Analyses
 
-Your analyses MUST address the two sets of questions directly. The report should be written so that there is a section which clearly answers the first set of questions for Part I and another section which clearly answers the second set of questions about Part II. If you prefer, you can write two 5-paged reports, one to address each set of questions. Be sure to also include the following in your report: 
+<font color="red">Your analyses MUST address the two sets of questions directly.</font> The report should be written so that there is a section which clearly answers the first set of questions for Part I and another section which clearly answers the second set of questions about Part II. If you prefer, you can write two 5-paged reports, one to address each set of questions. Be sure to also include the following in your report: 
 
 - the final models you ultimately decided to use,
 - clear model building, that is, justification for the models (e.g., why you chose certain transformations and why you decided the final models are reasonable),
 - model assessment for the final models,
-- the relevant regression output (includes: a table with coefficients and SEs, and confidence intervals (or credible intervals)),
+- the relevant regression output (includes: a table with coefficients and SEs, and confidence intervals),
 - your interpretation of the results in the context of the questions of interest, including clear and direct answers to the questions posed, and
 - any potential limitations of the analyses.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## General instructions
-
-- You MUST work within your assigned teams.
-  + You are free to divide the work any way you choose but be sure to divide the responsibilities fairly equally within teams.
-  + Each team member must work on understanding the data, exploring the data, building the model and providing answers to the questions of interest.
-  + However, teams can also look to take advantage of each member's strength. For example, one student could focus on writing code, another could focus on writing the report, another could focus on the presentation slides and so on.
-- <font color="red">Each team will create/record a (7 minute) video presentation of their findings</font>
-  + Each video will be played in class, and students from other teams will have the opportunity to ask questions.
-  + The presentation should only cover a brief introduction and your most interesting and important findings.
-  + You are free to create your presentation slides using PowerPoint, LaTeX or any other application you choose.
-  + The order of the presentations will be randomized; each team is expected to come to class fully prepared to present first.
-- For the reports, each team MUST turn in only one report with team members' names at the top of the report. 
-  + Please limit your report to a total of 10 pages. <font color="red">You will be penalized should your report exceed 10 pages!</font>
-  + Please type your reports using R Markdown, LaTeX or any other word processor but be sure to knit or convert the final output file to ".pdf". 
-  + **DO NOT INCLUDE R CODE OR OUTPUT IN YOUR REPORT!** R outputs should be converted to nicely formatted tables. Feel free to use R packages such as `kable` and `xtable`.
-  + All R-code must be included in the appendix. Feel free to also include any supplemental material that is important for your analysis, such as diagnostic checks or exploratory plots that you feel justify the conclusions in your report.
-  + Submissions should be made on gradescope: go to Assignments $\rightarrow$ Team Project 1. Gradescope will let you select your team mates when submitting, so make sure to do so. Only one person needs to submit the report. 
 
 
 
@@ -120,7 +91,7 @@ Although the original data is based on a randomized experiment (which means we w
 
 ### Data
 
-The data for this project can be found in the file "lalondedata.txt" on Sakai. You might consider taking a look at the references for a more in-depth background on the data.
+The data for this project can be found in the file <font color="brown">"lalondedata.txt"</font> on Sakai. You might consider taking a look at the references for a more in-depth background on the data.
 
 
 ### Questions
@@ -154,22 +125,6 @@ nodegree       |    1 if participant dropped out of high school, 0 otherwise.
 re74           |    real annual earnings in 1974.
 re75           |    real annual earnings in 1975.
 re78           |    real annual earnings in 1978.
-
-      
-
-### Other instructions
-
-Your analysis MUST address the two sets of questions directly. The report should be written so that there is a section which clearly answers the first set of questions about wages and another section which clearly answers the second set of questions about positive wages. If you prefer, you can write two 5-paged reports, one to address each set of questions. Be sure to also include the following in your report: 
-
-- the final models you ultimately decided to use,
-- clear model building, that is, justification for the models (e.g., why you chose certain transformations and why you decided the final models are reasonable),
-- model assessment and validation for the final models,
-- the relevant regression output (includes: a table with coefficients and SEs, and p-values or confidence intervals; and somewhere in the text or table the estimated regression standard deviation and R-squared for linear regression, or area under the curve and accuracy for logistic regression),
-- your interpretation of the results in the context of the questions of interest, including clear and direct answers to the questions posed, and
-- any potential limitations of the analysis.
-
-
-
     
 
 

@@ -188,7 +188,7 @@ lessons:
     
   - date: "NEW ASSIGNMENT:"
     title: "Team project I"
-    #project: "team-project-01.html"
+    project: "team-project-01.html"
     
     
   - title: " "
@@ -229,12 +229,14 @@ lessons:
   - date: "Thur, Sept 24"
     title: "Team project I presentations"
     
-  - date: "Fri, Sept 25 | DELIVERABLES:"
+  - date: "Sun, Sept 27 | DELIVERABLES:"
     title: "Team project I reports due"
     
-    
   - week: "WEEK 7"
-    date: "Tue, Sept 29"
+    date: "Mon, Sept 28 | DELIVERABLES:"
+    title: "Team project I evaluations due"
+    
+  - date: "Tue, Sept 29"
     title: "Module 3.5: Proportional odds model"
     #slides: ".html"
     #slidespdf: ".pdf"
