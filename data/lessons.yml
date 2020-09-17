@@ -208,7 +208,7 @@ lessons:
     slidespdf: "3-2-poisson-regression-illustration.pdf"
     video: "https://api.playposit.com/go/play/884051/1403540/929415/0/IDS-702--Module-32-Poisson-regression-illustration"
     
-  - title: "In-class: Q&A and discussion session"
+  - title: "In-class: Q&A session and team meetings for project"
   
   
   - week: "WEEK 6"
@@ -223,7 +223,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "In-class: Q&A and discussion session"
+  - title: "In-class: Q&A session and team meetings for project"
     
     
   - date: "Thur, Sept 24"
