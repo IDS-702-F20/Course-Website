@@ -238,13 +238,13 @@ lessons:
     
   - date: "Tue, Sept 29"
     title: "Module 3.5: Proportional odds model"
-    #slides: "3-5-proportional-odds.html"
-    #slidespdf: "3-5-proportional-odds.pdf"
+    slides: "3-5-proportional-odds.html"
+    slidespdf: "3-5-proportional-odds.pdf"
     #video: ""
     
   - title: "Module 3.6: Proportional odds model (illustration)"
-    #slides: "3-6-proportional-odds-illustration.html"
-    #slidespdf: "3-6-proportional-odds-illustration.pdf"
+    slides: "3-6-proportional-odds-illustration.html"
+    slidespdf: "3-6-proportional-odds-illustration.pdf"
     #video: ""
     
   - title: "In-class: Q&A and discussion session"
