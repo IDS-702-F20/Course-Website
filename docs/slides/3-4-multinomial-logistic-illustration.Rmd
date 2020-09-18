@@ -86,7 +86,7 @@ preclasf | pretest on classification skills
 ---
 class: center, middle
 
-# In-class analysis: move to the R script [here](https://ids-702-f19.github.io/Course-Website/slides/lec-slides/Sesame.R)
+# In-class analysis: move to the R script [here](https://ids-702-f20.github.io/Course-Website/slides/Sesame.R)
 
 
 ---
