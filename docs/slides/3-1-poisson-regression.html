@@ -98,10 +98,10 @@ Generally, GLMs have three major components:
 
 --
 
-3. The .hlight[link function] `\(g\)` connects the random and systematic components through `\(\mu_i = \mathbb{E}[Y_i]\)`, that is
+3. The .hlight[link function] `\(g\)` connects the random and systematic components through `\(\mu_i = \mathbb{E}[Y_i | \boldsymbol{x}_i]\)`, that is
 .block[
 .small[
-`$$\eta_i = g(u_i)$$`
+`$$\eta_i = g(\mu_i)$$`
 ]
 ]
 
@@ -109,7 +109,7 @@ Generally, GLMs have three major components:
 
 --
   
-  In standard linear regression, `\(g\)` is the .hlight[identity link] `\(n_i=g(u_i)=u_i\)`, whereas in logistic regression, `\(g\)` is the logit function.
+  In standard linear regression, `\(g\)` is the .hlight[identity link] `\(n_i=g(\mu_i)=\mu_i\)`, whereas in logistic regression, `\(g\)` is the logit function.
 
 
 
