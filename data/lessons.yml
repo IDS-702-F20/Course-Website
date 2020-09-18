@@ -213,14 +213,14 @@ lessons:
   
   - week: "WEEK 6"
     date: "Tue, Sept 22"
-    title: "Module 3.3: Multinomial logistic regression "
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    title: "Module 3.3: Multinomial logistic regression"
+    slides: "3-3-multinomial-logistic.html"
+    slidespdf: "3-3-multinomial-logistic.pdf"
     #video: ""
     
   - title: "Module 3.4: Multinomial logistic regression (illustration)"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "3-4-multinomial-logistic-illustration.html"
+    slidespdf: "3-4-multinomial-logistic-illustration.pdf"
     #video: ""
     
   - title: "In-class: Q&A session and team meetings for project"
