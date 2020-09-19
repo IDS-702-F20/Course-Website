@@ -26,7 +26,8 @@ sesame = read.csv("data/sesame.txt", header = T)
 sesame$site <- factor(sesame$site)
 sesame$sex <- factor(sesame$sex,levels=c(1,2),labels=c("Male","Female"))
 sesame$setting <- factor(sesame$setting,levels=c(1,2),labels=c("Home","School"))
-#let's make a dummy variable with encouragement = 2 as the baseline, since we want to interpret the effect of encouragement
+#let's make a dummy variable with encouragement = 2 as the baseline, 
+#since we want to interpret the effect of encouragement
 sesame$viewenc[sesame$viewenc==2] <- 0
 sesame$viewenc <- factor(sesame$viewenc,levels=c(0,1),labels=c("NotEncouraged","Encouraged"))
 sesame$viewcat_fac <- factor(sesame$viewcat)
@@ -188,7 +189,7 @@ predict(viewcatreg1, newdata, type = "probs")
 #2 0.27441129 0.2144506 0.3088348 0.2023033
  
 #now let's repeat for a kid in site 2
-newdata$site <- "4"
+newdata$site <- "2"
 predict(viewcatreg1, newdata, type = "probs")
 #           1         2         3         4
 #1 0.02561089 0.2577973 0.3219774 0.3946144
@@ -228,17 +229,6 @@ sesame$viewcat2 <- relevel(as.factor(sesame$viewcat), ref = "4")
 viewcatreg2 = multinom(viewcat2 ~ viewenc + site + cprenumb + cprelet + cpreform + cpreclasf + cprerelat + cprebody + cage, data = sesame)
 summary(viewcatreg2)
 
-##tables for factor variables
-tapply(rawresid1, sesame$site, mean)
-tapply(rawresid2, sesame$site, mean)
-tapply(rawresid3, sesame$site, mean)
-tapply(rawresid4, sesame$site, mean)
-
-tapply(rawresid1, sesame$viewenc, mean)
-tapply(rawresid2, sesame$viewenc, mean)
-tapply(rawresid3, sesame$viewenc, mean)
-tapply(rawresid4, sesame$viewenc, mean)
-
 
 ## Accuracy
 pred_classes <- predict(viewcatreg1)
@@ -273,8 +263,8 @@ multiclass.roc(sesame$viewcat,predprobs,plot=T,print.thres="best",legacy.axes=T,
 ## Interpretating the results
 #Using the coefficients of `viewenc` in final model,
 #For a child who is encouraged to watch Sesame Street, 
-#the odds of watching Sesame Street once or twice a week versus 
-#watching it rarelyare 18.5 times higher (95% CI: 6.3 to 55.0) 
+#the odds of watching Sesame Street once or twice a week versus (level 2)
+#watching it rarely (level 1) are 18.5 times higher (95% CI: 6.3 to 55.0) 
 #than the corresponding odds for a child not encouraged to watch Sesame Street.
 
 #For a child who is encouraged to watch Sesame Street, 
