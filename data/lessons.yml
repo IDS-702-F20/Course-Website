@@ -216,12 +216,12 @@ lessons:
     title: "Module 3.3: Multinomial logistic regression"
     slides: "3-3-multinomial-logistic.html"
     slidespdf: "3-3-multinomial-logistic.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/899040/1403540/929415/0/IDS-702--Module-33-Multinomial-logistic-regression"
     
   - title: "Module 3.4: Multinomial logistic regression (illustration)"
     slides: "3-4-multinomial-logistic-illustration.html"
     slidespdf: "3-4-multinomial-logistic-illustration.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/899052/1403540/929415/0/IDS-702--Module-34-Multinomial-logistic-regression-illustration"
     
   - title: "In-class: Q&A session and team meetings for project"
     
