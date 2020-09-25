@@ -1,6 +1,6 @@
 ---
 title: "Instructions for final project proposals"
-date: "Due date for project proposals: 11:59pm, Tuesday, November 5"
+date: "Due date for project proposals: 11:59pm, Wednesday, October 21"
 output: 
   html_document: 
     css: hw.css

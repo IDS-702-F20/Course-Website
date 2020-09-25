@@ -257,27 +257,30 @@ lessons:
   
   
   - date: "Thur, Oct 1"
-    title: "Module 4.1: Multilevel/hierarchical linear models I"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    title: "Module 4.1: Introduction to multilevel/hierarchical models"
+    #slides: "4-1-hierarchical-models-intro.html"
+    #slidespdf: "4-1-hierarchical-models-intro.pdf"
     #video: ""
   
-  - title: "Module 4.2: Multilevel/hierarchical linear models I (illustration)"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+  - title: "Module 4.2: Multilevel/hierarchical linear models"
+    #slides: "4-2-hierarchical-linear-models.html"
+    #slidespdf: "4-2-hierarchical-linear-models.pdf"
     #video: ""
     
   - title: "In-class analysis 7: Do more beautiful professors get higher evaluations I"
-
+  
+  - date: "Fri, Oct 2"
+    title: "Instructions for final project proposals"   
+    project: "final-project-proposal.html"
 
   - week: "WEEK 8"
     date: "Tue, Oct 6"
-    title: "Module 4.3: Multilevel/hierarchical linear models II"
+    title: "Module 4.3: Multilevel/hierarchical linear models (illustration I)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
   
-  - title: "Module 4.4: Multilevel/hierarchical linear models II (illustration)"
+  - title: "Module 4.4: Multilevel/hierarchical linear models (illustration II)"
     #slides: ".html"
     #slidespdf: ".pdf"
     #video: ""
@@ -304,7 +307,7 @@ lessons:
   
   
   - title: " "
-  - title: "MODULE 5: DEALING WITH MESSY DATA"
+  - title: "MODULE 5: HANDLING MISSING DATA"
     #reading: "5-reading.html"
   - title: " "
   
@@ -331,14 +334,119 @@ lessons:
   - date: "Thur, Oct 15"
     title: "Team project II presentations"
     
-  - date: "Fri, Oct 16 | DELIVERABLES:"
+  - date: "Sun, Oct 18 | DELIVERABLES:"
     title: "Team project II reports due"
     
     
   - title: " "
-  - title: "MODULE 5: METHODS FOR CAUSAL INFERENCE"
-    #reading: "5-reading.html"
+  - title: "MODULE 6: INTRODUCTION TO CAUSAL INFERENCE"
+    #reading: "6-reading.html"
   - title: " "
+  
+  
+  - week: "WEEK 10"
+    date: "Mon, Oct 19 | DELIVERABLES:"
+    title: "Team project II evaluations due!"
+  
+  
+  - date: "Tue, Oct 20"
+    title: "Module 6.1: The potential outcomes framework and causal estimands"
+  
+  - title: "Module 6.2: Assignment mechanisms and the role of randomization"
+  
+  - title: "In-class: Q&A and discussion session"
+    
+  - date: "NEW ASSIGNMENT:"
+    title: "Data analysis assignment IV"
+    #hw: "hw-04.html"
+    
+  - date: "Wed, Oct 21 | DELIVERABLES:"
+    title: "Final project proposal due!"
+    
+  - date: "Thur, Oct 22"
+    title: "Module 6.3: Unconfoundedness and overlap"
+  
+  - title: "Module 6.4: Covariate balance and the minimum wage analysis"
+  
+  - title: "In-class analysis 10: Right Heart Catheterization I"
+  
+  - week: "WEEK 11"
+    date: "Tue, Oct 27"
+    title: "Module 6.5: Regression-based estimation, stratification and matching"
+  
+  - title: "Module 6.6: Propensity scores"
+  
+  - title: "In-class analysis 11: Right Heart Catheterization II"
+  
+  - date: "DELIVERABLES:"
+    title: "Data analysis assignment IV due!"
+    
+  - date: "NEW ASSIGNMENT:"
+    title: "Data analysis assignment V"
+    #hw: "hw-05.html"
+    
+  - date: "Thur, Oct 29"
+    title: "Module 6.7: Causal inference using propensity scores"
+  
+  - title: "Module 6.8: The minimum wage analysis cont'd"
+  
+  - title: "In-class analysis 12: Right Heart Catheterization III"
+  
+  
+  - title: " "
+  - title: "MODULE 7: INTRODUCTION TO TIME SERIES MODELS"
+    #reading: "7-reading.html"
+  - title: " "
+  
+  - week: "WEEK 12"
+    date: "Tue, Nov 3"
+    title: "Module 7.1: Introduction to time series analysis"
+  
+  - title: "Module 7.2: Stationarity and autocorrelation"
+  
+  - title: "In-class: Q&A and discussion session"
+  
+  - date: "DELIVERABLES:"
+    title: "Data analysis assignment V due!"
+    
+  - date: "Thur, Nov 5"
+    title: "Module 7.3: AR and MA models"
+  
+  - title: "Module 7.4: Time series analysis (illustration)"
+  
+  - title: "In-class: open OH for final projects"
+  
+  
+  - title: " "
+  - title: "MODULE 8: BOOTSTRAP; INTRODUCTION TO TREE-BASED METHODS"
+    #reading: "8-reading.html"
+  - title: " "
+  
+  
+  - week: "WEEK 13"
+    date: "Tue, Nov 10"
+    title: "Module 8.1: Bootstrap"
+  
+  - title: "Module 8.2: Classification and regression trees"
+  
+  - title: "Module 8.3: Ensemble tree methods"
+  
+  - title: "In-class: open OH for final projects"
+    
+  - date: "Thur, Nov 12"
+    title: "Final project presentations I"
+  
+  - week: "WEEK 14"
+    date: "Tue, Nov 17"
+    title: "Final project presentations II"
+    
+  - date: "Thur, Nov 19"
+    title: "Final project presentations III"
+  
+  - week: "WEEK 15"
+    date: "Tue, Nov 24 | DELIVERABLES:"
+    title: "Final project reports due"
+  
   
   
     
