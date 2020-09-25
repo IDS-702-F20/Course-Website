@@ -366,7 +366,7 @@ lessons:
   - date: "Thur, Oct 22"
     title: "Module 6.3: Unconfoundedness and overlap"
   
-  - title: "Module 6.4: Covariate balance and the minimum wage analysis"
+  - title: "Module 6.4: Covariate balance"
   
   - title: "In-class analysis 10: Right Heart Catheterization I"
   
@@ -388,7 +388,7 @@ lessons:
   - date: "Thur, Oct 29"
     title: "Module 6.7: Causal inference using propensity scores"
   
-  - title: "Module 6.8: The minimum wage analysis cont'd"
+  - title: "Module 6.8: The minimum wage analysis"
   
   - title: "In-class analysis 12: Right Heart Catheterization III"
   
