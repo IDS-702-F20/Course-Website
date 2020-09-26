@@ -240,12 +240,12 @@ lessons:
     title: "Module 3.5: Proportional odds model"
     slides: "3-5-proportional-odds.html"
     slidespdf: "3-5-proportional-odds.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/918805/1403540/929415/0/IDS-702--Module-35-Proportional-odds-model"
     
   - title: "Module 3.6: Proportional odds model (illustration)"
     slides: "3-6-proportional-odds-illustration.html"
     slidespdf: "3-6-proportional-odds-illustration.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/918814/1403540/929415/0/IDS-702--Module-36-Proportional-odds-model-illustration"
     
   - title: "In-class: Q&A and discussion session"
   

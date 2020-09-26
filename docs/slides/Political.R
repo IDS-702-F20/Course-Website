@@ -22,7 +22,9 @@ political <- read.table("data/political.txt", header = T,stringsAsFactors = T)
 
 
 ###### View properties of the data
-political$Ideology <- ordered(political$Ideology,levels=c("Very Liberal","Slightly Liberal","Moderate","Slightly Conservative","Very Conservative"))
+political$Ideology <- ordered(political$Ideology,
+                              levels=c("Very Liberal","Slightly Liberal","Moderate",
+                                       "Slightly Conservative","Very Conservative"))
 str(political)
 head(political)
 dim(political)
@@ -48,7 +50,9 @@ chisq.test(table(political$Ideology, political$Sex))
 ###### Model fitting
 Model1_pom <- polr(Ideology ~ Party + Sex, data=political)
 summary(Model1_pom)
-#once again there are no p-values but we can use the CIs for inference
+#once again there are no p-values directly from function
+#however, we can use the CIs for inference
+coef(Model1_pom)
 confint(Model1_pom)
 #CI for party doesnt contain zero, so party is significant
 #CI for sex does contain zero, so looks like it is not significant once we have controlled for party
