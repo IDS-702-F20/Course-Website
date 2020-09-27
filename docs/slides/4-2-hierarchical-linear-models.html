@@ -25,17 +25,17 @@ class: center, middle, inverse, title-slide
 
 
 
-## The radon analysis
+## Mativating example: the radon analysis
 
-- To illustrate how to incorporate group-level predictors, we will use the radon example from the Gelman and Hill textbook.
-
---
-
-- The data focuses on the goal of estimating the distribution of radon levels of houses within each of 85 counties in Minnesota.
+- As a motivating example, we will look at data on radon levels of houses within each of 85 counties in Minnesota.
 
 --
 
-- The full data actually includes data for more states but let's focus on just Minnesota like the textbook. 
+- The data is in the file `Radon.txt` on Sakai.
+
+--
+
+- The full data actually includes data for more states but we will focus on just Minnesota like the textbook. 
 
 --
 
@@ -49,11 +49,13 @@ class: center, middle, inverse, title-slide
 
 - Radon occurs naturally as an indirect decay product of uranium.
 
+--
+
+- Given that counties are nested within states, thinking about a hierarchical model here makes sense.
+
 
 ---
-## The radon analysis
-
-There are 919 total observations in the data. The data is in the file `Radon.txt` on Sakai.
+## Mativating example: the radon analysis
 
 Variable    | Description
 :------------- | :------------
@@ -67,6 +69,13 @@ fips | state + county fips code
 uranium | county-level soil uranium
 log_uranium | log(uranium)
 
+--
+
+The response variable, radon (or log_radon) is continuous, so we need a (hierarchical/multilevel) regression framework.
+
+--
+
+To ascertain that we need a multilevel model here, we should check for differences across counties during EDA.
 
 
 ---
@@ -76,11 +85,11 @@ log_uranium | log(uranium)
 
 --
 
-- Today we will only focus on models for linear regression.
+- First we will only focus on models for linear regression.
 
 --
 
-- However, the same ideas apply to logistic regression (as we will see in the next class or two), Poisson regression, etc.
+- However, the same ideas apply to logistic regression (as we will see soon), Poisson regression, etc.
 
 --
 
@@ -141,6 +150,7 @@ $$
 ## Random intercepts model
 
 - Allows separate intercepts for each group, but shrinks estimates towards common value.
+&lt;img src="4-2-hierarchical-linear-models_files/figure-html/unnamed-chunk-1-1.png" style="display: block; margin: auto;" /&gt;
 
 --
 
@@ -149,12 +159,6 @@ $$
 --
   
 - Also useful when some groups have small sample sizes, so that estimation of individual group means is highly variable.
-
---
-
-- The model implies the same slope for each group.
-&lt;img src="4-2-hierarchical-linear-models_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
-
 
 
 ---
@@ -207,7 +211,7 @@ $$
 --
 
 - The model implies the same intercept for each group.
-&lt;img src="4-2-hierarchical-linear-models_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="4-2-hierarchical-linear-models_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -262,42 +266,29 @@ $$
 
 - `\((\gamma_{0j},\gamma_{1j})\)` are called .hlight[random effects] while `\((\beta_{0},\beta_{1})\)` are called .hlight[fixed effects]. Models with fixed and random effects are often called .hlight[mixed effects models].
 
-&lt;img src="4-2-hierarchical-linear-models_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="4-2-hierarchical-linear-models_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
-## Mixed Effects Model for Bass Data
-
-- We will fit a mixed effects model to the Bass data.
-
---
-
-- Let `\(y_{ij}\)` and `\(x_{1ij}\)` be the mercury measurement and mean-centered length respectively for fish `\(i\)` in station `\(j\)`.
-
---
-
-- The final model we will fit is
-.block[
-.small[
-$$
-`\begin{split}
-y_{ij} &amp; = (\beta_{0} + \gamma_{0j}) + (\beta_1 + \gamma_{1j}) x_{1ij} + \epsilon_{ij}; \ \ \ i = 1, \ldots, n_j; \ \ \ j = 1, \ldots, J \\
-\epsilon_{ij} &amp; \sim N(0, \sigma^2) \\
-(\gamma_{0j},\gamma_{1j}) &amp; \sim N_2(\boldsymbol{0}, \Sigma).
-\end{split}`
-$$
-]
-]
-
-- We will first explore the standard linear model as well as other specifications to see how our results change.
-
---
+## Mixed effects model
 
 - Use the .hlight[lmer] command in the .hlight[lme4] package in R to estimate the parameters using maximum likelihood (ML) or restricted maximum likelihood (REML) estimation.
 
 --
 
 - Take STA 601/602 and/or STA 610 for information on fitting these models using Bayesian methods.
+
+--
+
+- Also, note that the terms fixed effects, random effects, and mixed effects can have (very) different meanings in different fields.
+
+--
+
+- So, we will not get too carried away with the terminology.
+
+--
+
+- For us, the important thing will be to be able to distinguish between parameters that vary by group and those that do not.
 
 
 
@@ -308,11 +299,11 @@ $$
 
 --
 
-- You should still have linearity (by each group for random slopes), independence of the errors (and also of the random effects for each predictor), equal variance, and normality.
+- You should still have linearity (by each group for varying slopes), independence of the errors (and also of the varying effects for each predictor), equal variance, and normality.
 
 --
 
-- You should still look out for outliers and multicollinearity.
+- You should still look out for outliers and check for multicollinearity.
 
 --
 

@@ -24,13 +24,13 @@ class: center, middle, inverse, title-slide
 
 
 
-## Clustered or grouped data
+## Multilevel, clustered or grouped data
 
 - Often data are grouped or clustered naturally, for example 
   + students within schools,
   + patients within hospitals,
   + voters within counties or states, or
-  + repeated measurements on same person, as is often the case in longitudinal studies.
+  + repeated measurements on same person, as is often the case in .hlight[longitudinal studies].
 
 --
 
@@ -42,7 +42,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-- .hlight[Hierarchical or multilevel models] provide a principled way to do so. We'll start with simpler cases to elucidate the main ideas.
+- .hlight[Hierarchical or multilevel models] provide a principled way to do so. We will start with simpler cases to elucidate the main ideas.
 
 
 ---
@@ -89,21 +89,32 @@ class: center, middle, inverse, title-slide
 
 --
 
-- It would be nice to find a compromise! This is what we are able to do with .hlight[hierarchical modeling].
+- It would be nice to find a compromise!
+
+--
+
+- This is what we are able to do with .hlight[hierarchical modeling].
 
 
 ---
 ## Hierarchical model
 
-- Instead, we can assume that the `\(\mu_j\)`'s are drawn from a distribution based on the following: conceive of the schools themselves as being a random sample from all possible school.
+- Once again, suppose
+.block[
+.small[
+`$$y_{ij} | \mu_j, \sigma^2_j \sim N \left( \mu_j, \sigma^2_j\right); \ \ \ i = 1,\ldots, n_j; \ \ \ j = 1, \ldots, J.$$`
+]
+]
+
+- We can assume that the `\(\mu_j\)`'s are drawn from a distribution based on the following: .hlight[conceive of the schools themselves as being a random sample from all possible school.]
 
 --
 
-- Suppose `\(\mu_0\)` is the overall mean of all school's average scores (a mean of the means), and `\(\tau^2\)` is the variance of all school's average scores (a variance of the means).
+- Suppose `\(\mu_0\)` is the .hlight[overall mean of all school's average scores (a mean of the means)], and `\(\tau^2\)` is the .hlight[variance of all school's average scores (a variance of the means)].
 
 --
 
-- Then, we can think of each `\(\mu_j\)` as being drawn from a distribution, for example,
+- Then, we can think of each `\(\mu_j\)` as being drawn from a distribution, e.g.,
 .block[
 .small[
 `$$\mu_j | \mu_0, \tau^2 \sim N \left( \mu_0, \tau^2 \right),$$`
@@ -114,7 +125,7 @@ class: center, middle, inverse, title-slide
 
 --
   
-- Usually, `\(\mu_0\)` and `\(\tau^2\)` will be unknown so that we need to estimate them using maximum likelihood or Bayesian methods.
+- Usually, `\(\mu_0\)` and `\(\tau^2\)` will also be unknown so that we need to estimate them (think maximum likelihood or Bayesian methods).
 
 
 
@@ -146,7 +157,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-- If you want to take a course that explores hierarchical models in much more detail, consider taking STA 610.
+- If you want to take a course that explores hierarchical models in much more detail, consider taking STA 610 (after taking STA 602).
 
 --
 
@@ -171,7 +182,7 @@ $$
 
 --
 
-- The weights for the weighted average is determined by relative precisions (the inverse of variance is often referred to as precision) from the data and from the second level model.
+- The weights for the weighted average is determined by relative precisions (.hlight[the inverse of variance is often referred to as precision]) from the data and from the second level model.
 
 --
   
