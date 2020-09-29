@@ -260,12 +260,12 @@ lessons:
     title: "Module 4.1: Introduction to multilevel/hierarchical models"
     slides: "4-1-hierarchical-models-intro.html"
     slidespdf: "4-1-hierarchical-models-intro.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/922920/1403540/929415/0/IDS-702--Module-41-Introduction-to-multilevel-hierarchical-models"
   
   - title: "Module 4.2: Multilevel/hierarchical linear models"
     slides: "4-2-hierarchical-linear-models.html"
     slidespdf: "4-2-hierarchical-linear-models.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/922971/1403540/929415/0/IDS-702--Module-42-Multilevel-hierarchical-linear-models"
     
   - title: "In-class analysis 7: Do more beautiful professors get higher evaluations I"
   
