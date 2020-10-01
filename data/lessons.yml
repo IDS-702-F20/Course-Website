@@ -267,7 +267,8 @@ lessons:
     slidespdf: "4-2-hierarchical-linear-models.pdf"
     video: "https://api.playposit.com/go/play/922971/1403540/929415/0/IDS-702--Module-42-Multilevel-hierarchical-linear-models"
     
-  - title: "In-class: Q&A and discussion session"
+  - title: "In-class analysis 7: Do more beautiful professors get higher evaluations I"
+    inClass: "0-7-beautiful-professors-I.html"
   
   - date: "Fri, Oct 2"
     title: "Instructions for final project proposals"   
@@ -285,8 +286,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "In-class analysis 7: Do more beautiful professors get higher evaluations I"
-    #inClass: "0-7-beautiful-professors-I.html"
+  - title: "In-class analysis 8: Do more beautiful professors get higher evaluations II"
   
   - date: "NEW ASSIGNMENT:"
     title: "Team project II"
@@ -304,7 +304,7 @@ lessons:
     #slidespdf: ".pdf"
     #video: ""
     
-  - title: "In-class analysis 8: Do more beautiful professors get higher evaluations II"
+  - title: "In-class analysis 9: Do more beautiful professors get higher evaluations III"
   
   
   - title: " "
