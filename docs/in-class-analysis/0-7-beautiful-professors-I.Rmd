@@ -102,7 +102,7 @@ Treat the variable `eval` as the response variable and the other variables as po
 2. Describe the overall relationship between `eval` and `beauty`. 
 
 3. Examine the relationship between `eval` and `beauty`, by `CourseID` (think EDA for interactions). Are there any courses for which the relationship between `eval` and `beauty` looks potentially different than others?  
-    *There are 31 levels of `CourseID` in all, which might be tough to explore graphically, so you should probably take a look at a random sample of say 5-5 classes plus class `CourseID` == 0, making a total of 10 classes. Note that level `CourseID` == 0 actually includes so many other classes which were not identified in the data. For the purposes of this lab, we will treat that class as one single huge class. You can use the following skeleton code to take a look at a reduced version of the data containing a random sample of 6 classes plus class `CourseID` == 0.*
+    *There are 31 levels of `CourseID` in all, which might be tough to explore graphically, so you should probably take a look at a random sample of say 5 classes plus class `CourseID` == 0, making a total of 10 classes. Note that level `CourseID` == 0 actually includes so many other classes which were not identified in the data. For the purposes of this lab, we will treat that class as one single huge class. You can use the following skeleton code to take a look at a reduced version of the data containing a random sample of 6 classes plus class `CourseID` == 0.*
     ```{r eval = FALSE}
 set.seed(011020) #set your own seed to be able to replicate results
 sample_courseID <- c(0,sample(1:30,6,replace=F))
