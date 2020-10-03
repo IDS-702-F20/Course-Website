@@ -163,7 +163,7 @@ ggplot(Radon[is.element(Radon$countyname,sample_county),],
 ---
 ## The radon analysis
 
-Let's focus on counties with at least 10 houses.
+Let's focus on counties with at least 11 houses.
 
 ```{r fig.height=3.2,message=F,eval=F}
 sample_county <- which(table(Radon$countyID) > 10)
@@ -251,7 +251,7 @@ Again, not enough data for some counties.
 ---
 ## The radon analysis
 
-Let's focus on counties with at least 15 houses.
+Let's focus on counties with at least 16 houses.
 
 ```{r fig.height=3.2,message=F,eval=F}
 sample_county <- which(table(Radon$countyID) > 15)

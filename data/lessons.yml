@@ -279,12 +279,12 @@ lessons:
     title: "Module 4.3: Multilevel/hierarchical linear models (illustration I)"
     slides: "4-3-hierarchical-linear-models-illustration-I.html"
     slidespdf: "4-3-hierarchical-linear-models-illustration-I.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/937523/1403540/929415/0/IDS-702--Module-43-Multilevel-hierarchical-linear-models-illustration-I"
   
   - title: "Module 4.4: Multilevel/hierarchical linear models (illustration II)"
     slides: "4-4-hierarchical-linear-models-illustration-II.html"
     slidespdf: "4-4-hierarchical-linear-models-illustration-II.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/937530/1403540/929415/0/IDS-702--Module-44-Multilevel-hierarchical-linear-models-illustration-II"
     
   - title: "In-class analysis 8: Do more beautiful professors get higher evaluations II"
   

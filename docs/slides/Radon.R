@@ -60,10 +60,10 @@ sample_county <- sample(unique(Radon$countyname),15,replace=F)
 ggplot(Radon[is.element(Radon$countyname,sample_county),],
        aes(x=countyname, y=log_radon, fill=countyname)) +
   geom_boxplot() +
-  scale_fill_brewer(palette="Greens") +
+  #scale_fill_brewer(palette="Greens") +
   labs(title="Log radon vs floor",
-       x="Lowest living area of each house",y="Log Radon") + 
-  theme_classic() + theme(legend.position="none")
+       x="Lowest living area of each house",y="Log Radon") + theme_classic() + 
+  theme(legend.position="none",axis.text.x = element_text(angle = 90))
 
 
 #Next, let's focus on predicting the radon levels from `floor`, 
