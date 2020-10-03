@@ -277,13 +277,13 @@ lessons:
   - week: "WEEK 8"
     date: "Tue, Oct 6"
     title: "Module 4.3: Multilevel/hierarchical linear models (illustration I)"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "4-3-hierarchical-linear-models-illustration-I.html"
+    slidespdf: "4-3-hierarchical-linear-models-illustration-I.pdf"
     #video: ""
   
   - title: "Module 4.4: Multilevel/hierarchical linear models (illustration II)"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "4-4-hierarchical-linear-models-illustration-II.html"
+    slidespdf: "4-4-hierarchical-linear-models-illustration-II.pdf"
     #video: ""
     
   - title: "In-class analysis 8: Do more beautiful professors get higher evaluations II"
