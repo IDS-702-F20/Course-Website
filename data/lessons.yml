@@ -295,13 +295,13 @@ lessons:
   
   - date: "Thur, Oct 8"
     title: "Module 4.5: Multilevel/hierarchical logistic models"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "4-5-hierarchical-logistic-models.html"
+    slidespdf: "4-5-hierarchical-logistic-models.pdf"
     #video: ""
   
   - title: "Module 4.6: Multilevel/hierarchical logistic models (illustration)"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "4-6-hierarchical-logistic-models-illustration.html"
+    slidespdf: "4-6-hierarchical-logistic-models-illustration.pdf"
     #video: ""
     
   - title: "In-class analysis 9: Do more beautiful professors get higher evaluations III"
