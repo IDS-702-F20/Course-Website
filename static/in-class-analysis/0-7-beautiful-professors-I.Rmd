@@ -56,7 +56,7 @@ The data contains information about student evaluations of instructor's beauty a
 
 
 
-# The Data
+# The data
 
 Download the data (named `Beauty.txt`)  from Sakai and save it locally to the same directory as your R markdown file. To find the data file on Sakai, go to Resources $\rightarrow$ Datasets $\rightarrow$ In-Class Analyses. Once you have downloaded the data file into the SAME folder as your R markdown file, load and clean the data by using the following R code.
 

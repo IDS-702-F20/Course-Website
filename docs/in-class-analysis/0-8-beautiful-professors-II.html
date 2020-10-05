@@ -11,9 +11,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-<meta name="date" content="2020-10-01" />
+<meta name="date" content="2020-10-06" />
 
-<title>IDS 702 In-class analysis 7</title>
+<title>IDS 702 In-class analysis 8</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -544,9 +544,9 @@ background-color: #AF5500;
 
 
 
-<h1 class="title toc-ignore">IDS 702 In-class analysis 7</h1>
-<h3 class="subtitle">Do more beautiful professors get higher evaluations I</h3>
-<h4 class="date">October 1, 2020</h4>
+<h1 class="title toc-ignore">IDS 702 In-class analysis 8</h1>
+<h3 class="subtitle">Do more beautiful professors get higher evaluations II</h3>
+<h4 class="date">October 6, 2020</h4>
 
 
 <div id="TOC">
@@ -591,6 +591,7 @@ background-color: #AF5500;
 </div>
 <div id="the-data" class="section level1">
 <h1>The data</h1>
+<p>This is the same data from the last in-class exercise. so you should already have it saved locally. Just in case you do not, follow the instructions below.</p>
 <p>Download the data (named <code>Beauty.txt</code>) from Sakai and save it locally to the same directory as your R markdown file. To find the data file on Sakai, go to Resources <span class="math inline">\(\rightarrow\)</span> Datasets <span class="math inline">\(\rightarrow\)</span> In-Class Analyses. Once you have downloaded the data file into the SAME folder as your R markdown file, load and clean the data by using the following R code.</p>
 <p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">Remember to double-check the dimensions and first few rows of the data to confirm you have the right file.</span></span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">Beauty &lt;-<span class="st"> </span><span class="kw">read.table</span> (<span class="st">&quot;Beauty.txt&quot;</span>, <span class="dt">header=</span>T, <span class="dt">sep=</span><span class="st">&quot; &quot;</span>)</a></code></pre></div>
@@ -687,16 +688,12 @@ background-color: #AF5500;
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
 <p>Treat the variable <code>eval</code> as the response variable and the other variables as potential predictors.</p>
+<p><em>For ease of interpretion, fit your models using either <code>eval</code> or <code>log(eval)</code> as the response. Use <code>log(eval)</code> if you think the distribution of <code>eval</code> is too skewed and taking logs greatly improves it.</em></p>
 <ol style="list-style-type: decimal">
-<li><p>Is the distribution of <code>eval</code> normal? If not, try the log transformation. Does that look more “normal”? If you think the log transformation does not help, what other transformation(s) do you think might work? Examine and describe the distribution(s) for the transformation(s).</p></li>
-<li><p>Describe the overall relationship between <code>eval</code> and <code>beauty</code>.</p></li>
-<li><p>Examine the relationship between <code>eval</code> and <code>beauty</code>, by <code>CourseID</code> (think EDA for interactions). Are there any courses for which the relationship between <code>eval</code> and <code>beauty</code> looks potentially different than others?<br />
-<em>There are 31 levels of <code>CourseID</code> in all, which might be tough to explore graphically, so you should probably take a look at a random sample of say 5 classes plus class <code>CourseID</code> == 0, making a total of 10 classes. Note that level <code>CourseID</code> == 0 actually includes so many other classes which were not identified in the data. For the purposes of this lab, we will treat that class as one single huge class. You can use the following skeleton code to take a look at a reduced version of the data containing a random sample of 6 classes plus class <code>CourseID</code> == 0.</em></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">011020</span>) <span class="co">#set your own seed to be able to replicate results</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">sample_courseID &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">30</span>,<span class="dv">6</span>,<span class="dt">replace=</span>F))</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">Data_reduced &lt;-<span class="st"> </span>Data[<span class="kw">is.element</span>(Data<span class="op">$</span>CourseID,sample_courseID),]</a></code></pre></div></li>
-<li><p>Do you think it is meaningful to fit a multilevel linear model that includes varying slopes for <code>beauty</code> by <code>profnumber</code>? Why or why not?</p></li>
-<li><p>Now, explore the relationship between <code>eval</code> and the other potential predictors, excluding <code>profnumber</code>, <code>profevaluation</code>, and <code>CourseID</code>. Don’t include any of the plots, just briefly describe the most interesting relationships. We should not include <code>profevaluation</code> as a predictor for <code>eval</code>. Why?</p></li>
+<li><p>If you have not already done so, complete the remaining exercises from the last in-class exercise (In-class analysis 7).</p></li>
+<li><p>Fit a varying-intercept model for <code>eval</code> (or <code>log(eval)</code>) grouped by <code>profnumber</code>, with <code>beauty</code> as the only predictor. Interpret the results in the context of the question.</p></li>
+<li><p>Using the model from question 2 above, how does the variation in average ratings across professors compare to the variation in ratings for the same professor? Which is higher, and what does that mean to you?</p></li>
+<li><p>Now identify three instructor-level predictors excluding <code>beauty</code> (with <code>profnumber</code> being the instructor-level identifier) that you think we should control for based on your EDA. Fit a varying-intercept model for the data grouped by <code>profnumber</code>, and include <code>beauty</code>, plus the other three variables you have identified as potential predictors. Interpret the results in the context of the question.</p></li>
 </ol>
 </div>
 

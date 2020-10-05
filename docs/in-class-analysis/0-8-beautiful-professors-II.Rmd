@@ -1,7 +1,7 @@
 ---
-title: "IDS 702 In-class analysis 7"
-subtitle: "Do more beautiful professors get higher evaluations I"
-date: "October 1, 2020"
+title: "IDS 702 In-class analysis 8"
+subtitle: "Do more beautiful professors get higher evaluations II"
+date: "October 6, 2020"
 #date: "August 20, 2020"
 output: 
   tufte::tufte_html:
@@ -57,6 +57,7 @@ The data contains information about student evaluations of instructor's beauty a
 
 
 # The data
+This is the same data from the last in-class exercise. so you should already have it saved locally. Just in case you do not, follow the instructions below.
 
 Download the data (named `Beauty.txt`)  from Sakai and save it locally to the same directory as your R markdown file. To find the data file on Sakai, go to Resources $\rightarrow$ Datasets $\rightarrow$ In-Class Analyses. Once you have downloaded the data file into the SAME folder as your R markdown file, load and clean the data by using the following R code.
 
@@ -97,22 +98,15 @@ tenuretrack  | Is the professor tenure track faculty? 1 = yes, 0 = no
 
 Treat the variable `eval` as the response variable and the other variables as potential predictors.
 
-1. Is the distribution of `eval` normal? If not, try the log transformation. Does that look more "normal"? If you think the log transformation does not help, what other transformation(s) do you think might work? Examine and describe the distribution(s) for the transformation(s).
+*For ease of interpretion, fit your models using either `eval` or `log(eval)` as the response. Use `log(eval)` if you think the distribution of `eval` is too skewed and taking logs greatly improves it.*
 
-2. Describe the overall relationship between `eval` and `beauty`. 
+1. If you have not already done so, complete the remaining exercises from the last in-class exercise (In-class analysis 7).
 
-3. Examine the relationship between `eval` and `beauty`, by `CourseID` (think EDA for interactions). Are there any courses for which the relationship between `eval` and `beauty` looks potentially different than others?  
-    *There are 31 levels of `CourseID` in all, which might be tough to explore graphically, so you should probably take a look at a random sample of say 5 classes plus class `CourseID` == 0, making a total of 10 classes. Note that level `CourseID` == 0 actually includes so many other classes which were not identified in the data. For the purposes of this lab, we will treat that class as one single huge class. You can use the following skeleton code to take a look at a reduced version of the data containing a random sample of 6 classes plus class `CourseID` == 0.*
-    ```{r eval = FALSE}
-set.seed(011020) #set your own seed to be able to replicate results
-sample_courseID <- c(0,sample(1:30,6,replace=F))
-Data_reduced <- Data[is.element(Data$CourseID,sample_courseID),]
-```
+2. Fit a varying-intercept model for `eval` (or `log(eval)`) grouped by `profnumber`, with `beauty` as the only predictor. Interpret the results in the context of the question.
 
-    
-4. Do you think it is meaningful to fit a multilevel linear model that includes varying slopes for `beauty` by `profnumber`? Why or why not?
+3. Using the model from question 2 above, how does the variation in average ratings across professors compare to the variation in ratings for the same professor? Which is higher, and what does that mean to you?
 
-5. Now, explore the relationship between `eval` and the other potential predictors, excluding `profnumber`, `profevaluation`, and `CourseID`. Don't include any of the plots, just briefly describe the most interesting relationships. We should not include `profevaluation` as a predictor for `eval`. Why? 
+4. Now identify three instructor-level predictors excluding `beauty` (with `profnumber` being the instructor-level identifier)  that you think we should control for based on your EDA. Fit a varying-intercept model for the data grouped by `profnumber`, and include `beauty`, plus the other three variables you have identified as potential predictors. Interpret the results in the context of the question.
 
 
 

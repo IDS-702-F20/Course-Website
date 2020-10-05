@@ -287,10 +287,11 @@ lessons:
     video: "https://api.playposit.com/go/play/937530/1403540/929415/0/IDS-702--Module-44-Multilevel-hierarchical-linear-models-illustration-II"
     
   - title: "In-class analysis 8: Do more beautiful professors get higher evaluations II"
+    inClass: "0-8-beautiful-professors-II.html"
   
   - date: "NEW ASSIGNMENT:"
     title: "Team project II"
-    #project: "team-project-02.html"
+    project: "team-project-02.html"
   
   
   - date: "Thur, Oct 8"
@@ -309,7 +310,7 @@ lessons:
   
   - title: " "
   - title: "MODULE 5: HANDLING MISSING DATA"
-    #reading: "5-reading.html"
+    reading: "5-reading.html"
   - title: " "
   
   
