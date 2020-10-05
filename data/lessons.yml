@@ -298,12 +298,12 @@ lessons:
     title: "Module 4.5: Multilevel/hierarchical logistic models"
     slides: "4-5-hierarchical-logistic-models.html"
     slidespdf: "4-5-hierarchical-logistic-models.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/942823/1403540/929415/0/IDS-702--Module-45-Multilevel-hierarchical-logistic-models"
   
   - title: "Module 4.6: Multilevel/hierarchical logistic models (illustration)"
     slides: "4-6-hierarchical-logistic-models-illustration.html"
     slidespdf: "4-6-hierarchical-logistic-models-illustration.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/942833/1403540/929415/0/IDS-702--Module-46-Multilevel-hierarchical-logistic-models-illustration"
     
   - title: "In-class analysis 9: Do more beautiful professors get higher evaluations III"
   

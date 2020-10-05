@@ -11,7 +11,8 @@ library(ggplot2) #Time to pivot to ggplot2
 library(lme4)
 library(rstan)
 library(brms)
-library(sjPlot)
+library(sjPlot) #another option for making nice html tables
+library(lattice) #for ranef
 
 
 ###### Load the data
@@ -53,14 +54,17 @@ tab_model(model1)
 #can also try probit; identical results
 #model1 <- glmer(bush ~ black + female + (1|state_label), family=binomial(link="probit"),data=polls_subset)
 #summary(model1)
+dotplot(ranef(model1, condVar=TRUE))
 
 #Let's includes other relevant survey factors, such as region, 
-#prior vote history (average Republican vote share in the three prior elections, adjusted for home-state and home-region candidate effects), 
+#prior vote history (average Republican vote share in the three prior elections, 
+#adjusted for home-state and home-region candidate effects), 
 #age category, and education category.
 model2 <- glmer(bush ~ black + female + v_prev + edu_label:age_label + (1|state_label) + (1|region_label),
                 family=binomial(link="logit"),data=polls_subset)
 summary(model2)
 tab_model(model2)
+dotplot(ranef(model2, condVar=TRUE))
 
 
 #Let's change the edu:age interaction to random effects instead
@@ -68,6 +72,7 @@ model3 <- glmer(bush ~ black + female + v_prev + (1|state_label) + (1|region_lab
                 family=binomial(link="logit"),data=polls_subset)
 summary(model3)
 tab_model(model3)
+dotplot(ranef(model3, condVar=TRUE))
 
 #Let's use a Bayesian approach instead
 #Try xcode-select --install from the Terminal app or the Terminal tab of the RStudio console
@@ -76,13 +81,13 @@ model_bayes <- brm(bush ~ black + female + v_prev + (1|state_label) + (1|region_
 summary(model_bayes)
 head(predict(model_bayes))
 dim(posterior_samples(model_bayes))
-head(posterior_samples(model_bayes))
+#head(posterior_samples(model_bayes))
 
 
 #visualize results: plot estimated OR's with 2 SD error bars ea. side
 plot_model(model_bayes,show.values = TRUE)
 plot_model(model_bayes,type="pred")
-p <-plot_model(model_bayes,type="re",show.values = TRUE,ri.nr = c(1,2))
+p <- plot_model(model_bayes,type="re",show.values = TRUE,ri.nr = c(1,2))
 p[[17]]
 p[[18]]
 
