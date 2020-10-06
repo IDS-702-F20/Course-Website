@@ -348,9 +348,9 @@ $$
 ]
 
   where
-  + $\tau_0^2$ describes the within county variation attributed to the random/varying intercept,
+  + $\tau_0^2$ describes the across county variation attributed to the random/varying intercept,
   
-  + $\tau_1^2$ describes the within county variation attributed to the random/varying slope (that is, floor), and
+  + $\tau_1^2$ describes the across county variation attributed to the random/varying slope (that is, floor), and
   
   + $\rho$ describes the correlation between $\gamma_{0j}$ and $\gamma_{1j}$.
 
@@ -426,19 +426,19 @@ summary(Model1)
 ---
 ## Interpretation of random effects
 
-- The estimated standard error $\hat{\sigma} = 0.75$ describes the unexplained within-county variation.
+- The estimated standard error $\hat{\sigma} = 0.75$ describes the within-county or remaining unexplained variation.
 
 --
 
-- The estimated $\hat{\tau_0} = 0.35$ describes the within county variation attributed to the random intercept.
+- The estimated $\hat{\tau_0} = 0.35$ describes the across-county variation attributed to the random intercept.
 
 --
 
-- The estimated $\hat{\tau_1} = 0.34$ describes the within-county variation attributed to the random slope (the predictor, floor).
+- The estimated $\hat{\tau_1} = 0.34$ describes the across-county variation attributed to the random slope (the predictor, floor).
 
 --
 
-- Those two sources of within county variation are actually quite similar.
+- Those two sources of county variation are actually quite similar.
 
 --
 

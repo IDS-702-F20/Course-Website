@@ -405,9 +405,9 @@ $$
 ]
 
   where
-  + `\(\tau_0^2\)` describes the within county variation attributed to the random/varying intercept,
+  + `\(\tau_0^2\)` describes the across county variation attributed to the random/varying intercept,
   
-  + `\(\tau_1^2\)` describes the within county variation attributed to the random/varying slope (that is, floor), and
+  + `\(\tau_1^2\)` describes the across county variation attributed to the random/varying slope (that is, floor), and
   
   + `\(\rho\)` describes the correlation between `\(\gamma_{0j}\)` and `\(\gamma_{1j}\)`.
 
@@ -436,7 +436,7 @@ summary(Model1)
 ## Random effects:
 ##  Groups     Name             Variance Std.Dev. Corr 
 ##  countyname (Intercept)      0.1216   0.3487        
-##             floorFirst Floor 0.1180   0.3436   -0.34
+##             floorFirst Floor 0.1181   0.3436   -0.34
 ##  Residual                    0.5567   0.7462        
 ## Number of obs: 919, groups:  countyname, 85
 ## 
@@ -487,7 +487,7 @@ $$ \widehat{\text{log(radon}_{i}\text{)}} = 1.46 - 0.68 \times \textrm{floor}_i 
   
   ```
   ##        (Intercept) floorFirst Floor
-  ## DAKOTA  -0.1099069      -0.08787551
+  ## DAKOTA  -0.1099052      -0.08786805
   ```
 
   so that the estimated regression line for Dakota county is actually
@@ -529,7 +529,7 @@ summary(Model1)
 ## Random effects:
 ##  Groups     Name             Variance Std.Dev. Corr 
 ##  countyname (Intercept)      0.1216   0.3487        
-##             floorFirst Floor 0.1180   0.3436   -0.34
+##             floorFirst Floor 0.1181   0.3436   -0.34
 ##  Residual                    0.5567   0.7462        
 ## Number of obs: 919, groups:  countyname, 85
 ## 
@@ -547,19 +547,19 @@ summary(Model1)
 ---
 ## Interpretation of random effects
 
-- The estimated standard error `\(\hat{\sigma} = 0.75\)` describes the unexplained within-county variation.
+- The estimated standard error `\(\hat{\sigma} = 0.75\)` describes the within-county or remaining unexplained variation.
 
 --
 
-- The estimated `\(\hat{\tau_0} = 0.35\)` describes the within county variation attributed to the random intercept.
+- The estimated `\(\hat{\tau_0} = 0.35\)` describes the across-county variation attributed to the random intercept.
 
 --
 
-- The estimated `\(\hat{\tau_1} = 0.34\)` describes the within-county variation attributed to the random slope (the predictor, floor).
+- The estimated `\(\hat{\tau_1} = 0.34\)` describes the across-county variation attributed to the random slope (the predictor, floor).
 
 --
 
-- Those two sources of within county variation are actually quite similar.
+- Those two sources of county variation are actually quite similar.
 
 --
 
@@ -635,6 +635,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -652,17 +678,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {
