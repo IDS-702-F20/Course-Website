@@ -318,21 +318,16 @@ lessons:
   - week: "WEEK 9"
     date: "Tue, Oct 13"
     title: "Module 5.1: Introduction to missing data"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "5-1-missing-data-intro.html"
+    slidespdf: "5-1-missing-data-intro.pdf"
     #video: ""
   
   - title: "Module 5.2: Imputation methods I"
-    #slides: ".html"
-    #slidespdf: ".pdf"
+    slides: "5-2-imputation-methods-I.html"
+    slidespdf: "5-2-imputation-methods-I.pdf"
     #video: ""
     
-  - title: "Module 5.3: Imputation methods II"
-    #slides: ".html"
-    #slidespdf: ".pdf"
-    #video: ""
-    
-  - title: "In-class: Q&A and discussion session"
+  - title: "In-class: Q&A session and team meetings for project"
     
   - date: "Thur, Oct 15"
     title: "Team project II presentations"
@@ -340,11 +335,6 @@ lessons:
   - date: "Sun, Oct 18 | DELIVERABLES:"
     title: "Team project II reports due"
     
-    
-  - title: " "
-  - title: "MODULE 6: INTRODUCTION TO CAUSAL INFERENCE"
-    #reading: "6-reading.html"
-  - title: " "
   
   
   - week: "WEEK 10"
@@ -353,11 +343,15 @@ lessons:
   
   
   - date: "Tue, Oct 20"
-    title: "Module 6.1: The potential outcomes framework and causal estimands"
-  
-  - title: "Module 6.2: Assignment mechanisms and the role of randomization"
-  
-  - title: "In-class: Q&A and discussion session"
+    title: "Module 5.3: Imputation methods II"
+    #slides: "5-3-imputation-methods-II.html"
+    #slidespdf: "5-3-imputation-methods-II.pdf"
+    #video: ""
+    
+  - title: "Module 5.4: Imputation methods III"
+    #slides: "5-4-imputation-methods-III.html"
+    #slidespdf: "5-4-imputation-methods-III.pdf"
+    #video: ""
     
   - date: "NEW ASSIGNMENT:"
     title: "Data analysis assignment IV"
@@ -366,20 +360,29 @@ lessons:
   - date: "Wed, Oct 21 | DELIVERABLES:"
     title: "Final project proposal due!"
     
+    
+  - title: " "
+  - title: "MODULE 6: INTRODUCTION TO CAUSAL INFERENCE"
+    #reading: "6-reading.html"
+  - title: " "
+  
+    
   - date: "Thur, Oct 22"
+    title: "Module 6.1: The potential outcomes framework and causal estimands"
+  
+  - title: "Module 6.2: Assignment mechanisms and the role of randomization"
+  
+  - title: "In-class: Q&A and discussion session"
+  
+  - week: "WEEK 11"
+    date: "Tue, Oct 27"
     title: "Module 6.3: Unconfoundedness and overlap"
   
   - title: "Module 6.4: Covariate balance"
   
+  - title: "Module 6.5: Regression-based estimation, stratification and matching"
+  
   - title: "In-class analysis 10: Right Heart Catheterization I"
-  
-  - week: "WEEK 11"
-    date: "Tue, Oct 27"
-    title: "Module 6.5: Regression-based estimation, stratification and matching"
-  
-  - title: "Module 6.6: Propensity scores"
-  
-  - title: "In-class analysis 11: Right Heart Catheterization II"
   
   - date: "DELIVERABLES:"
     title: "Data analysis assignment IV due!"
@@ -389,11 +392,13 @@ lessons:
     #hw: "hw-05.html"
     
   - date: "Thur, Oct 29"
-    title: "Module 6.7: Causal inference using propensity scores"
+    title: "Module 6.6: Propensity scores"
+    
+  - title: "Module 6.7: Causal inference using propensity scores"
   
   - title: "Module 6.8: The minimum wage analysis"
   
-  - title: "In-class analysis 12: Right Heart Catheterization III"
+  - title: "In-class analysis 11: Right Heart Catheterization II"
   
   
   - title: " "
