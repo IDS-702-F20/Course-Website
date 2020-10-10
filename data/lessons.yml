@@ -320,12 +320,12 @@ lessons:
     title: "Module 5.1: Introduction to missing data"
     slides: "5-1-missing-data-intro.html"
     slidespdf: "5-1-missing-data-intro.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/954606/1403540/929415/0/IDS-702--Module-51-Introduction-to-missing-data"
   
   - title: "Module 5.2: Imputation methods I"
     slides: "5-2-imputation-methods-I.html"
     slidespdf: "5-2-imputation-methods-I.pdf"
-    #video: ""
+    video: "https://api.playposit.com/go/play/954611/1403540/929415/0/IDS-702--Module-52-Imputation-methods-I"
     
   - title: "In-class: Q&A session and team meetings for project"
     
