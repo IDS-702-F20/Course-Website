@@ -145,7 +145,7 @@ For any house in Minnesota with a basement as the lowest living area, every unit
 ---
 ## How much data and how many groups?
 
-- When $J$, that is the number of groups, is small, it is difficult to estimate the between-group variation.
+- When $J$, that is the number of groups, is small, it is difficult to estimate the across-group variation.
 
 --
 
