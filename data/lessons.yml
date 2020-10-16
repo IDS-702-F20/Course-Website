@@ -344,14 +344,14 @@ lessons:
   
   - date: "Tue, Oct 20"
     title: "Module 5.3: Imputation methods II"
-    #slides: "5-3-imputation-methods-II.html"
-    #slidespdf: "5-3-imputation-methods-II.pdf"
-    #video: ""
+    slides: "5-3-imputation-methods-II.html"
+    slidespdf: "5-3-imputation-methods-II.pdf"
+    video: ""
     
-  - title: "Module 5.4: Imputation methods III"
-    #slides: "5-4-imputation-methods-III.html"
-    #slidespdf: "5-4-imputation-methods-III.pdf"
-    #video: ""
+  - title: "Module 5.4: Multiple imputation in R"
+    slides: "5-4-imputation-methods-III.html"
+    slidespdf: "5-4-imputation-methods-III.pdf"
+    video: ""
     
   - date: "NEW ASSIGNMENT:"
     title: "Data analysis assignment IV"
