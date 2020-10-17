@@ -346,12 +346,12 @@ lessons:
     title: "Module 5.3: Imputation methods II"
     slides: "5-3-imputation-methods-II.html"
     slidespdf: "5-3-imputation-methods-II.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/970546/1403540/929415/0/IDS-702--Module-53-Imputation-methods-II"
     
   - title: "Module 5.4: Multiple imputation in R"
     slides: "5-4-imputation-methods-III.html"
     slidespdf: "5-4-imputation-methods-III.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/970549/1403540/929415/0/IDS-702--Module-54-Multiple-imputation-in-R"
     
   - date: "NEW ASSIGNMENT:"
     title: "Data analysis assignment IV"
