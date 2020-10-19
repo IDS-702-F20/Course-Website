@@ -369,8 +369,14 @@ lessons:
     
   - date: "Thur, Oct 22"
     title: "Module 6.1: The potential outcomes framework and causal estimands"
+    slides: "6-1-causal-inference-intro.html"
+    slidespdf: "6-1-causal-inference-intro.pdf"
+    #video: " "
   
   - title: "Module 6.2: Assignment mechanisms and the role of randomization"
+    slides: "6-2-causal-inference-assignment-mechanisms.html"
+    slidespdf: "6-2-causal-inference-assignment-mechanisms.pdf"
+    #video: " "
   
   - title: "In-class: Q&A and discussion session"
   
