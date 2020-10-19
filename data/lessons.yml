@@ -371,22 +371,25 @@ lessons:
     title: "Module 6.1: The potential outcomes framework and causal estimands"
     slides: "6-1-causal-inference-intro.html"
     slidespdf: "6-1-causal-inference-intro.pdf"
-    #video: " "
+    video: "https://api.playposit.com/go/play/974972/1403540/929415/0/IDS-702--Module-61-The-potential-outcomes-framework-and-causal-estimands"
   
   - title: "Module 6.2: Assignment mechanisms and the role of randomization"
     slides: "6-2-causal-inference-assignment-mechanisms.html"
     slidespdf: "6-2-causal-inference-assignment-mechanisms.pdf"
-    #video: " "
+    video: "https://api.playposit.com/go/play/974981/1403540/929415/0/IDS-702--Module-62-Assignment-mechanisms-and-the-role-of-randomization"
   
   - title: "In-class: Q&A and discussion session"
   
   - week: "WEEK 11"
     date: "Tue, Oct 27"
     title: "Module 6.3: Unconfoundedness and overlap"
+    #video: " "
   
   - title: "Module 6.4: Covariate balance"
+    #video: " "
   
   - title: "Module 6.5: Regression-based estimation, stratification and matching"
+    #video: " "
   
   - title: "In-class analysis 10: Right Heart Catheterization I"
   
@@ -399,10 +402,13 @@ lessons:
     
   - date: "Thur, Oct 29"
     title: "Module 6.6: Propensity scores"
+    #video: " "
     
   - title: "Module 6.7: Causal inference using propensity scores"
+    #video: " "
   
   - title: "Module 6.8: The minimum wage analysis"
+    #video: " "
   
   - title: "In-class analysis 11: Right Heart Catheterization II"
   
