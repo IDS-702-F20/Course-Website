@@ -81,8 +81,8 @@ Friday, August 28	| Drop/Add ends
 Monday, September 7 | Labor day. Classes in session
 Friday, September 25 | Team project I reports due
 Friday, October 23 | Team project II reports due
-Wednesday, October 28 | Final project proposal due
-Tuesday - Thursday, November 17 - 19 | Final project presentations
+Wednesday, October 21 | Final project proposal due
+Tuesday - Thursday, November 12 - 19 | Final project presentations
 Tuesday, November 24 | Final project reports due
 Tuesday, November 24 |	End of semester
 
