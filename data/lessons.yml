@@ -357,7 +357,7 @@ lessons:
     
   - date: "NEW ASSIGNMENT:"
     title: "Data analysis assignment IV"
-    #hw: "hw-04.html"
+    hw: "hw-04.html"
     
   - date: "Wed, Oct 21 | DELIVERABLES:"
     title: "Final project proposal due!"

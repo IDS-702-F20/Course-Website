@@ -1,6 +1,6 @@
 ---
-title: "Methods and Data Analysis 4"
-date: "Due: 11:59pm, Monday, Nov 11"
+title: "Data Analysis Assignment 4"
+date: "Due: 11:59pm, Tuesday, Oct 27"
 output: 
   html_document: 
     css: hw.css
@@ -12,11 +12,25 @@ output:
       smooth_scroll: true
 ---
 
+
+<br/><br/>
+<font color="blue">**THIS IS AN OPTIONAL HOMEWORK. IF YOU CHOOSE TO SUBMIT IT, THE SCORE WILL REPLACE THE LOWEST SCORE OUT OF THE FOUR OTHER METHODS AND DATA ANALYSIS ASSIGNMENTS, AS LONG AS IT EXCEEDS AT LEAST ONE OF THE SCORES FROM THOSE PREVIOUS ASSIGNMENTS.**</font>
+
+
+
 ## Instructions
 
 This assignment involves missing data. Note that this is an individual assignment.
-<!-- The datasets (for question 2) can be found on Sakai: go to Resources $\rightarrow$ Datasets $\rightarrow$ Homework Datasets $\rightarrow$ Methods and Data Analysis 2.  -->
-Please type your solutions using R Markdown, LaTeX or any other word processor but be sure to knit or convert the final output file to ".pdf". Submissions should be made on gradescope: go to Assignments $\rightarrow$ Methods and Data Analysis 4.
+<!-- The data can be found on Sakai: go to Resources $\rightarrow$ Datasets $\rightarrow$ Data Analysis Assignments $\rightarrow$ Assignment 2.   -->
+Please type your solutions using R Markdown, LaTeX or any other word processor but YOU MUST knit or convert the final output file to ".pdf". Submissions should be made on gradescope: go to Assignments $\rightarrow$ Data Analysis Assignment 4.
+
+<font color="red">**DO NOT INCLUDE R CODE OR OUTPUT IN YOUR SOLUTIONS/REPORTS** *All R code can be included in an appendix, and R outputs should be converted to nicely formatted tables. Feel free to use R packages such as `kable`, `xtable`, and `stargazer`.*</font>
+
+<font color="red">*Also, you can round up ALL numbers/estimates to 2 decimal places (4 decimal places at the most to avoid exact zeros when possible).*</font>
+
+**Reminder: You are allowed and even encouraged to talk to each other about general concepts, or to the instructor/TAs. However, the write-ups, solutions, and code MUST be entirely your own work.**
+
+
 
 ## Questions
 
