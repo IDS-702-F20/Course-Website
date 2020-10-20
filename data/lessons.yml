@@ -353,6 +353,8 @@ lessons:
     slidespdf: "5-4-imputation-methods-III.pdf"
     video: "https://api.playposit.com/go/play/970549/1403540/929415/0/IDS-702--Module-54-Multiple-imputation-in-R"
     
+  - title: "In-class: Discussion session"
+    
   - date: "NEW ASSIGNMENT:"
     title: "Data analysis assignment IV"
     #hw: "hw-04.html"
