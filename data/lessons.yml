@@ -365,7 +365,7 @@ lessons:
     
   - title: " "
   - title: "MODULE 6: INTRODUCTION TO CAUSAL INFERENCE"
-    #reading: "6-reading.html"
+    reading: "6-reading.html"
   - title: " "
   
     
@@ -417,7 +417,7 @@ lessons:
   
   - title: " "
   - title: "MODULE 7: INTRODUCTION TO TIME SERIES MODELS"
-    #reading: "7-reading.html"
+    reading: "7-reading.html"
   - title: " "
   
   - week: "WEEK 12"
@@ -441,7 +441,7 @@ lessons:
   
   - title: " "
   - title: "MODULE 8: BOOTSTRAP; INTRODUCTION TO TREE-BASED METHODS"
-    #reading: "8-reading.html"
+    reading: "8-reading.html"
   - title: " "
   
   

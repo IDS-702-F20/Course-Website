@@ -112,10 +112,6 @@ knitr::include_graphics("img/miss-data-pattern.png")
 
 --
 
-- .hlight[At the top]: number of rows with each pattern, e.g., 3 cases where only cholesterol is missing.
-
---
-
 - .hlight[At the bottom]: total number of missing values by variables.
 
 --
