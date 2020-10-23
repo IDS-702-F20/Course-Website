@@ -1765,8 +1765,7 @@ This is a dataset on 20 trees comprising age and diameter of trees. Let’s crea
 You don’t need to turn in anything for this part, but you should report the final impu- tation model that you decided to use.</li>
 <li>Estimate a regression of age on diameter. Apply the multiple imputation combining rules to obtain point and variance estimates for the regression parameters that account for missing data. What can you conclude about the relationship between age and diameter?</li>
 </ul></li>
-<li><font color="blue">MULTIPLE IMPUTATION IN NHANES DATA</font>. We now will use multiple imputation on a larger dataset that has missing values. The dataset has a variable called <code>tmec2yr</code>. This is a survey weight variable, which you can disregard for this assignment. You can learn more about survey weights in STA 522. The dataset also has variables <code>sdmvstra</code> and <code>sdmvpsu</code>. You can ignore these variables as well.<br />
-<em>The data and code book for this question can be found in the files “nhanes.csv” and “nhanesCodebook.pdf” on Sakai.</em>
+<li><font color="blue">MULTIPLE IMPUTATION IN NHANES DATA</font>. We now will use multiple imputation on a larger dataset that has missing values. The dataset has variables <code>sdmvstra</code>, <code>sdmvpsu</code>, <code>wtmec2yr</code>, and <code>ridageyr</code>. You can ignore these variables. <em>The data and code book for this question can be found in the files “nhanes.csv” and “nhanesCodebook.pdf” on Sakai.</em>
 <ul>
 <li>Use a multiple imputation approach to fill in missing values with the R software mice using a default application (no transformations in the modeling).
 <ul>

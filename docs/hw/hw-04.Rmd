@@ -51,7 +51,7 @@ This is a dataset on 20 trees comprising age and diameter of trees. Let’s crea
 
 
 2. <font color="blue">MULTIPLE IMPUTATION IN NHANES DATA</font>.
-We now will use multiple imputation on a larger dataset that has missing values. The dataset has a variable called `tmec2yr`. This is a survey weight variable, which you can disregard for this assignment. You can learn more about survey weights in STA 522. The dataset also has variables `sdmvstra` and `sdmvpsu`. You can ignore these variables as  well.  
+We now will use multiple imputation on a larger dataset that has missing values. The dataset has variables `sdmvstra`, `sdmvpsu`, `wtmec2yr`, and `ridageyr`. You can ignore these variables.
     *The data and code book for this question can be found in the files "nhanes.csv" and "nhanesCodebook.pdf" on Sakai.*  
       + Use a multiple imputation approach to fill in missing values with the R software mice using a default application (no transformations in the modeling). 
         - Create m = 10 imputed datasets. 
