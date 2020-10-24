@@ -149,7 +149,7 @@ assumptions—explicit or implicit—come with that model.
 - .hlight[Flexible methods] (we won't cover these)
   + Semiparametric models (e.g., power series)
   + Machine learning methods (e.g., CART, random forest, boosting, bagging, etc)
-  + Bayesian non-paramteric and semi-parametric models (e.g., Gaussian Processes, BART, Dirichlet Processes mixtures)
+  + Bayesian non-parametric and semi-parametric models (e.g., Gaussian Processes, BART, Dirichlet Processes mixtures)
   
 
 

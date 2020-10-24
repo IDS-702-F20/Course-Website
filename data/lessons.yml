@@ -387,17 +387,17 @@ lessons:
     title: "Module 6.3: Unconfoundedness and overlap"
     slides: "6-3-unconfoundedness-and-overlap.html"
     slidespdf: "6-3-unconfoundedness-and-overlap.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/987110/1403540/929415/0/IDS-702--Module-63-Unconfoundedness-and-overlap"
   
   - title: "Module 6.4: Regression-based estimation and covariate balance"
     slides: "6-4-covariate-balance.html"
     slidespdf: "6-4-covariate-balance.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/987119/1403540/929415/0/IDS-702--Module-64-Regression-based-estimation-and-covariate-balance"
   
   - title: "Module 6.5: Stratification and matching"
     slides: "6-5-stratification-and-matching.html"
     slidespdf: "6-5-stratification-and-matching.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/987130/1403540/929415/0/IDS-702--Module-65-Stratification-and-matching"
   
   - title: "In-class analysis 10: Right Heart Catheterization I"
   
