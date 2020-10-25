@@ -410,13 +410,19 @@ lessons:
     
   - date: "Thur, Oct 29"
     title: "Module 6.6: Propensity scores"
-    #video: " "
+    slides: "6-6-propensity-scores.html"
+    slidespdf: "6-6-propensity-scores.pdf"
+    video: ""
     
   - title: "Module 6.7: Causal inference using propensity scores"
-    #video: " "
+    slides: "6-7-causal-inference-with-propensity-scores.html"
+    slidespdf: "6-7-causal-inference-with-propensity-scores.pdf"
+    video: ""
   
   - title: "Module 6.8: The minimum wage analysis"
-    #video: " "
+    slides: "6-8-minimum-wage-analysis.html"
+    slidespdf: "6-8-minimum-wage-analysis.pdf"
+    video: ""
   
   - title: "In-class analysis 11: Right Heart Catheterization II"
   
@@ -429,18 +435,33 @@ lessons:
   - week: "WEEK 12"
     date: "Tue, Nov 3"
     title: "Module 7.1: Introduction to time series analysis"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
   
   - title: "Module 7.2: Stationarity and autocorrelation"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
   
   - title: "In-class: Q&A and discussion session"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
   
   - date: "Tue, Nov 4 | DELIVERABLES:"
     title: "Data analysis assignment V due!"
     
   - date: "Thur, Nov 5"
     title: "Module 7.3: AR and MA models"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
   
   - title: "Module 7.4: Time series analysis (illustration)"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
   
   - title: "In-class: open OH for final projects"
   
@@ -454,12 +475,24 @@ lessons:
   - week: "WEEK 13"
     date: "Tue, Nov 10"
     title: "Module 8.1: Bootstrap"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
   
   - title: "Module 8.2: Classification and regression trees"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
   
   - title: "Module 8.3: Ensemble tree methods"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
   
   - title: "In-class: open OH for final projects"
+    #slides: " "
+    #slidespdf: " "
+    #video: " "
     
   - date: "Thur, Nov 12"
     title: "Final project presentations I"
