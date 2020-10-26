@@ -400,6 +400,7 @@ lessons:
     video: "https://api.playposit.com/go/play/987130/1403540/929415/0/IDS-702--Module-65-Stratification-and-matching"
   
   - title: "In-class analysis 10: Right Heart Catheterization I"
+    inClass: "1-0-rhc-I.html"
   
   - date: "DELIVERABLES:"
     title: "Data analysis assignment IV due!"
@@ -425,6 +426,7 @@ lessons:
     video: ""
   
   - title: "In-class analysis 11: Right Heart Catheterization II"
+    #inClass: "1-1-rhc-II.html"
   
   
   - title: " "
