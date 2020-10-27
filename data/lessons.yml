@@ -413,17 +413,17 @@ lessons:
     title: "Module 6.6: Propensity scores"
     slides: "6-6-propensity-scores.html"
     slidespdf: "6-6-propensity-scores.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/992494/1403540/929415/0/IDS-702--Module-66-Propensity-scores"
     
   - title: "Module 6.7: Causal inference using propensity scores"
     slides: "6-7-causal-inference-with-propensity-scores.html"
     slidespdf: "6-7-causal-inference-with-propensity-scores.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/992502/1403540/929415/0/IDS-702--Module-67-Causal-inference-using-propensity-scores"
   
   - title: "Module 6.8: The minimum wage analysis"
     slides: "6-8-minimum-wage-analysis.html"
     slidespdf: "6-8-minimum-wage-analysis.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/992503/1403540/929415/0/IDS-702--Module-68-The-minimum-wage-analysis"
   
   - title: "In-class analysis 11: Right Heart Catheterization II"
     #inClass: "1-1-rhc-II.html"

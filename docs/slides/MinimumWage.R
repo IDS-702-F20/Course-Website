@@ -13,7 +13,7 @@ library(ggplot2)
 
 ###### Load the data
 MinWage <- read.csv("data/MinimumWageData.csv",header=T,
-                    colClasses=c("factor","numeric","numeric","numeric",
+                    colClasses=c("numeric","numeric","numeric","numeric",
                                  "factor","factor","factor","factor"))
 
 
@@ -30,8 +30,8 @@ summary(MinWage)
 #first, let's summarize the predictors by NJ and by PA.
 summary(MinWage[MinWage$NJ.PA == 0, 3:8]) #first PA
 summary(MinWage[MinWage$NJ.PA == 1, 3:8]) #now NJ
-bal.tab(list(treat=MinWage$NJ.PA,covs=MinWage[,3:8],estimand="ATE"))
-love.plot(list(treat=MinWage$NJ.PA,covs=MinWage[,3:8],estimand="ATE"),stars = "std")
+bal.tab(list(treat=MinWage$NJ.PA,covs=MinWage[,3:8],estimand="ATT"))
+love.plot(list(treat=MinWage$NJ.PA,covs=MinWage[,3:8],estimand="ATT"),stars = "std")
 #the distributions of prior employment are not well balanced
 #other variables pretty close, but we might be able to do better by matching
 
@@ -42,13 +42,15 @@ MinWage$PA.NJ[MinWage$NJ.PA == 0] = 1
 
 
 ###### Propensity scores estimation
-pscorereg <- glm(PA.NJ ~ EmploymentPre + WagePre + BurgerKing + KFC + Roys + Wendys, data = MinWage)
+pscorereg <- glm(NJ.PA ~ EmploymentPre + WagePre + BurgerKing + KFC + Roys + Wendys,
+                 data = MinWage, family=binomial)
 summary(pscorereg)
 #oops... we didn't need to include one of the dummy variables for the restaurants
 #all four dummy variables sum up to the intercept, so that's a problem
 #just like we usually have to make one level of all factor variables the baseline
 #drop Wendys
-pscorereg <- glm(PA.NJ ~ EmploymentPre + WagePre + BurgerKing + KFC + Roys, data = MinWage)
+pscorereg <- glm(NJ.PA ~ EmploymentPre + WagePre + BurgerKing + KFC + Roys,
+                 data = MinWage, family=binomial)
 summary(pscorereg)
 #EmploymentPre seems to be the only significant variable
 #Not really a problem since we care about using the model to predict
@@ -63,8 +65,8 @@ ggplot(MinWage, aes(pscores)) +
 #we don't have probabilities that are either too close to 0 or 1 which is good.
 
 #look at distribution of propensity scores for treateds and controls
-MinWage$state <- "NJ"
-MinWage$state[MinWage$PA.NJ == 1] <- "PA"
+MinWage$state <- "PA"
+MinWage$state[MinWage$NJ.PA == 1] <- "NJ"
 ggplot(MinWage, aes(y=pscores, x=state, fill=state)) +
   geom_boxplot()
 #we can see clear differences in the distributions of propensity scores
@@ -90,6 +92,7 @@ matchesMW <- matchit(PA.NJ ~ EmploymentPre + WagePre + BurgerKing + KFC + Roys,
 #if you are curious, here are the row numbers of the matched controls
 #using built in functions from MatchIt
 matchesMW$match.matrix
+matchesMW$nn
 
 #there are a few more options here
 #we could match with replacement
@@ -105,11 +108,13 @@ minwagematcheddata <- match.data(matchesMW)
 #let's look at the propensity scores after matching.  the "distance" variable gives scores.
 ggplot(minwagematcheddata, aes(y=distance, x=state, fill=state)) +
   geom_boxplot()
-#the distributions are more similar! now let's look at balance post-matching for each covariate.
+#the distributions are more similar!
+#Now let's look at balance post-matching for each covariate.
 #can see results conveniently using the summary command on the MatchIt object
 
 summary(matchesMW)
-#for descriptions of all output, see https://r.iq.harvard.edu/docs/matchit/2.4-20/Output_Values2.html 
+#for descriptions of all output, 
+#see https://r.iq.harvard.edu/docs/matchit/2.4-20/Output_Values2.html 
 #the columns labeled eQQ refer to empirical quantile-quantile plots. 
 #They provide the median, mean, and maximum distance between the 
 #empirical quantile functions of the treated and control groups.
@@ -167,7 +172,8 @@ se <- sqrt(var(minwagematcheddata$EmploymentPost[minwagematcheddata$PA.NJ==1])/7
 #using the normal approximation, confidence intervals would be
 trteffct - 1.96*se
 trteffct + 1.96*se
-#contains zero so not enough evidence that the treatment effect is in fact different from zero
+#contains zero so not enough evidence that the treatment effect
+#is in fact different from zero
 
 #given small imbalances remaining, we should do a regression analysis to 
 #control for covariates when estimating the treatment effect.
@@ -178,6 +184,7 @@ trteffct + 1.96*se
 regmodel <- lm(EmploymentPost ~ PA.NJ+EmploymentPre+WagePre+BurgerKing+KFC+Roys+distance,
                data=minwagematcheddata)
 summary(regmodel)
-#the treatment effect is definitely different from what we had before but also not significant
+#the treatment effect is definitely different from what we had before
+#but also not significant
 
 
