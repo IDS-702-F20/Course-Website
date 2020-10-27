@@ -407,7 +407,7 @@ lessons:
     
   - date: "NEW ASSIGNMENT:"
     title: "Data analysis assignment V"
-    #hw: "hw-05.html"
+    hw: "hw-05.html"
     
   - date: "Thur, Oct 29"
     title: "Module 6.6: Propensity scores"
@@ -451,7 +451,7 @@ lessons:
     #slidespdf: " "
     #video: " "
   
-  - date: "Tue, Nov 4 | DELIVERABLES:"
+  - date: "Wed, Nov 4 | DELIVERABLES:"
     title: "Data analysis assignment V due!"
     
   - date: "Thur, Nov 5"
