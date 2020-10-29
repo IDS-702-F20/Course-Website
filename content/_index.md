@@ -82,8 +82,8 @@ Monday, September 7 | Labor day. Classes in session
 Friday, September 25 | Team project I reports due
 Friday, October 23 | Team project II reports due
 Wednesday, October 21 | Final project proposal due
-Tuesday - Thursday, November 12 - 19 | Final project presentations
-Tuesday, November 24 | Final project reports due
+Sunday, November 15 | Upload final project presentations
+Sunday, November 22 | Final project reports due
 Tuesday, November 24 |	End of semester
 
 

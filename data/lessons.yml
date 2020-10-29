@@ -463,7 +463,7 @@ lessons:
     #slidespdf: " "
     #video: " "
   
-  - title: "In-class: open OH for final projects"
+  - title: "In-class: Q&A and discussion session"
   
   
   - title: " "
@@ -495,17 +495,19 @@ lessons:
     #video: " "
     
   - date: "Thur, Nov 12"
-    title: "Final project presentations I"
+    title: "In-class: open OH for final projects"
   
   - week: "WEEK 14"
-    date: "Tue, Nov 17"
-    title: "Final project presentations II"
+    date: "Sun, Nov 15 | DELIVERABLES:"
+    title: "Upload final project presentations"
+  
+  - date: "Tue, Nov 17"
+    title: "Reading week: work on final projects"
     
   - date: "Thur, Nov 19"
-    title: "Final project presentations III"
-  
-  - week: "WEEK 15"
-    date: "Tue, Nov 24 | DELIVERABLES:"
+    title: "Reading week: work on final projects"
+    
+  - date: "Sun, Nov 22 | DELIVERABLES:"
     title: "Final project reports due"
   
   
