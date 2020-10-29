@@ -426,7 +426,7 @@ lessons:
     video: "https://api.playposit.com/go/play/992503/1403540/929415/0/IDS-702--Module-68-The-minimum-wage-analysis"
   
   - title: "In-class analysis 11: Right Heart Catheterization II"
-    #inClass: "1-1-rhc-II.html"
+    inClass: "1-1-rhc-II.html"
   
   
   - title: " "
@@ -446,10 +446,8 @@ lessons:
     #slidespdf: " "
     #video: " "
   
-  - title: "In-class: Q&A and discussion session"
-    #slides: " "
-    #slidespdf: " "
-    #video: " "
+  - title: "In-class analysis 12: Right Heart Catheterization III"
+    #inClass: "1-2-rhc-III.html"
   
   - date: "Wed, Nov 4 | DELIVERABLES:"
     title: "Data analysis assignment V due!"
