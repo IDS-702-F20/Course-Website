@@ -425,9 +425,7 @@ lessons:
     slidespdf: "6-8-minimum-wage-analysis.pdf"
     video: "https://api.playposit.com/go/play/992503/1403540/929415/0/IDS-702--Module-68-The-minimum-wage-analysis"
   
-  - title: "In-class analysis 11: Right Heart Catheterization II"
-    inClass: "1-1-rhc-II.html"
-  
+  #- title: "In-class analysis 11: Right Heart Catheterization II"
   
   - title: " "
   - title: "MODULE 7: INTRODUCTION TO TIME SERIES MODELS"
@@ -446,8 +444,8 @@ lessons:
     #slidespdf: " "
     #video: " "
   
-  - title: "In-class analysis 12: Right Heart Catheterization III"
-    #inClass: "1-2-rhc-III.html"
+  - title: "In-class analysis 11: Right Heart Catheterization II"
+    inClass: "1-1-rhc-II.html"
   
   - date: "Wed, Nov 4 | DELIVERABLES:"
     title: "Data analysis assignment V due!"

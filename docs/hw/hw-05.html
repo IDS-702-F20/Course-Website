@@ -1829,6 +1829,30 @@ Let <em>pr(Y(w) = 1) = p<sub>w</sub></em> be the fraction of patients who would 
 <li>Relevel <code>i_sex</code>, <code>i_educ</code> and <code>i_seve</code> by doing <code>Data$i_sex &lt;- relevel(factor(Data$i_sex), ref = 1)</code>, <code>Data$i_educ &lt;- relevel(factor(Data$i_educ), ref = 5)</code>, and <code>Data$i_seve &lt;- relevel(factor(Data$i_seve), ref = 3)</code>.</li>
 <li><em><font color="red">Note that the estimated average causal effect computed on the matched sample is in some sense ATT (where the treated group is <code>pg = 1</code>) and not really ATE, because we will discard observations in the control group for which we cannot find matches for.</font></em></li>
 </ul></li>
+<li><p><font color="green">You may find the following code useful.</font></p>
+<pre class="r"><code>#Fit the model
+cov_names &lt;- names(Data)
+p_formula &lt;- as.formula(paste(&quot;pg ~&quot;,
+                        paste(cov_names[!cov_names %in% c(&quot;i_aqoc&quot;,&quot;pg&quot;)],
+                              collapse = &quot; + &quot;)))
+pscorereg &lt;- glm(p_formula,......)
+pscores &lt;- ...... #predict propensity scores here
+
+#Check number of observations outside of the overlap region between the two groups
+#First the left tails
+sum(pscores &lt; max(min(pscores[Data$pg==1]),
+            min(pscores[Data$pg==2])))
+#Next the right tails
+sum(pscores &gt; min(max(pscores[Data$pg==1]),
+            max(pscores[Data$pg==2])))
+
+#If there are &quot;outliers&quot;,
+#get row index for observations that violate overlap.
+index &lt;- which((pscores &lt; max(min(pscores[Data$pg==1]),
+                       min(pscores[Data$pg==2])) |
+       pscores &gt; min(max(pscores[Data$pg==1]),
+                         max(pscores[Data$pg==2]))) == TRUE)
+Data &lt;- Data[-index,]; pscores &lt;- pscores[-index]</code></pre></li>
 </ul></li>
 </ol>
 </div>

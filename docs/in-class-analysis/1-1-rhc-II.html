@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-<meta name="date" content="2020-10-29" />
+<meta name="date" content="2020-11-03" />
 
 <title>IDS 702 In-class analysis 11</title>
 
@@ -546,7 +546,7 @@ background-color: #AF5500;
 
 <h1 class="title toc-ignore">IDS 702 In-class analysis 11</h1>
 <h3 class="subtitle">Right Heart Catheterization II</h3>
-<h4 class="date">October 29, 2020</h4>
+<h4 class="date">November 3, 2020</h4>
 
 
 <div id="TOC">
@@ -597,22 +597,23 @@ background-color: #AF5500;
 <p>This is the same data from the last in-class exercise. so you should already have it saved locally. Just in case you do not, follow the instructions below.</p>
 <p>Download the data file (named <code>rhc.txt</code>) from Sakai and save it locally to the same directory as your R markdown file. To find the data file on Sakai, go to Resources <span class="math inline">\(\rightarrow\)</span> Datasets <span class="math inline">\(\rightarrow\)</span> In-Class Analyses. Once you have downloaded the data file into the SAME folder as your R markdown file, load and clean the data by using the following R code.</p>
 <p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"><span style="display: block;">Remember to double-check the dimensions and first few rows of the data to confirm you have the right file. Also, convert the two variables <code>treatment</code> and <code>dth30</code> to binary variables. You MUST exclude the variable <code>surv2md1</code> from the analysis, as shown in the code, so that you are left with 51 covariates.</span></span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(cobalt)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">library</span>(MatchIt)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">library</span>(randomForest)</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co"># Read in the data</span></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">RHC &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;rhc.txt&quot;</span>,<span class="dt">head=</span>T)</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">RHC &lt;-<span class="st"> </span>RHC[,<span class="op">-</span><span class="kw">which</span>(<span class="kw">names</span>(RHC)<span class="op">==</span><span class="st">&quot;surv2md1&quot;</span>)]</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">RHC[,<span class="kw">sapply</span>(RHC,is.logical)] &lt;-<span class="st"> </span></a>
-<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="st">  </span><span class="kw">lapply</span>(RHC[,<span class="kw">sapply</span>(RHC,is.logical)], as.factor)</a>
-<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#RHC$dth30 &lt;- as.numeric(RHC$dth30) - 1 #use this to change dth30 to binary 0, 1</span></a>
-<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#RHC$treatment &lt;- as.numeric(RHC$treatment) - 1 #use this to change treatment to binary 0, 1</span></a></code></pre></div>
-<p>The dataset contains data on 5735 hospitalized adult patients at five medical centers in the U.S. The variable <code>rhc</code> indicates whether RHC was applied within 24 hours of admission (TRUE/FALSE). Each patient was followed up with some treatment procedures that may have been influenced by the RHC result if it was performed on the patient.</p>
-<p><strong>The outcome variable is <code>dth30</code> – death at 30 days (TRUE: dead; FALSE: alive).</strong></p>
-<p>Based on information from a panel of experts, a set of 52 variables were identified that are potentially related to both the decision to use RHC and the outcome. The goal is to estimate the treatment effect of RHC on death at 30 days. Let <em>pr(Y(w) = 1) = p<sub>w</sub></em> be the fraction of patients with <code>dth30=1</code> for treatment group <em>w</em> (<em>w=0</em> or <em>1</em>, that is <code>rhc=FALSE</code> or <code>rhc=TRUE</code> respectively).</p>
-<p><strong>The target estimand is the average causal effect <em>Q = p<sub>1</sub> - p<sub>0</sub></em> for patients with <code>rhc=TRUE</code>.</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Load libraries</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">library</span>(cobalt)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">library</span>(MatchIt)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">library</span>(randomForest)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co"># Read in the data</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">RHC &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;rhc.txt&quot;</span>,<span class="dt">head=</span>T,<span class="dt">stringsAsFactors =</span> T)</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">RHC &lt;-<span class="st"> </span>RHC[,<span class="op">-</span><span class="kw">which</span>(<span class="kw">names</span>(RHC)<span class="op">==</span><span class="st">&quot;surv2md1&quot;</span>)]</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">RHC[,<span class="kw">sapply</span>(RHC,is.logical)] &lt;-<span class="st"> </span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="st">  </span><span class="kw">lapply</span>(RHC[,<span class="kw">sapply</span>(RHC,is.logical)], as.factor)</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">RHC<span class="op">$</span>treatment &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(RHC<span class="op">$</span>treatment) <span class="op">-</span><span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">RHC<span class="op">$</span>dth30 &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(RHC<span class="op">$</span>dth30) <span class="op">-</span><span class="st"> </span><span class="dv">1</span></a></code></pre></div>
+<p>The dataset contains data on 5735 hospitalized adult patients at five medical centers in the U.S. The variable <code>treatment</code> indicates whether RHC was applied within 24 hours of admission (TRUE/FALSE). Each patient was followed up with some treatment procedures that may have been influenced by the RHC result if it was performed on the patient.</p>
+<p><strong>The outcome variable is <code>dth30</code> – death at 30 days (TRUE: dead; FALSE: alive). Note that after loading in the data, we have now converted this variable to binary, so that, 1 = dead and 0 = alive</strong></p>
+<p>Based on information from a panel of experts, a set of 52 variables were identified that are potentially related to both the decision to use RHC and the outcome. The goal is to estimate the treatment effect of RHC on death at 30 days. Let <em>pr(Y(w) = 1) = p<sub>w</sub></em> be the fraction of patients with <code>dth30=1</code> for treatment group <em>w</em> (<em>w=0</em> or <em>1</em>, that is <code>rhc/treatment=FALSE</code> or <code>rhc/treatment=TRUE</code> respectively).</p>
+<p><strong>The target estimand is the average causal effect <em>Q = p<sub>1</sub> - p<sub>0</sub></em> for patients with <code>treatment=TRUE</code>.</strong></p>
 <p>That is, we will focus on estimating ATT and not ATE, that is, treatment effect for those who actually received RHC. Clearly, this analysis models death, which means high probabilities are BAD. If RHC works, ATT should be negative.</p>
 <!-- This data is based on the data analysis part of: https://stat.duke.edu/sites/stat.duke.edu/files/site-images/FYE13.pdf (the problem and data are actually slightly different). -->
 <div id="code-book" class="section level2">
@@ -623,22 +624,40 @@ background-color: #AF5500;
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
 <ol style="list-style-type: decimal">
-<li><p>Estimate the propensity score <em>e</em> using a logistic regression with all covariates entering in the model as main effects.</p></li>
-<li><p>Assess overlap: that is, are there any observations with an estimated propensity score <em>e</em> that is out of the range of <em>e</em> in the other group? If there are only a few such outliers (less than 5), keep them; If many, discard them and report the number of the discarded observations.</p></li>
+<li><p>Estimate the propensity score <em>e</em> using a logistic regression with all covariates entering in the model as main effects. Assess overlap. Are there any observations with an estimated propensity score <em>e</em> that is out of the range of <em>e</em> in the other group? If there are only a few such outliers (less than 5), keep them; If many, discard them and report the number of the discarded observations.<br />
+<em><font color="red">You may find the following code useful.</font></em></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co">#Fit the model</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">cov_names &lt;-<span class="st"> </span><span class="kw">names</span>(RHC)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">p_formula &lt;-<span class="st"> </span><span class="kw">as.formula</span>(<span class="kw">paste</span>(<span class="st">&quot;treatment ~&quot;</span>,</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">                          <span class="kw">paste</span>(cov_names[<span class="op">!</span>cov_names <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;dth30&quot;</span>,<span class="st">&quot;treatment&quot;</span>)],</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">                                <span class="dt">collapse =</span> <span class="st">&quot; + &quot;</span>)))</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">pscorereg &lt;-<span class="st"> </span><span class="kw">glm</span>(p_formula,......)</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">pscores &lt;-<span class="st"> </span>...... <span class="co">#predict propensity scores here</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#Check number of observations outside of the overlap region between the two groups</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#First the left tails</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="kw">sum</span>(pscores <span class="op">&lt;</span><span class="st"> </span><span class="kw">max</span>(<span class="kw">min</span>(pscores[RHC<span class="op">$</span>treatment<span class="op">==</span><span class="ot">FALSE</span>]),</a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">              <span class="kw">min</span>(pscores[RHC<span class="op">$</span>treatment<span class="op">==</span><span class="ot">TRUE</span>])))</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#Next the right tails</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="kw">sum</span>(pscores <span class="op">&gt;</span><span class="st"> </span><span class="kw">min</span>(<span class="kw">max</span>(pscores[RHC<span class="op">$</span>treatment<span class="op">==</span><span class="ot">FALSE</span>]),</a>
+<a class="sourceLine" id="cb2-15" data-line-number="15">              <span class="kw">max</span>(pscores[RHC<span class="op">$</span>treatment<span class="op">==</span><span class="ot">TRUE</span>])))</a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#If there are &quot;outliers&quot;,</span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#get row index for observations that violate overlap.</span></a>
+<a class="sourceLine" id="cb2-19" data-line-number="19">index &lt;-<span class="st"> </span><span class="kw">which</span>((pscores <span class="op">&lt;</span><span class="st"> </span><span class="kw">max</span>(<span class="kw">min</span>(pscores[RHC<span class="op">$</span>treatment<span class="op">==</span><span class="ot">FALSE</span>]),</a>
+<a class="sourceLine" id="cb2-20" data-line-number="20">                         <span class="kw">min</span>(pscores[RHC<span class="op">$</span>treatment<span class="op">==</span><span class="ot">TRUE</span>])) <span class="op">|</span></a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="st">         </span>pscores <span class="op">&gt;</span><span class="st"> </span><span class="kw">min</span>(<span class="kw">max</span>(pscores[RHC<span class="op">$</span>treatment<span class="op">==</span><span class="ot">FALSE</span>]),</a>
+<a class="sourceLine" id="cb2-22" data-line-number="22">                           <span class="kw">max</span>(pscores[RHC<span class="op">$</span>treatment<span class="op">==</span><span class="ot">TRUE</span>]))) <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb2-23" data-line-number="23">RHC &lt;-<span class="st"> </span>RHC[<span class="op">-</span>index,]; pscores &lt;-<span class="st"> </span>pscores[<span class="op">-</span>index]</a></code></pre></div></li>
 <li><p>Do one-to-one, nearest neighbor matching on the estimated propensity scores.<br />
-<em><font color="red">Set this up so that you discard observations in the control group for which you do not find matches for.</font></em></p></li>
+<em><font color="red">Set this up so that you discard observations in the control group for which you do not find matches for. You may find the following code useful.</font></em></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">matches &lt;-<span class="st"> </span><span class="kw">matchit</span>(p_formula,<span class="dt">method=</span>...,</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">               <span class="dt">distance=</span>...,<span class="dt">data=</span>...)</a></code></pre></div></li>
 <li><p>Extract the matched data and check balance again. Are the covariates balanced now? If no, which ones are not?</p></li>
 <li><p>Estimate the average causal effect <span class="math inline">\(Q\)</span> using the matched sample obtained above. Construct a 95% confidence interval using the normal approximation as I did at the end of the video for Module 6.8. Interpret your findings. Are treated patients better or worse off with RHC?<br />
-<em><font color="red">Note that the estimated average causal effect computed on the matched sample is the ATT we want (where the treated group is <code>rhc = TRUE</code>) and not ATE, because we will discard observations in the control group for which we cannot find matches for. This is something you should keep in mind should you want to estimate ATE on your own projects and applications in the future.</font></em></p></li>
+<em><font color="red">Note that the estimated average causal effect computed on the matched sample is the ATT we want (where the treated group is <code>treatment = TRUE</code>) and not ATE, because we will discard observations in the control group for which we cannot find matches for. This is something you should keep in mind should you want to estimate ATE on your own projects and applications in the future.</font></em></p></li>
+<li><p><label for="tufte-mn-2" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-2" class="margin-toggle"><span class="marginnote"><span style="display: block;">Note that this estimated effect is no longer an estimate of <em>Q = p<sub>1</sub> - p<sub>0</sub></em> but intuitively, we can still draw “roughly” the same conclusions from it.</span></span> Fit a logistic regression to the response variable using the main effects of all covariates. Also include the new propensity scores <em>e</em> from question 7 as a predictor. Report the estimated causal odds ratio and its corresponding confidence interval. Interpret your findings. Are your overall findings in line with your findings from question 9?</p></li>
 </ol>
-<!-- 7. Now estimate the propensity score *e* using Random forests with all the covariates. Assess overlap: that is, are there any observations with an estimated propensity score *e* that is out of the range of *e* in the other group? If there are only a few such outliers (less than 5), keep them; If many, discard them and report the number of the discarded observations. -->
-<!-- 8. Using one-to-one, nearest neighbor matching on the new estimated propensity scores from question 7, check balance again. Are the covariates balanced now? If no, which ones are not? -->
-<!-- 9. Estimate the average causal effect $Q$ using the new matched sample obtained in question 8. Construct a 95% confidence interval and interpret your findings (use your code from question 6). -->
-<!-- 10.  -->
-<!-- ```{marginfigure} -->
-<!-- Note that this estimated effect is no longer an estimate of *Q = p<sub>1</sub> - p<sub>0</sub>* but intuitively, we can still draw "roughly" the same conclusions from it. -->
-<!-- ``` -->
-<!-- Using the new matched sample obtained in question 8, fit a logistic regression to the response variable using the main effects of all covariates. Also include the new propensity scores *e* from question 7 as a predictor. Report the estimated causal odds ratio and its corresponding confidence interval. Interpret your findings. Are your overall findings in line with your findings from question 9? -->
 <!-- # Acknowledgement -->
 <!-- This exercise is based on ideas proposed by [Sam Voisin](https://stat.duke.edu/people/sam-voisin). -->
 </div>

@@ -1,7 +1,7 @@
 ---
 title: "IDS 702 In-class analysis 11"
 subtitle: "Right Heart Catheterization II"
-date: "October 29, 2020"
+date: "November 3, 2020"
 output: 
   tufte::tufte_html:
     tufte_variant: "envisioned"
@@ -66,27 +66,28 @@ Remember to double-check the dimensions and first few rows of the data to confir
 ```
 
 ```{r eval = FALSE}
+# Load libraries
 library(ggplot2)
 library(cobalt)
 library(MatchIt)
 library(randomForest)
-# Read in the data
-RHC <- read.table("rhc.txt",head=T)
-RHC <- RHC[,-which(names(RHC)=="surv2md1")]
 
+# Read in the data
+RHC <- read.table("rhc.txt",head=T,stringsAsFactors = T)
+RHC <- RHC[,-which(names(RHC)=="surv2md1")]
 RHC[,sapply(RHC,is.logical)] <- 
   lapply(RHC[,sapply(RHC,is.logical)], as.factor)
-#RHC$dth30 <- as.numeric(RHC$dth30) - 1 #use this to change dth30 to binary 0, 1
-#RHC$treatment <- as.numeric(RHC$treatment) - 1 #use this to change treatment to binary 0, 1
+RHC$treatment <- as.numeric(RHC$treatment) - 1
+RHC$dth30 <- as.numeric(RHC$dth30) - 1
 ```
 
-The dataset contains data on 5735 hospitalized adult patients at five medical centers in the U.S. The variable `rhc` indicates whether RHC was applied within 24 hours of admission (TRUE/FALSE). Each patient was followed up with some treatment procedures that may have been influenced by the RHC result if it was performed on the patient. 
+The dataset contains data on 5735 hospitalized adult patients at five medical centers in the U.S. The variable `treatment` indicates whether RHC was applied within 24 hours of admission (TRUE/FALSE). Each patient was followed up with some treatment procedures that may have been influenced by the RHC result if it was performed on the patient. 
 
-**The outcome variable is `dth30` -- death at 30 days (TRUE: dead; FALSE: alive).**
+**The outcome variable is `dth30` -- death at 30 days (TRUE: dead; FALSE: alive). Note that after loading in the data, we have now converted this variable to binary, so that, 1 = dead and 0 = alive**
 
-Based on information from a panel of experts, a set of 52 variables were identified that are potentially related to both the decision to use RHC and the outcome. The goal is to estimate the treatment effect of RHC on death at 30 days. Let *pr(Y(w) = 1) = p<sub>w</sub>* be the fraction of patients with `dth30=1` for treatment group *w* (*w=0* or *1*, that is `rhc=FALSE` or `rhc=TRUE` respectively). 
+Based on information from a panel of experts, a set of 52 variables were identified that are potentially related to both the decision to use RHC and the outcome. The goal is to estimate the treatment effect of RHC on death at 30 days. Let *pr(Y(w) = 1) = p<sub>w</sub>* be the fraction of patients with `dth30=1` for treatment group *w* (*w=0* or *1*, that is `rhc/treatment=FALSE` or `rhc/treatment=TRUE` respectively). 
 
-**The target estimand is the average causal effect *Q = p<sub>1</sub> - p<sub>0</sub>* for patients with `rhc=TRUE`.**
+**The target estimand is the average causal effect *Q = p<sub>1</sub> - p<sub>0</sub>* for patients with `treatment=TRUE`.**
 
 That is, we will focus on estimating ATT and not ATE, that is, treatment effect for those who actually received RHC. Clearly, this analysis models death, which means high probabilities are BAD. If RHC works, ATT should be negative.
 
@@ -101,29 +102,51 @@ Download the code book for the data (named `rhc_codebook.pdf`) from Sakai; go to
 # Exercises
 
       
-1. Estimate the propensity score *e* using a logistic regression with all covariates entering in the model as main effects. 
+1. Estimate the propensity score *e* using a logistic regression with all covariates entering in the model as main effects. Assess overlap. Are there any observations with an estimated propensity score *e* that is out of the range of *e* in the other group? If there are only a few such outliers (less than 5), keep them; If many, discard them and report the number of the discarded observations.  
+  *<font color="red">You may find the following code useful.</font>*  
+    ```{r eval = FALSE}
+#Fit the model
+cov_names <- names(RHC)
+p_formula <- as.formula(paste("treatment ~",
+                              paste(cov_names[!cov_names %in% c("dth30","treatment")],
+                                    collapse = " + ")))
+pscorereg <- glm(p_formula,......)
+pscores <- ...... #predict propensity scores here
 
-2. Assess overlap: that is, are there any observations with an estimated propensity score *e* that is out of the range of *e* in the other group? If there are only a few such outliers (less than 5), keep them; If many, discard them and report the number of the discarded observations.
+#Check number of observations outside of the overlap region between the two groups
+#First the left tails
+sum(pscores < max(min(pscores[RHC$treatment==FALSE]),
+                  min(pscores[RHC$treatment==TRUE])))
+#Next the right tails
+sum(pscores > min(max(pscores[RHC$treatment==FALSE]),
+                  max(pscores[RHC$treatment==TRUE])))
 
-3. Do one-to-one, nearest neighbor matching on the estimated propensity scores.  
-  *<font color="red">Set this up so that you discard observations in the control group for which you do not find matches for.</font>*
+#If there are "outliers",
+#get row index for observations that violate overlap.
+index <- which((pscores < max(min(pscores[RHC$treatment==FALSE]),
+                             min(pscores[RHC$treatment==TRUE])) |
+             pscores > min(max(pscores[RHC$treatment==FALSE]),
+                               max(pscores[RHC$treatment==TRUE]))) == TRUE)
+RHC <- RHC[-index,]; pscores <- pscores[-index]
+```
 
-4. Extract the matched data and check balance again. Are the covariates balanced now? If no, which ones are not?
+2. Do one-to-one, nearest neighbor matching on the estimated propensity scores.  
+  *<font color="red">Set this up so that you discard observations in the control group for which you do not find matches for. You may find the following code useful.</font>*  
+    ```{r eval = FALSE}
+matches <- matchit(p_formula,method=...,
+                   distance=...,data=...)
+```
 
-5. Estimate the average causal effect $Q$ using the matched sample obtained above. Construct a 95% confidence interval using the normal approximation as I did at the end of the video for Module 6.8. Interpret your findings. Are treated patients better or worse off with RHC?  
-  *<font color="red">Note that the estimated average causal effect computed on the matched sample is the ATT we want (where the treated group is `rhc = TRUE`) and not ATE, because we will discard observations in the control group for which we cannot find matches for. This is something you should keep in mind should you want to estimate ATE on your own projects and applications in the future.</font>*
+3. Extract the matched data and check balance again. Are the covariates balanced now? If no, which ones are not?
 
-<!-- 7. Now estimate the propensity score *e* using Random forests with all the covariates. Assess overlap: that is, are there any observations with an estimated propensity score *e* that is out of the range of *e* in the other group? If there are only a few such outliers (less than 5), keep them; If many, discard them and report the number of the discarded observations. -->
+4. Estimate the average causal effect $Q$ using the matched sample obtained above. Construct a 95% confidence interval using the normal approximation as I did at the end of the video for Module 6.8. Interpret your findings. Are treated patients better or worse off with RHC?  
+  *<font color="red">Note that the estimated average causal effect computed on the matched sample is the ATT we want (where the treated group is `treatment = TRUE`) and not ATE, because we will discard observations in the control group for which we cannot find matches for. This is something you should keep in mind should you want to estimate ATE on your own projects and applications in the future.</font>*
 
-<!-- 8. Using one-to-one, nearest neighbor matching on the new estimated propensity scores from question 7, check balance again. Are the covariates balanced now? If no, which ones are not? -->
-
-<!-- 9. Estimate the average causal effect $Q$ using the new matched sample obtained in question 8. Construct a 95% confidence interval and interpret your findings (use your code from question 6). -->
-
-<!-- 10.  -->
-<!-- ```{marginfigure} -->
-<!-- Note that this estimated effect is no longer an estimate of *Q = p<sub>1</sub> - p<sub>0</sub>* but intuitively, we can still draw "roughly" the same conclusions from it. -->
-<!-- ``` -->
-<!-- Using the new matched sample obtained in question 8, fit a logistic regression to the response variable using the main effects of all covariates. Also include the new propensity scores *e* from question 7 as a predictor. Report the estimated causal odds ratio and its corresponding confidence interval. Interpret your findings. Are your overall findings in line with your findings from question 9? -->
+5.
+```{marginfigure}
+Note that this estimated effect is no longer an estimate of *Q = p<sub>1</sub> - p<sub>0</sub>* but intuitively, we can still draw "roughly" the same conclusions from it.
+```
+Fit a logistic regression to the response variable using the main effects of all covariates. Also include the new propensity scores *e* from question 7 as a predictor. Report the estimated causal odds ratio and its corresponding confidence interval. Interpret your findings. Are your overall findings in line with your findings from question 9?
 
 
 
