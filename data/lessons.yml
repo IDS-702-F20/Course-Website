@@ -435,13 +435,13 @@ lessons:
   - week: "WEEK 12"
     date: "Tue, Nov 3"
     title: "Module 7.1: Introduction to time series analysis"
-    #slides: " "
-    #slidespdf: " "
+    slides: "7-1-time-series-intro.html"
+    slidespdf: "7-1-time-series-intro.pdf"
     #video: " "
   
   - title: "Module 7.2: Stationarity and autocorrelation"
-    #slides: " "
-    #slidespdf: " "
+    slides: "7-2-stationarity-autocorrelation.html"
+    slidespdf: "7-2-stationarity-autocorrelation.pdf"
     #video: " "
   
   - title: "In-class analysis 11: Right Heart Catheterization II"
