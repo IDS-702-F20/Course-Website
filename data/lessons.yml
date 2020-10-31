@@ -437,12 +437,12 @@ lessons:
     title: "Module 7.1: Introduction to time series analysis"
     slides: "7-1-time-series-intro.html"
     slidespdf: "7-1-time-series-intro.pdf"
-    #video: " "
+    video: "https://api.playposit.com/go/play/1004050/1403540/929415/0/IDS-702--Module-71-Introduction-to-time-series-analysis"
   
   - title: "Module 7.2: Stationarity and autocorrelation"
     slides: "7-2-stationarity-autocorrelation.html"
     slidespdf: "7-2-stationarity-autocorrelation.pdf"
-    #video: " "
+    video: "https://api.playposit.com/go/play/1004055/1403540/929415/0/IDS-702--Module-72-Stationarity-and-autocorrelation"
   
   - title: "In-class analysis 11: Right Heart Catheterization II"
     inClass: "1-1-rhc-II.html"
