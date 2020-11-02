@@ -452,18 +452,18 @@ lessons:
     
   - date: "Thur, Nov 5"
     title: "Module 7.3: AR and MA models"
-    #slides: " "
-    #slidespdf: " "
-    #video: " "
+    slides: "7-3-ar-ma-model.html"
+    slidespdf: "7-3-ar-ma-model.pdf"
+    video: ""
   
   - title: "Module 7.4: Time series analysis (illustration)"
-    #slides: " "
-    #slidespdf: " "
-    #video: " "
+    slides: "7-4-time-series-illustration.html"
+    slidespdf: "7-4-time-series-illustration.pdf"
+    video: ""
   
   - title: "In-class: Q&A and discussion session"
   
-  
+   
   - title: " "
   - title: "MODULE 8: BOOTSTRAP; INTRODUCTION TO TREE-BASED METHODS"
     reading: "8-reading.html"
