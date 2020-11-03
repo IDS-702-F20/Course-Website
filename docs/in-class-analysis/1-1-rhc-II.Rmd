@@ -146,7 +146,7 @@ matches <- matchit(p_formula,method=...,
 ```{marginfigure}
 Note that this estimated effect is no longer an estimate of *Q = p<sub>1</sub> - p<sub>0</sub>* but intuitively, we can still draw "roughly" the same conclusions from it.
 ```
-Fit a logistic regression to the response variable using the main effects of all covariates. Also include the new propensity scores *e* from question 7 as a predictor. Report the estimated causal odds ratio and its corresponding confidence interval. Interpret your findings. Are your overall findings in line with your findings from question 9?
+Fit a logistic regression to the response variable using the main effects of all covariates. Also include the new propensity scores *e* from question 7 as a predictor. Report the estimated causal odds ratio and its corresponding confidence interval. Interpret your findings.
 
 
 

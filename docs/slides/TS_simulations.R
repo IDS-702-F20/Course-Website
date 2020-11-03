@@ -98,8 +98,8 @@ MA_sim(phi=-0.9,mu=5,sigma=1,TT=500,plot=T)
 
 #compare AR(1) and MA(1) with the same value of phi
 par(mfrow=c(2,1))
-plot.ts(AR_sim(phi=0.6,mu=0,sigma=1,TT=500,plot=F),col="blue4",ylab="y",main="AR(1)")
-plot.ts(MA_sim(phi=0.6,mu=0,sigma=1,TT=500,plot=F),col="red4",ylab="y",main="MA(1)")
+plot.ts(AR_sim(phi=0.7,mu=0,sigma=1,TT=500,plot=F),col="blue4",ylab="y",main="AR(1)")
+plot.ts(MA_sim(phi=0.7,mu=0,sigma=1,TT=500,plot=F),col="red4",ylab="y",main="MA(1)")
 
 #Can be hard to differentiate. AR maybe a bit more sticky than MA?
 

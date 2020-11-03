@@ -116,6 +116,8 @@ ggplot(cancersun, aes(x=sunspot, y=regmelanoma$residual)) +
   geom_hline(yintercept=0,col="red3") + labs(title="Residuals vs Sunspots")
 #it looks nice... nothing obvious going on.  but these data are ordered in time
 
+plot(regmelanoma)
+
 #let's look at residuals versus year
 ggplot(cancersun, aes(x=year, y=regmelanoma$residual)) +
   geom_point(alpha = .5,colour="blue4") +
@@ -133,7 +135,8 @@ pacf(regmelanoma$resid)
 pacf(regmelanoma$resid,plot=F)
 #seems like only the lag 1 correlation matters.  But the residuals are not stationary!  
 
-#Let's fit a model that includes year as a predictor, to try to take care of the non-stationarity
+#Let's fit a model that includes year as a predictor,
+#to try to take care of the non-stationarity
 regmelanoma2 <- lm(melanoma ~ sunspot + year, data = cancersun)
 summary(regmelanoma2)
 #year is clearly significant
@@ -167,7 +170,8 @@ pacf(regmelanoma2$resid); pacf(regmelanoma2$resid,plot=F)
 #but let's fit an AR(1) model first
 
 #AR(1) model
-tsregmelanoma1 <- arima(cancersun$melanoma, order = c(1, 0, 0), xreg = cbind(cancersun$sunspot, cancersun$year))
+tsregmelanoma1 <- arima(cancersun$melanoma, order = c(1, 0, 0),
+                        xreg = cbind(cancersun$sunspot, cancersun$year))
 tsregmelanoma1
 
 #diagnostics
@@ -187,7 +191,8 @@ pacf(tsregmelanoma1$residual)
 
 
 #MA(1) model
-tsregmelanoma2 <- arima(cancersun$melanoma, order = c(0, 0, 1), xreg = cbind(cancersun$sunspot, cancersun$year))
+tsregmelanoma2 <- arima(cancersun$melanoma, order = c(0, 0, 1),
+                        xreg = cbind(cancersun$sunspot, cancersun$year))
 tsregmelanoma2
 
 #diagnostics
