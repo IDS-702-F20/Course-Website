@@ -604,11 +604,11 @@ background-color: #AF5500;
 <a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">library</span>(randomForest)</a>
 <a class="sourceLine" id="cb1-6" data-line-number="6"></a>
 <a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co"># Read in the data</span></a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">RHC &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;rhc.txt&quot;</span>,<span class="dt">head=</span>T,<span class="dt">stringsAsFactors =</span> T)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">RHC &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;rhc.txt&quot;</span>,<span class="dt">header=</span>T,<span class="dt">stringsAsFactors =</span> T)</a>
 <a class="sourceLine" id="cb1-9" data-line-number="9">RHC &lt;-<span class="st"> </span>RHC[,<span class="op">-</span><span class="kw">which</span>(<span class="kw">names</span>(RHC)<span class="op">==</span><span class="st">&quot;surv2md1&quot;</span>)]</a>
 <a class="sourceLine" id="cb1-10" data-line-number="10">RHC[,<span class="kw">sapply</span>(RHC,is.logical)] &lt;-<span class="st"> </span></a>
 <a class="sourceLine" id="cb1-11" data-line-number="11"><span class="st">  </span><span class="kw">lapply</span>(RHC[,<span class="kw">sapply</span>(RHC,is.logical)], as.factor)</a>
-<a class="sourceLine" id="cb1-12" data-line-number="12">RHC<span class="op">$</span>treatment &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(RHC<span class="op">$</span>treatment) <span class="op">-</span><span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#RHC$treatment &lt;- as.numeric(RHC$treatment) - 1</span></a>
 <a class="sourceLine" id="cb1-13" data-line-number="13">RHC<span class="op">$</span>dth30 &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(RHC<span class="op">$</span>dth30) <span class="op">-</span><span class="st"> </span><span class="dv">1</span></a></code></pre></div>
 <p>The dataset contains data on 5735 hospitalized adult patients at five medical centers in the U.S. The variable <code>treatment</code> indicates whether RHC was applied within 24 hours of admission (TRUE/FALSE). Each patient was followed up with some treatment procedures that may have been influenced by the RHC result if it was performed on the patient.</p>
 <p><strong>The outcome variable is <code>dth30</code> – death at 30 days (TRUE: dead; FALSE: alive). Note that after loading in the data, we have now converted this variable to binary, so that, 1 = dead and 0 = alive</strong></p>

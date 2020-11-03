@@ -73,11 +73,11 @@ library(MatchIt)
 library(randomForest)
 
 # Read in the data
-RHC <- read.table("rhc.txt",head=T,stringsAsFactors = T)
+RHC <- read.table("rhc.txt",header=T,stringsAsFactors = T)
 RHC <- RHC[,-which(names(RHC)=="surv2md1")]
 RHC[,sapply(RHC,is.logical)] <- 
   lapply(RHC[,sapply(RHC,is.logical)], as.factor)
-RHC$treatment <- as.numeric(RHC$treatment) - 1
+#RHC$treatment <- as.numeric(RHC$treatment) - 1
 RHC$dth30 <- as.numeric(RHC$dth30) - 1
 ```
 
