@@ -454,12 +454,12 @@ lessons:
     title: "Module 7.3: AR and MA models"
     slides: "7-3-ar-ma-model.html"
     slidespdf: "7-3-ar-ma-model.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/1010854/1403540/929415/0/IDS-702--Module-73-AR-and-MA-models"
   
   - title: "Module 7.4: Time series analysis (illustration)"
     slides: "7-4-time-series-illustration.html"
     slidespdf: "7-4-time-series-illustration.pdf"
-    video: ""
+    video: "https://api.playposit.com/go/play/1010862/1403540/929415/0/IDS-702--Module-74-Time-series-analysis-illustration"
   
   - title: "In-class: Q&A and discussion session"
   
