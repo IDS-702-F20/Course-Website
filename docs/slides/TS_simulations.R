@@ -46,7 +46,7 @@ AR_sim <- function(phi,mu,sigma,TT,plot){
 AR_sim(phi=0.3,mu=0,sigma=1,TT=500,plot=T)
 AR_sim(phi=0.5,mu=0,sigma=1,TT=500,plot=T)
 AR_sim(phi=-0.5,mu=0,sigma=1,TT=500,plot=T)
-AR_sim(phi=0.85,mu=0,sigma=1,TT=500,plot=T)
+AR_sim(phi=0.95,mu=0,sigma=1,TT=500,plot=T)
 AR_sim(phi=-0.9,mu=0,sigma=1,TT=500,plot=T)
 #play around with other values
 
@@ -90,7 +90,7 @@ MA_sim <- function(phi,mu,sigma,TT,plot){
 MA_sim(phi=0.3,mu=0,sigma=1,TT=500,plot=T)
 MA_sim(phi=0.5,mu=0,sigma=1,TT=500,plot=T)
 MA_sim(phi=-0.5,mu=0,sigma=1,TT=500,plot=T)
-MA_sim(phi=0.9,mu=-5,sigma=1,TT=500,plot=T)
+MA_sim(phi=0.95,mu=-5,sigma=1,TT=500,plot=T)
 MA_sim(phi=-0.9,mu=5,sigma=1,TT=500,plot=T)
 #play around with other values
 
