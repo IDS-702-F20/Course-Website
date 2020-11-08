@@ -475,17 +475,17 @@ lessons:
     title: "Module 8.1: Bootstrap"
     slides: "8-1-boostrap.html"
     slidespdf: "8-1-boostrap.pdf"
-    #video: " "
+    video: "https://api.playposit.com/go/play/1019722/1403540/929415/0/IDS-702--Module-81-Bootstrap"
   
   - title: "Module 8.2: Classification and regression trees"
     slides: "8-2-cart.html"
     slidespdf: "8-2-cart.pdf"
-    #video: " "
+    video: "https://api.playposit.com/go/play/1019726/1403540/929415/0/IDS-702--Module-82-Classification-and-regression-trees"
   
   - title: "Module 8.3: Ensemble tree methods"
     slides: "8-3-ensemble-tree-methods.html"
     slidespdf: "8-3-ensemble-tree-methods.pdf"
-    #video: " "
+    video: "https://api.playposit.com/go/play/1019728/1403540/929415/0/IDS-702--Module-83-Ensemble-tree-methods"
   
   - title: "In-class: open OH for final projects"
     

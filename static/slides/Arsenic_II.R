@@ -58,17 +58,20 @@ Conf_mat_cart <- confusionMatrix(predict(ars_cart,type="class"),
 Conf_mat_cart$table #compare to Conf_mat$table
 Conf_mat_cart$overall["Accuracy"] #compare to Conf_mat$overall["Accuracy"]
 #lower accuracy than the logistic model
-Conf_mat_cart$byClass[c("Sensitivity","Specificity")] #compare to Conf_mat$byClass[c("Sensitivity","Specificity")]
+Conf_mat_cart$byClass[c("Sensitivity","Specificity")]
+#compare to Conf_mat$byClass[c("Sensitivity","Specificity")]
 #higher specificity but lower sensitivity
 
 ## ROC curve
-roc(arsenic$switch,predict(ars_cart,type="vector")[,2],plot=T,print.thres="best",legacy.axes=T,print.auc =T,col="red3")
-#worse accuracy
+roc(arsenic$switch,predict(ars_cart,type="vector")[,2],plot=T,print.thres="best",
+    legacy.axes=T,print.auc =T,col="red3")
+#worse AUC
 
 
 ###### Bagging
 library(randomForest)
 ars_bagg <- randomForest(as.factor(switch) ~ arsenic + assoc + dist + educ, data = arsenic,mtry=4)
+
 ars_bagg
 
 ## Confusion matrix
@@ -80,16 +83,19 @@ Conf_mat_bagg$overall["Accuracy"]
 Conf_mat_bagg$byClass[c("Sensitivity","Specificity")]
 
 ## ROC curve
-roc(arsenic$switch,predict(ars_bagg,type="prob")[,2],plot=T,print.thres="best",legacy.axes=T,print.auc =T,col="red3")
+roc(arsenic$switch,predict(ars_bagg,type="prob")[,2],plot=T,print.thres="best",
+    legacy.axes=T,print.auc =T,col="red3")
 #also worse than logistic regression and cart
 
 
 ###### Random forest
-ars_rf <- randomForest(as.factor(switch) ~ arsenic + assoc + dist + educ, data = arsenic, importance =TRUE)
+ars_rf <- randomForest(as.factor(switch) ~ arsenic + assoc + dist + educ,
+                       data = arsenic, importance =TRUE)
 ars_rf
 varImpPlot(ars_rf)
 #MeanDecreaseAccuracy: mean decrease of accuracy in predictions when the variable is excluded. 
-#MeanDecreaseGini: measure of total decrease in node impurity that results from splits over that variable, averaged over all trees
+#MeanDecreaseGini: measure of total decrease in node impurity that
+#results from splits over that variable, averaged over all trees
 #importance(ars_rf)
 
 ## Confusion matrix
@@ -97,11 +103,11 @@ Conf_mat_rf <- confusionMatrix(predict(ars_rf,type="response"),
                                  as.factor(arsenic$switch),positive = "1")
 Conf_mat_rf$table #compare to Conf_mat$table
 Conf_mat_rf$overall["Accuracy"]
-#still worse
 Conf_mat_rf$byClass[c("Sensitivity","Specificity")]
 
 ## ROC curve
-roc(arsenic$switch,predict(ars_rf,type="prob")[,2],plot=T,print.thres="best",legacy.axes=T,print.auc =T,col="red3")
+roc(arsenic$switch,predict(ars_rf,type="prob")[,2],plot=T,print.thres="best",
+    legacy.axes=T,print.auc =T,col="red3")
 #worse than logistic regression, comparable to cart and better than bagging
 
 
@@ -143,7 +149,8 @@ Conf_boost2$byClass[c("Sensitivity","Specificity")]
 ## ROC curve
 roc(arsenic$switch,pred_prob_boost2,
     plot=T,print.thres="best",legacy.axes=T,print.auc =T,col="red3")
-#results closer to what we had for logistic regression without spending so much time tuning the model
+#results closer to what we had for logistic regression without
+#spending so much time tuning the model
 
 #YOU SHOULD PICK NUMBER OF TREES AND LAMBDA USING RMSE (PREFERABLY OUT-OF-SAMPLE)!
 
