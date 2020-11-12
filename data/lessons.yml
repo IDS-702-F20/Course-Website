@@ -425,8 +425,6 @@ lessons:
     slidespdf: "6-8-minimum-wage-analysis.pdf"
     video: "https://api.playposit.com/go/play/992503/1403540/929415/0/IDS-702--Module-68-The-minimum-wage-analysis"
   
-  #- title: "In-class analysis 11: Right Heart Catheterization II"
-  
   - title: " "
   - title: "MODULE 7: INTRODUCTION TO TIME SERIES MODELS"
     reading: "7-reading.html"
@@ -490,7 +488,8 @@ lessons:
   - title: "In-class: open OH for final projects"
     
   - date: "Thur, Nov 12"
-    title: "In-class: open OH for final projects"
+    title: "In-class: wrap-up and open OH for final projects"
+    slides: "wrap-up.html"
   
   - week: "WEEK 14"
     date: "Sun, Nov 15 | DELIVERABLES:"
